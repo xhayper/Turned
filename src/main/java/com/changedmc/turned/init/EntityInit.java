@@ -15,9 +15,8 @@ public class EntityInit {
         registerEntity("whiteknight", EntityWhiteKnight.class, Reference.ENTITY_WHITE_KNIGHT, 50, 14606555, 16777215);
     }
 
-    private static void registerEntity(String name, Class<? extends Entity> entity, int id, int range, int color1, int color2)
-    {
-    EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID + ":" + name), entity, name, id, Main.instance, range, 1, true, color1, color2);
+    private static void registerEntity(String name, Class<? extends Entity> entity, int id, int range, int color1, int color2) {
+        EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID + ":" + name), entity, name, id, Main.instance, range, 1, true, color1, color2);
     }
      */
 }
