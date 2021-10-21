@@ -5,7 +5,7 @@
 
 | Task | Status |
 | :---: | :---: |
-| Fix code structure | N |
+| Fix code structure | W |
 | Port code [1] | N |
 | Rewrite transfur code [2] | N |
 | Include network code [3] | N |
