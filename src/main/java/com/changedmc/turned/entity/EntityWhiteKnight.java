@@ -17,14 +17,12 @@ import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 
-public class EntityWhiteKnight extends EntityMob
-{
+public class EntityWhiteKnight extends EntityMob {
+    public EntityWhiteKnight(World worldIn) {
+        super(worldIn);
+    }
 
-	public EntityWhiteKnight(World worldIn) {
-		super(worldIn);
-	}
-	protected void initEntityAI()
-	{
+    protected void initEntityAI() {
         this.tasks.addTask(0, (EntityAIBase) new EntityAISwimming(this));
         this.tasks.addTask(5, (EntityAIBase) new EntityAIMoveTowardsRestriction(this, 1.0D));
         this.tasks.addTask(7, (EntityAIBase) new EntityAIWanderAvoidWater(this, 1.0D));
@@ -35,15 +33,14 @@ public class EntityWhiteKnight extends EntityMob
         this.targetTasks.addTask(3, (EntityAIBase) new EntityAINearestAttackableTarget(this, EntityDarkLatexM.class, true));
         this.targetTasks.addTask(3, (EntityAIBase) new EntityAINearestAttackableTarget(this, EntityVillager.class, false));
         this.targetTasks.addTask(3, (EntityAIBase) new EntityAINearestAttackableTarget(this, EntityIronGolem.class, true));
-        this.tasks.addTask(8, (EntityAIBase)new EntityAIAttackMelee((EntityCreature)this, 1.0D, true));
+        this.tasks.addTask(8, (EntityAIBase) new EntityAIAttackMelee((EntityCreature) this, 1.0D, true));
     }
-    protected void applyEntityAttributes()
-    {
+
+    protected void applyEntityAttributes() {
         super.applyEntityAttributes();
         this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(40.0D);
         this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.300045D);
         this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(3.5D);
         this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(2.0D);
     }
-    
 }
