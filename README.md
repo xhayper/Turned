@@ -5,12 +5,12 @@ The mod focuses on having mostly transform-based mechanics and various NPCs/Mons
 
 ## TODO
 
-| Task | Status |
-| :---: | :---: |
-| Fix code structure | W |
-| Port code [1] | N |
-| Rewrite transfur code [2] | N |
-| Include network code [3] | N |
+| Task | Status | Taken By |
+| :---: | :---: | :---: |
+| Fix code structure | W | hayper |
+| Port code [1] | N | - |
+| Rewrite transfur code [2] | N | - |
+| Include network code [3] | N | - |
 
 Y - Done, W - Working on it, N - Will get to it
 
