@@ -1,3 +1,4 @@
+![](https://cdn.discordapp.com/attachments/814468698618200135/838709503725010944/Turned_Background.png)
 # ChangedForge
 A mod inspired by the steam game "Changed", mixed sightly with my Discord Server "Adapted" lore, who is a Roleplay based on a different timeline of Changed!<br>
 The mod focuses on having mostly transform-based mechanics and various NPCs/Monsters, Along with decorative and building blocks.
