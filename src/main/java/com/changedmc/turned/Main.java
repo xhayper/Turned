@@ -2,6 +2,7 @@ package com.changedmc.turned;
 
 import com.changedmc.turned.capability.transfur.CapabilityAttachmentHandler;
 import com.changedmc.turned.capability.transfur.TransfurCapability;
+import com.changedmc.turned.event_handlers.EventsRegistrator;
 import com.changedmc.turned.networking.NetworkManager;
 import com.changedmc.turned.util.Reference;
 import net.minecraft.entity.Entity;
@@ -25,5 +26,6 @@ public class Main {
     	TransfurCapability.register();
     	NetworkManager.registerPackets();
     	MinecraftForge.EVENT_BUS.addGenericListener(Entity.class, CapabilityAttachmentHandler::onAttachCapabilitiesEvent);
+        EventsRegistrator.registerEvents();
     }
 }

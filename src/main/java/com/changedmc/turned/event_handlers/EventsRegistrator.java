@@ -1,7 +1,9 @@
 package com.changedmc.turned.event_handlers;
 
-public class EventsRegistrator {
-    static void registerEvents() {
+import net.minecraftforge.common.MinecraftForge;
 
+public class EventsRegistrator {
+    public static void registerEvents() {
+        MinecraftForge.EVENT_BUS.addListener(EntityJoinEventHandler::onEntityJoin);
     }
 }
