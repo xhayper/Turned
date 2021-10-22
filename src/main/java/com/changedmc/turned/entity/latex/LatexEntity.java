@@ -1,7 +1,11 @@
 package com.changedmc.turned.entity.latex;
 
+import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.ai.attributes.AttributeModifierMap;
+import net.minecraft.entity.ai.attributes.Attributes;
+import net.minecraft.entity.ai.brain.task.WalkRandomlyTask;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -25,6 +29,7 @@ public class LatexEntity extends MonsterEntity {
     protected void registerGoals() {
         //this.goalSelector.addGoal(8, new LookAtGoal(this, PlayerEntity.class, 8.0F));
         this.goalSelector.addGoal(8, new LookRandomlyGoal(this));
+        this.goalSelector.addGoal(8, new RandomWalkingGoal(this, 1.2d));
         this.addBehaviourGoals();
     }
 
