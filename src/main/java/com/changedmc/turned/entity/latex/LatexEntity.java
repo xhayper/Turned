@@ -1,16 +1,8 @@
 package com.changedmc.turned.entity.latex;
 
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.ai.attributes.AttributeModifierMap;
-import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.entity.ai.brain.sensor.HurtBySensor;
 import net.minecraft.entity.ai.goal.*;
-import net.minecraft.entity.merchant.villager.AbstractVillagerEntity;
 import net.minecraft.entity.monster.MonsterEntity;
-import net.minecraft.entity.monster.ZombieEntity;
-import net.minecraft.entity.monster.ZombifiedPiglinEntity;
-import net.minecraft.entity.passive.IronGolemEntity;
-import net.minecraft.entity.passive.TurtleEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.datasync.DataParameter;
@@ -19,7 +11,6 @@ import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.world.World;
 
 public class LatexEntity extends MonsterEntity {
-
     public boolean isTransfured;
     public int transfurType;
 
@@ -36,14 +27,18 @@ public class LatexEntity extends MonsterEntity {
         this.addBehaviourGoals();
     }
 
-    public static AttributeModifierMap.MutableAttribute createAttributes() {
-        return MonsterEntity.createMonsterAttributes().add(Attributes.FOLLOW_RANGE, 35.0D).add(Attributes.MOVEMENT_SPEED, (double)0.23F).add(Attributes.ATTACK_DAMAGE, 3.0D).add(Attributes.ARMOR, 2.0D).add(Attributes.SPAWN_REINFORCEMENTS_CHANCE);
-    }
-
     protected void addBehaviourGoals() {
         this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.0D, false));
         this.targetSelector.addGoal(1, (new HurtByTargetGoal(this)).setAlertOthers(LatexEntity.class));
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, true));
+    }
+
+    @Override
+    public void setBaby(boolean p_82227_1_) { }
+
+    @Override
+    public boolean isBaby() {
+        return false;
     }
 
     protected void defineSynchedData() {
@@ -63,4 +58,7 @@ public class LatexEntity extends MonsterEntity {
         this.isTransfured = compoundNBT.getBoolean("isTransfured");
         this.transfurType = compoundNBT.getInt("transfurType");
     }
+
+    // public void killed(ServerWorld p_241847_1_, LivingEntity p_241847_2_) {
+    // when they kill someone
 }

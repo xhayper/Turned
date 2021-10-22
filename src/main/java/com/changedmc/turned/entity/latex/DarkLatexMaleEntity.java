@@ -1,7 +1,6 @@
 package com.changedmc.turned.entity.latex;
 
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.monster.ZombieEntity;
 import net.minecraft.world.World;
 
 public class DarkLatexMaleEntity extends LatexEntity {
