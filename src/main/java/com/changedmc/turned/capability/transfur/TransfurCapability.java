@@ -22,14 +22,14 @@ public class TransfurCapability {
         public INBT writeNBT(Capability<ITransfurCapability> capability, ITransfurCapability instance, Direction side) {
             CompoundNBT compoundNBT = new CompoundNBT();
             compoundNBT.putInt("transfurType", instance.getTransfurType());
-            compoundNBT.putBoolean("is_transfured", instance.isTransfured());
+            compoundNBT.putBoolean("isTransfured", instance.isTransfured());
             return compoundNBT;
         }
 
         @Override
         public void readNBT(Capability<ITransfurCapability> capability, ITransfurCapability instance, Direction side, INBT nbt) {
             CompoundNBT compoundNBT = ((CompoundNBT) nbt);
-            instance.setTransfured(compoundNBT.getBoolean("is_transfured"));
+            instance.setTransfured(compoundNBT.getBoolean("isTransfured"));
             instance.setTransfurType(compoundNBT.getInt("transfurType"));
         }
     }
