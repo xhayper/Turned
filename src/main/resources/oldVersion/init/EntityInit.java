@@ -4,11 +4,11 @@ import com.changedmc.turned.entity.EntityDarkLatexM;
 import com.changedmc.turned.entity.EntityEyelessWhiteLatex;
 import com.changedmc.turned.entity.EntityWhiteKnight;
 import com.changedmc.turned.util.Reference;
-import net.minecraft.entity.Entity;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.entity.Entity;
 
 public class EntityInit {
-    /*
+   // private static final DeferredRegister<Entity> ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCKS, Reference.MOD_ID);
+
     public static void registerEntities() {
         registerEntity("darklatexm", EntityDarkLatexM.class, Reference.ENTITY_DARK_LATEX_M, 50, 1184274, 16777215);
         registerEntity("eyelesswhitelatex", EntityEyelessWhiteLatex.class, Reference.ENTITY_EYELESS_WHITE_LATEX, 50, 14606555, 16777215);
@@ -16,7 +16,6 @@ public class EntityInit {
     }
 
     private static void registerEntity(String name, Class<? extends Entity> entity, int id, int range, int color1, int color2) {
-        EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID + ":" + name), entity, name, id, Main.instance, range, 1, true, color1, color2);
+        //ENTITIES.register(new ResourceLocation(Reference.MOD_ID + ":" + name), entity, name, id, /*Main.instance*/ null, range, 1, true, color1, color2);
     }
-     */
 }

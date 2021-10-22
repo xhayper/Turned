@@ -1,17 +1,13 @@
 package com.changedmc.turned.util.handlers;
 
-
 import com.changedmc.turned.init.BlockInit;
 import com.changedmc.turned.init.EntityInit;
 import com.changedmc.turned.init.ItemInit;
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
+import net.minecraft.world.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 @EventBusSubscriber
 public class RegistryHandler {
@@ -21,7 +17,6 @@ public class RegistryHandler {
     }
 
     @SubscribeEvent
-    @SideOnly(Side.CLIENT)
     public static void onModelRegister(ModelRegistryEvent event) {
         for (Item item : ItemInit.ITEMS) {
             Main.proxy.registerItemRenderer(item, 0, "inventory");
