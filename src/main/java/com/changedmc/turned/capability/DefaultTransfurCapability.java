@@ -1,15 +1,26 @@
 package com.changedmc.turned.capability;
 
 public class DefaultTransfurCapability implements ITransfurCapability{
-    private int value = 0;
+    private int transfurType;
+    private boolean isTransfured;
 
     @Override
-    public void setValue(int value_) {
-        this.value = value_;
+    public void setTransfured(boolean isTransfured) {
+        this.isTransfured = isTransfured;
     }
 
     @Override
-    public int getValue() {
-        return this.value;
+    public boolean isTransfured() {
+        return this.isTransfured;
+    }
+
+    @Override
+    public int getTransfurType() {
+        return this.transfurType;
+    }
+
+    @Override
+    public void setTransfurType(int transfurType) {
+        this.transfurType = transfurType;
     }
 }

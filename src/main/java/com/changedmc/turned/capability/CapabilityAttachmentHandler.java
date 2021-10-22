@@ -11,7 +11,7 @@ public class CapabilityAttachmentHandler {
         if (event.getObject() instanceof PlayerEntity) {
             System.out.println("Trying to attach capability");
             TransfurCapabilityProvider provider = new TransfurCapabilityProvider();
-            event.addCapability(new ResourceLocation(Reference.MOD_ID, "transfurcapability"), provider);
+            event.addCapability(new ResourceLocation(Reference.MOD_ID, "transfur_capability"), provider);
             event.addListener(provider::invalidate);
         }
     }

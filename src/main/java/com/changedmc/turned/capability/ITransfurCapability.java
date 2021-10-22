@@ -1,7 +1,11 @@
 package com.changedmc.turned.capability;
 
 public interface ITransfurCapability {
-    void setValue(int value_);
+    void setTransfured(boolean isTransfured);
 
-    int getValue();
+    boolean isTransfured();
+
+    int getTransfurType();
+
+    void setTransfurType(int transfurType);
 }

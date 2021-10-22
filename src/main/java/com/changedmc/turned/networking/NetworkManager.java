@@ -1,6 +1,6 @@
 package com.changedmc.turned.networking;
 
-import com.changedmc.turned.networking.server.SyncTransfurCapability;
+import com.changedmc.turned.networking.packet.server.SyncTransfurCapability;
 import com.changedmc.turned.util.Reference;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.util.ResourceLocation;

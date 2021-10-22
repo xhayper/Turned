@@ -6,7 +6,6 @@ import net.minecraft.util.Direction;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.CapabilityInject;
 import net.minecraftforge.common.capabilities.CapabilityManager;
-
 import javax.annotation.Nullable;
 
 public class TransfurCapability {
@@ -17,21 +16,21 @@ public class TransfurCapability {
         CapabilityManager.INSTANCE.register(ITransfurCapability.class, new Storage(), DefaultTransfurCapability::new);
     }
 
-
     public static class Storage implements Capability.IStorage<ITransfurCapability> {
-
         @Nullable
         @Override
         public INBT writeNBT(Capability<ITransfurCapability> capability, ITransfurCapability instance, Direction side) {
-            CompoundNBT tag = new CompoundNBT();
-            tag.putInt("pickupcount", instance.getValue());
-            return tag;
+            CompoundNBT compoundNBT = new CompoundNBT();
+            compoundNBT.putInt("transfurType", instance.getTransfurType());
+            compoundNBT.putBoolean("isTransfured", instance.isTransfured());
+            return compoundNBT;
         }
 
         @Override
         public void readNBT(Capability<ITransfurCapability> capability, ITransfurCapability instance, Direction side, INBT nbt) {
-            int value = ((CompoundNBT) nbt).getInt("pickupcount");
-            instance.setValue(value);
+            CompoundNBT compoundNBT = ((CompoundNBT) nbt);
+            instance.setTransfured(compoundNBT.getBoolean("isTransfured"));
+            instance.setTransfurType(compoundNBT.getInt("transfurType"));
         }
     }
 }
