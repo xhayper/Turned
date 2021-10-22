@@ -15,6 +15,7 @@ import java.util.UUID;
 public class EntityJoinEventHandler {
     public static void onEntityJoin(EntityJoinWorldEvent event) {
         if (event.getEntity() instanceof PlayerEntity) {
+            System.out.println("Player join event");
             UUID player_id = event.getEntity().getUUID();
             World level = event.getWorld();
             if (level.isClientSide) {

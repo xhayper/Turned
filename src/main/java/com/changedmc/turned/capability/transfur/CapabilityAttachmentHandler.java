@@ -6,6 +6,8 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
+import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public class CapabilityAttachmentHandler {
     public static void onAttachCapabilitiesEvent(AttachCapabilitiesEvent<Entity> event) {
@@ -14,8 +16,9 @@ public class CapabilityAttachmentHandler {
             TransfurCapabilityProvider provider = new TransfurCapabilityProvider();
             event.addCapability(new ResourceLocation(Reference.MOD_ID, "transfur_capability"), provider);
             event.addListener(provider::invalidate);
-            new Thread(() -> {
+            /*new Thread(() -> {
                 try {
+                    Main.LOGGER.info("Is ClientSide : " + event.getObject().level.isClientSide());
                     event.getObject().getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent(iTransfurCapability -> {
                         Main.LOGGER.info("isTransfured: " + iTransfurCapability.isTransfured());
                     });
@@ -24,13 +27,27 @@ public class CapabilityAttachmentHandler {
                         iTransfurCapability.setTransfured(true);
                     });
                     Thread.sleep(1000);
+                    Main.LOGGER.info("Is ClientSide : " + event.getObject().level.isClientSide());
                     event.getObject().getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent(iTransfurCapability -> {
                         Main.LOGGER.info("isTransfured: " + iTransfurCapability.isTransfured());
                     });
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-            }).start();
+            }).start();*/
+
+        }
+    }
+    public static void on_pickup(EntityItemPickupEvent event) {
+        Main.LOGGER.info("Item pickup event");
+        boolean is_client_side = event.getEntity().level.isClientSide();
+        if (is_client_side == false) {
+            event.getEntity().getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent(iTransfurCapability -> {
+                iTransfurCapability.setTransfured(!iTransfurCapability.isTransfured());
+            });
+            event.getEntity().getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent(iTransfurCapability -> {
+                Main.LOGGER.info("isTransfured: " + iTransfurCapability.isTransfured());
+            });
         }
     }
 }
