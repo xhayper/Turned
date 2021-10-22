@@ -13,23 +13,23 @@ public class TransfurCapability {
     public static Capability<ITransfurCapability> TRANSFUR_CAPABILITY = null;
 
     public static void register() {
-        CapabilityManager.INSTANCE.register(ITransfurCapability.class, new Storage(), DefaultTransfurCapability::new);
+        CapabilityManager.INSTANCE.register(ITransfurCapability.class, new TransfurStorage(), DefaultTransfurCapability::new);
     }
 
-    public static class Storage implements Capability.IStorage<ITransfurCapability> {
+    public static class TransfurStorage implements Capability.IStorage<ITransfurCapability> {
         @Nullable
         @Override
         public INBT writeNBT(Capability<ITransfurCapability> capability, ITransfurCapability instance, Direction side) {
             CompoundNBT compoundNBT = new CompoundNBT();
             compoundNBT.putInt("transfurType", instance.getTransfurType());
-            compoundNBT.putBoolean("isTransfured", instance.isTransfured());
+            compoundNBT.putBoolean("is_transfured", instance.isTransfured());
             return compoundNBT;
         }
 
         @Override
         public void readNBT(Capability<ITransfurCapability> capability, ITransfurCapability instance, Direction side, INBT nbt) {
             CompoundNBT compoundNBT = ((CompoundNBT) nbt);
-            instance.setTransfured(compoundNBT.getBoolean("isTransfured"));
+            instance.setTransfured(compoundNBT.getBoolean("is_transfured"));
             instance.setTransfurType(compoundNBT.getInt("transfurType"));
         }
     }
