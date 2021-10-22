@@ -14,6 +14,7 @@ import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.util.LazyOptional;
+import java.util.Optional;
 
 public class LatexEntity extends CreatureEntity {
     private static final DataParameter<Boolean> DATA_TRANSFURED_ID = EntityDataManager.defineId(LatexEntity.class, DataSerializers.BOOLEAN);
@@ -44,8 +45,8 @@ public class LatexEntity extends CreatureEntity {
         this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.0D, false));
         this.targetSelector.addGoal(1, (new HurtByTargetGoal(this)).setAlertOthers(LatexEntity.class));
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, 10, true, false, livingEntity -> {
-//            LazyOptional<ITransfurCapability> lazyOptional = livingEntity.getCapability(TransfurCapability.TRANSFUR_CAPABILITY);
-//            if (lazyOptional.isPresent()) return !lazyOptional.resolve().get().isTransfured();
+            Optional<ITransfurCapability> optional = livingEntity.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).resolve();
+            if (optional.isPresent()) return !optional.get().isTransfured();
             return true;
         }));
     }
