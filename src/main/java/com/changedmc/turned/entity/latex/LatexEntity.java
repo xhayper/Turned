@@ -1,6 +1,7 @@
 package com.changedmc.turned.entity.latex;
 
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -9,13 +10,13 @@ import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
 
 public class LatexEntity extends MonsterEntity {
-    public boolean isTransfured;
-    public int transfurType;
-
     private static final DataParameter<Boolean> DATA_TRANSFURED_ID = EntityDataManager.defineId(LatexEntity.class, DataSerializers.BOOLEAN);
     private static final DataParameter<Integer> DATA_TRANSFUR_TYPE_ID = EntityDataManager.defineId(LatexEntity.class, DataSerializers.INT);
+    public boolean isTransfured;
+    public int transfurType;
 
     protected LatexEntity(EntityType<? extends LatexEntity> p_i48553_1_, World p_i48553_2_) {
         super(p_i48553_1_, p_i48553_2_);
@@ -34,11 +35,12 @@ public class LatexEntity extends MonsterEntity {
     }
 
     @Override
-    public void setBaby(boolean p_82227_1_) { }
-
-    @Override
     public boolean isBaby() {
         return false;
+    }
+
+    @Override
+    public void setBaby(boolean p_82227_1_) {
     }
 
     protected void defineSynchedData() {
@@ -59,6 +61,8 @@ public class LatexEntity extends MonsterEntity {
         this.transfurType = compoundNBT.getInt("transfurType");
     }
 
-    // public void killed(ServerWorld p_241847_1_, LivingEntity p_241847_2_) {
-    // when they kill someone
+    public void killed(ServerWorld p_241847_1_, LivingEntity p_241847_2_) {
+        //when they kill someone
+        //TODO: Insert transfur code
+    }
 }
