@@ -1,15 +1,11 @@
 package com.changedmc.turned.networking.server;
 
-import com.changedmc.turned.capability.transfur.ITransfur;
-import com.changedmc.turned.capability.transfur.TransfurCapability;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.fml.DistExecutor;
-import net.minecraftforge.fml.network.NetworkDirection;
 import net.minecraftforge.fml.network.NetworkEvent;
 
 import java.util.function.Supplier;
@@ -46,11 +42,11 @@ public class SyncTransfurCapability {
             if (world == null) return;
             Entity entity = world.getEntity(message.entityID);
             if (entity == null) return;
-            LazyOptional<ITransfur> capability = entity.getCapability(TransfurCapability.TRANSFUR_CAPABILITY);
-            capability.ifPresent(iTransfur -> {
-                iTransfur.setTransfured(message.isTransfured);
-                iTransfur.setTransfurType(message.transfurType);
-            });
+//            LazyOptional<ITransfur> capability = entity.getCapability(TransfurCapability.TRANSFUR_CAPABILITY);
+//            capability.ifPresent(iTransfur -> {
+//                iTransfur.setTransfured(message.isTransfured);
+//                iTransfur.setTransfurType(message.transfurType);
+//            });
         }));
         context.setPacketHandled(true);
     }
