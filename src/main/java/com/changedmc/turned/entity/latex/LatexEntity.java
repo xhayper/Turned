@@ -30,7 +30,7 @@ public class LatexEntity extends MonsterEntity {
     protected void addBehaviourGoals() {
         this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.0D, false));
         this.targetSelector.addGoal(1, (new HurtByTargetGoal(this)).setAlertOthers(LatexEntity.class));
-        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, true));
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, 10, true, false, livingEntity -> !(livingEntity instanceof LatexEntity) || !((LatexEntity) livingEntity).isTransfured));
     }
 
     @Override
