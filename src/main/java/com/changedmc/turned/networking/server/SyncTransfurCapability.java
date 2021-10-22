@@ -1,5 +1,6 @@
 package com.changedmc.turned.networking.server;
 
+import com.changedmc.turned.capability.TransfurCapability;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.network.PacketBuffer;
@@ -42,6 +43,13 @@ public class SyncTransfurCapability {
             if (world == null) return;
             Entity entity = world.getEntity(message.entityID);
             if (entity == null) return;
+                entity.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent(c -> {
+                    int value = c.getValue();
+                    System.out.println("previous capability value : " + Integer.toString(value));
+                    c.setValue(message.transfurType);
+                    //player.sendMessage(new TranslationTextComponent("message.increase_charge", Integer.toString(value)), player.getUUID());
+                    //player.sendStatusMessage(new TranslationTextComponent("message.increase_charge", Integer.toString(charge)), true);
+                });
 //            LazyOptional<ITransfur> capability = entity.getCapability(TransfurCapability.TRANSFUR_CAPABILITY);
 //            capability.ifPresent(iTransfur -> {
 //                iTransfur.setTransfured(message.isTransfured);
