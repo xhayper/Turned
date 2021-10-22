@@ -1,4 +1,4 @@
-package com.changedmc.turned.capability;
+package com.changedmc.turned.capability.transfur;
 
 public interface ITransfurCapability {
     void setTransfured(boolean isTransfured);

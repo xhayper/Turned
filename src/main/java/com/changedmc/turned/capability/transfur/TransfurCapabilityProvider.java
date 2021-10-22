@@ -1,4 +1,4 @@
-package com.changedmc.turned.capability;
+package com.changedmc.turned.capability.transfur;
 
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.Direction;

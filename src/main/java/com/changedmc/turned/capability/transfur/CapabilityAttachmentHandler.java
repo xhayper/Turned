@@ -1,4 +1,4 @@
-package com.changedmc.turned.capability;
+package com.changedmc.turned.capability.transfur;
 
 import com.changedmc.turned.util.Reference;
 import net.minecraft.entity.Entity;

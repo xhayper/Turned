@@ -1,4 +1,4 @@
-package com.changedmc.turned.capability;
+package com.changedmc.turned.capability.transfur;
 
 public class DefaultTransfurCapability implements ITransfurCapability{
     private int transfurType;

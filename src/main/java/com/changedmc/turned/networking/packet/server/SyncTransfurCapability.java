@@ -1,6 +1,6 @@
 package com.changedmc.turned.networking.packet.server;
 
-import com.changedmc.turned.capability.TransfurCapability;
+import com.changedmc.turned.capability.transfur.TransfurCapability;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.network.PacketBuffer;

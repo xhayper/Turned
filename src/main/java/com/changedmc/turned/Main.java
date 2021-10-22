@@ -1,6 +1,6 @@
 package com.changedmc.turned;
 
-import com.changedmc.turned.capability.CapabilityAttachmentHandler;
+import com.changedmc.turned.capability.transfur.CapabilityAttachmentHandler;
 import com.changedmc.turned.networking.NetworkManager;
 import com.changedmc.turned.util.Reference;
 import net.minecraft.entity.Entity;
