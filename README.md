@@ -7,10 +7,11 @@ The mod focuses on having mostly transform-based mechanics and various NPCs/Mons
 
 | Task | Status | Taken By |
 | :---: | :---: | :---: |
-| Fix code structure | W | hayper |
+| Fix code structure | Y | - |
 | Port code [1] | N | - |
 | Rewrite transfur code [2] | N | - |
 | Include network code [3] | N | - |
+| Fix Capability | W | hayper |
 
 Y - Done, W - Working on it, N - Will get to it
 
