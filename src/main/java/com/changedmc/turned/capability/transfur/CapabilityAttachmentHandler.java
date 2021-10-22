@@ -6,8 +6,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
-import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public class CapabilityAttachmentHandler {
     public static void onAttachCapabilitiesEvent(AttachCapabilitiesEvent<Entity> event) {
@@ -16,6 +14,23 @@ public class CapabilityAttachmentHandler {
             TransfurCapabilityProvider provider = new TransfurCapabilityProvider();
             event.addCapability(new ResourceLocation(Reference.MOD_ID, "transfur_capability"), provider);
             event.addListener(provider::invalidate);
+            new Thread(() -> {
+                try {
+                    event.getObject().getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent(iTransfurCapability -> {
+                        Main.LOGGER.info("isTransfured: " + iTransfurCapability.isTransfured());
+                    });
+                    Thread.sleep(1000);
+                    event.getObject().getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent(iTransfurCapability -> {
+                        iTransfurCapability.setTransfured(true);
+                    });
+                    Thread.sleep(1000);
+                    event.getObject().getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent(iTransfurCapability -> {
+                        Main.LOGGER.info("isTransfured: " + iTransfurCapability.isTransfured());
+                    });
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }).start();
         }
     }
 }

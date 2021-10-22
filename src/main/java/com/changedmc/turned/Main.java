@@ -19,7 +19,6 @@ public class Main {
 
     public Main() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(Main::init);
-        
     }
     
     public static void init(final FMLCommonSetupEvent event) {
