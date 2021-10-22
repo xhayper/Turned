@@ -3,11 +3,7 @@ package com.changedmc.turned.entity.latex;
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ai.attributes.AttributeModifierMap;
-import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.entity.ai.brain.task.WalkRandomlyTask;
 import net.minecraft.entity.ai.goal.*;
-import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.datasync.DataParameter;
@@ -16,7 +12,7 @@ import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 
-public class LatexEntity extends MonsterEntity {
+public class LatexEntity extends CreatureEntity {
     private static final DataParameter<Boolean> DATA_TRANSFURED_ID = EntityDataManager.defineId(LatexEntity.class, DataSerializers.BOOLEAN);
     private static final DataParameter<Integer> DATA_TRANSFUR_TYPE_ID = EntityDataManager.defineId(LatexEntity.class, DataSerializers.INT);
     public boolean isTransfured;
@@ -24,6 +20,14 @@ public class LatexEntity extends MonsterEntity {
 
     protected LatexEntity(EntityType<? extends LatexEntity> p_i48553_1_, World p_i48553_2_) {
         super(p_i48553_1_, p_i48553_2_);
+    }
+
+    @Override
+    public boolean canPickUpLoot() { return false; }
+
+    @Override
+    public boolean canBeLeashed(PlayerEntity ignored) {
+        return false;
     }
 
     protected void registerGoals() {
