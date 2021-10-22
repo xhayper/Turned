@@ -11,11 +11,10 @@ import org.apache.logging.log4j.Logger;
 
 @Mod(Reference.MOD_ID)
 public class Main {
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public Main() {
         MinecraftForge.EVENT_BUS.addGenericListener(Entity.class, CapabilityAttachmentHandler::onAttachCapabilitiesEvent);
         NetworkManager.registerPackets();
-        MinecraftForge.EVENT_BUS.register(this);
     }
 }

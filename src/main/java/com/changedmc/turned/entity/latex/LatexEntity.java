@@ -1,5 +1,7 @@
 package com.changedmc.turned.entity.latex;
 
+import com.changedmc.turned.capability.transfur.ITransfurCapability;
+import com.changedmc.turned.capability.transfur.TransfurCapability;
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -11,6 +13,7 @@ import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
+import net.minecraftforge.common.util.LazyOptional;
 
 public class LatexEntity extends CreatureEntity {
     private static final DataParameter<Boolean> DATA_TRANSFURED_ID = EntityDataManager.defineId(LatexEntity.class, DataSerializers.BOOLEAN);
@@ -40,7 +43,11 @@ public class LatexEntity extends CreatureEntity {
     protected void addBehaviourGoals() {
         this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.0D, false));
         this.targetSelector.addGoal(1, (new HurtByTargetGoal(this)).setAlertOthers(LatexEntity.class));
-        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, 10, true, false, livingEntity -> !(livingEntity instanceof LatexEntity) || !((LatexEntity) livingEntity).isTransfured));
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, 10, true, false, livingEntity -> {
+//            LazyOptional<ITransfurCapability> lazyOptional = livingEntity.getCapability(TransfurCapability.TRANSFUR_CAPABILITY);
+//            if (lazyOptional.isPresent()) return !lazyOptional.resolve().get().isTransfured();
+            return true;
+        }));
     }
 
     @Override
