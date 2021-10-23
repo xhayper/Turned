@@ -2,9 +2,11 @@ package com.changedmc.turned.event;
 
 import com.changedmc.turned.Main;
 import com.changedmc.turned.capability.transfur.TransfurCapability;
+import com.changedmc.turned.config.CommonConfig;
 import com.changedmc.turned.entity.latex.LatexEntity;
 import com.changedmc.turned.networking.NetworkManager;
 import com.changedmc.turned.networking.packet.server.SyncTransfurCapability;
+import com.changedmc.turned.util.Reference;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
@@ -39,8 +41,8 @@ public class EventEntity {
         event.getEntity().getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent(iTransfurCapability -> {
             iTransfurCapability.setTransfured(!iTransfurCapability.isTransfured());
         });
-        event.getEntity().getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent(iTransfurCapability -> {
-            Main.LOGGER.info("isTransfured: " + iTransfurCapability.isTransfured());
+        if (CommonConfig.debug.get() || Reference.DEBUG_BUILD) event.getEntity().getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent(iTransfurCapability -> {
+            Main.LOGGER.debug(event.getEntity() + "'s isTransfured: " + iTransfurCapability.isTransfured());
         });
     }
 }
