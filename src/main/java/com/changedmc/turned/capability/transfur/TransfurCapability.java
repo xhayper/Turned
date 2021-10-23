@@ -27,8 +27,8 @@ public class TransfurCapability {
         @Override
         public void readNBT(Capability<ITransfurCapability> capability, ITransfurCapability instance, Direction side, INBT nbt) {
             CompoundNBT compoundNBT = ((CompoundNBT) nbt);
-            instance.setTransfured(compoundNBT.getBoolean("isTransfured"));
             instance.setTransfurType(compoundNBT.getInt("transfurType"));
+            instance.setTransfured(compoundNBT.getBoolean("isTransfured"));
         }
     }
 }
