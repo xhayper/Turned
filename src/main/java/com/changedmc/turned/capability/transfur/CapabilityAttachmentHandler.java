@@ -41,7 +41,7 @@ public class CapabilityAttachmentHandler {
     public static void on_pickup(EntityItemPickupEvent event) {
         Main.LOGGER.info("Item pickup event");
         boolean is_client_side = event.getEntity().level.isClientSide();
-        if (is_client_side == false) {
+        if (!is_client_side) {
             event.getEntity().getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent(iTransfurCapability -> {
                 iTransfurCapability.setTransfured(!iTransfurCapability.isTransfured());
             });
