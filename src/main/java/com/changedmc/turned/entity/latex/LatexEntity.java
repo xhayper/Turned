@@ -78,7 +78,7 @@ public class LatexEntity extends CreatureEntity {
         this.transfurType = compoundNBT.getInt("transfurType");
     }
 
-    public void killed(ServerWorld serverWorld, LivingEntity livingEntity) {
+    public void killed(@Nonnull ServerWorld serverWorld, @Nonnull LivingEntity livingEntity) {
         //when they kill someone
         //TODO: Insert transfur code
     }
