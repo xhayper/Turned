@@ -149,6 +149,9 @@ public class DarkLatexMaleModel<T extends DarkLatexMaleEntity> extends EntityMod
     }
 
     @Override
+    public void setupAnim(T p_225597_1_, float p_225597_2_, float p_225597_3_, float p_225597_4_, float p_225597_5_, float p_225597_6_) { }
+
+    @Override
     public void renderToBuffer(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha){
         Anthro.render(matrixStack, buffer, packedLight, packedOverlay);
     }
@@ -158,7 +161,4 @@ public class DarkLatexMaleModel<T extends DarkLatexMaleEntity> extends EntityMod
         modelRenderer.yRot = y;
         modelRenderer.zRot = z;
     }
-
-    @Override
-    public void setupAnim(T p_225597_1_, float p_225597_2_, float p_225597_3_, float p_225597_4_, float p_225597_5_, float p_225597_6_) { }
 }

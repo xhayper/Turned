@@ -13,8 +13,8 @@ import net.minecraft.util.SoundEvents;
 import net.minecraft.world.World;
 import javax.annotation.Nonnull;
 
-public class DarkLatexMaleEntity extends CreatureEntity {
-    public DarkLatexMaleEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
+public class DarkLatexSnowLeopardEntity extends CreatureEntity {
+    public DarkLatexSnowLeopardEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
         super(type, worldIn);
     }
 
