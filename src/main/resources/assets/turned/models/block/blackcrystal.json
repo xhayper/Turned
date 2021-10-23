@@ -1,7 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "turned_remaster:blocks/black_double_plant_rose_bottom",
-    "particle": "turned_remaster:blocks/black_double_plant_rose_bottom"
-  }
-}

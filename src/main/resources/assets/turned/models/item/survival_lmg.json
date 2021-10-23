@@ -1,9 +1,0 @@
-{
-  "parent": "turned_remaster:custom/rpk",
-  "textures": {
-    "0": "turned_remaster:blocks/rkm_texture",
-    "1": "turned_remaster:blocks/rkm_stock_texture",
-    "2": "turned_remaster:blocks/rpk_bipod_texture",
-    "particle": "turned_remaster:items/cartoony_ak47"
-  }
-}

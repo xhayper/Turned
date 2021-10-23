@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "turned_remaster:items/matchlock_gun_parts"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "turned_remaster:custom/blunderbass",
-  "textures": {
-    "0": "turned_remaster:blocks/musket_pistol",
-    "1": "turned_remaster:blocks/blunderbass_iron",
-    "particle": "turned_remaster:items/matchlock_shotgun"
-  }
-}

@@ -2,6 +2,7 @@ package com.changedmc.turned.event;
 
 import com.changedmc.turned.Main;
 import com.changedmc.turned.config.CommonConfig;
+import com.changedmc.turned.entity.TurnedEntityType;
 import com.changedmc.turned.util.Reference;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -16,5 +17,7 @@ public class EventManager {
         MinecraftForge.EVENT_BUS.register(EventRegistry.class);
         if (CommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering EventEntity");
         MinecraftForge.EVENT_BUS.register(EventEntity.class);
+
+        TurnedEntityType.ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 }

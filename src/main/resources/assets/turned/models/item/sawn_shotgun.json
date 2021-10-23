@@ -1,8 +1,0 @@
-{
-  "parent": "turned_remaster:custom/sawn_shotgun",
-  "textures": {
-    "0": "turned_remaster:blocks/shotgun_texture",
-    "1": "turned_remaster:blocks/sawn_shotgun_grip",
-    "particle": "turned_remaster:items/mossberg"
-  }
-}

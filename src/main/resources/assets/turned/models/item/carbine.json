@@ -1,7 +1,0 @@
-{
-  "parent": "turned_remaster:custom/carbine",
-  "textures": {
-    "0": "turned_remaster:blocks/carbine_texture",
-    "particle": "turned_remaster:items/cartoony_ak47"
-  }
-}

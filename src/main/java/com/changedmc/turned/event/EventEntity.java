@@ -3,7 +3,6 @@ package com.changedmc.turned.event;
 import com.changedmc.turned.Main;
 import com.changedmc.turned.capability.transfur.TransfurCapability;
 import com.changedmc.turned.config.CommonConfig;
-import com.changedmc.turned.entity.latex.LatexEntity;
 import com.changedmc.turned.networking.NetworkManager;
 import com.changedmc.turned.networking.packet.server.SyncTransfurCapability;
 import com.changedmc.turned.util.Reference;
@@ -20,7 +19,7 @@ import net.minecraftforge.fml.network.PacketDistributor;
 public class EventEntity {
     @SubscribeEvent
     public static void onEntityJoin(EntityJoinWorldEvent event) {
-        if (!((event.getEntity() instanceof PlayerEntity) || (event.getEntity() instanceof LatexEntity))) return;
+        if (!(event.getEntity() instanceof PlayerEntity)) return;
         if (event.getWorld().isClientSide) return;
         World world = event.getWorld();
         Entity entity = event.getEntity();

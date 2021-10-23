@@ -1,8 +1,0 @@
-{
-  "parent": "turned_remaster:custom/note",
-  "textures": {
-    "all": "turned_remaster:blocks/note_icom",
-    "particle": "turned_remaster:blocks/note_icom",
-    "1": "turned_remaster:blocks/note"
-  }
-}

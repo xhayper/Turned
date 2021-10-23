@@ -1,8 +1,0 @@
-{
-  "parent": "block/slab",
-  "textures": {
-    "bottom": "turned_remaster:blocks/dark_latex_goo_block",
-    "top": "turned_remaster:blocks/dark_latex_goo_block",
-    "side": "turned_remaster:blocks/dark_latex_goo_block"
-  }
-}

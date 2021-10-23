@@ -1,8 +1,0 @@
-{
-  "parent": "block/outer_stairs",
-  "textures": {
-    "bottom": "turned_remaster:blocks/lab_top_bottom",
-    "top": "turned_remaster:blocks/lab_top_bottom",
-    "side": "turned_remaster:blocks/lab_top_bottom"
-  }
-}

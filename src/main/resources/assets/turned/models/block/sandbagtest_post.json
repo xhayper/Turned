@@ -1,7 +1,0 @@
-{
-  "parent": "block/template_wall_post",
-  "textures": {
-    "wall": "turned_remaster:blocks/sandbag",
-    "particle": "turned_remaster:blocks/sandbag"
-  }
-}
