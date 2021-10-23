@@ -1,6 +1,5 @@
 package com.changedmc.turned.capability.transfur;
 
-import com.changedmc.turned.Main;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.nbt.INBT;
 import net.minecraft.util.Direction;
@@ -13,10 +12,7 @@ public class TransfurCapability {
     @CapabilityInject(ITransfurCapability.class)
     public static Capability<ITransfurCapability> TRANSFUR_CAPABILITY = null;
 
-    public static void register() {
-        Main.LOGGER.info("Registering capability storage");
-        CapabilityManager.INSTANCE.register(ITransfurCapability.class, new TransfurStorage(), DefaultTransfurCapability::new);
-    }
+    public static void register() { CapabilityManager.INSTANCE.register(ITransfurCapability.class, new TransfurStorage(), DefaultTransfurCapability::new); }
 
     public static class TransfurStorage implements Capability.IStorage<ITransfurCapability> {
         @Nullable

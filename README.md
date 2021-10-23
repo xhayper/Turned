@@ -7,17 +7,13 @@ The mod focuses on having mostly transform-based mechanics and various NPCs/Mons
 
 | Task | Status | Taken By |
 | :---: | :---: | :---: |
-| Fix code structure | Y | - |
 | Port code [1] | N | - |
 | Rewrite transfur code [2] | N | - |
-| Include network code [3] | N | - |
-| Fix Capability | W | hayper |
 
-Y - Done, W - Working on it, N - Will get to it
+W - Working on it, N - Will get to it
 
 [1] - Finish porting and removing unused imports/implementations and replace with the new ones<br>
 [2] - Rewriting the transfur code that Block was working on<br>
-[3] - Include the networking code Sasha was working on<br>
 
 ## Note
 
