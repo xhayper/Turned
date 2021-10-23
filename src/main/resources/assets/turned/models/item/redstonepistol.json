@@ -1,0 +1,7 @@
+{
+  "parent": "turned_remaster:custom/redstone_pistol",
+  "textures": {
+    "0": "turned_remaster:blocks/redstone_pistol_texture",
+    "particle": "turned_remaster:items/redstone_pistol"
+  }
+}

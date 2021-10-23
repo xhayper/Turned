@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "turned_remaster:blocks/cell_shaded_lab_block",
+    "top": "turned_remaster:blocks/cell_shaded_lab_block",
+    "side": "turned_remaster:blocks/cell_shaded_lab_block"
+  }
+}

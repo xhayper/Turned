@@ -1,0 +1,7 @@
+{
+  "parent": "turned_remaster:custom/shotgun",
+  "textures": {
+    "0": "turned_remaster:blocks/shotgun_texture",
+    "particle": "turned_remaster:items/mossberg"
+  }
+}

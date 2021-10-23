@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "turned_remaster:block/wallmonitor"
+    },
+    "facing=east": {
+      "model": "turned_remaster:block/wallmonitor",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "turned_remaster:block/wallmonitor",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "turned_remaster:block/wallmonitor",
+      "y": 270
+    }
+  }
+}

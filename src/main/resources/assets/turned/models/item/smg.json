@@ -1,0 +1,7 @@
+{
+  "parent": "turned_remaster:custom/smg",
+  "textures": {
+    "0": "turned_remaster:blocks/texture_smg",
+    "particle": "turned_remaster:items/pistol"
+  }
+}

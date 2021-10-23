@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "turned_remaster:items/green_crystal_shovel"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "turned_remaster:block/computer"
+    },
+    "facing=east": {
+      "model": "turned_remaster:block/computer",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "turned_remaster:block/computer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "turned_remaster:block/computer",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "turned_remaster:custom/broken_revolver",
+  "textures": {
+    "2": "turned_remaster:blocks/broken_revolver_texture",
+    "particle": "turned_remaster:items/mathlock_pistol"
+  }
+}

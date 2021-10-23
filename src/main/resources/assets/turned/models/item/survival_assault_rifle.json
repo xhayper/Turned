@@ -1,0 +1,8 @@
+{
+  "parent": "turned_remaster:custom/akm",
+  "textures": {
+    "0": "turned_remaster:blocks/akm_texture",
+    "1": "turned_remaster:blocks/akm_stock_texture",
+    "particle": "turned_remaster:items/cartoony_ak47"
+  }
+}

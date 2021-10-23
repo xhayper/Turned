@@ -1,0 +1,12 @@
+{
+  "parent": "turned_remaster:custom/lab",
+  "textures": {
+    "all": "turned_remaster:blocks/science_icon",
+    "particle": "turned_remaster:blocks/science_icon",
+    "0": "turned_remaster:blocks/animation",
+    "1": "turned_remaster:blocks/finaljar",
+    "2": "turned_remaster:blocks/firstbottle",
+    "3": "turned_remaster:blocks/finaljaremptypart",
+    "4": "turned_remaster:blocks/glasswarestand"
+  }
+}

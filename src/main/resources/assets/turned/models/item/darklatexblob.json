@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "turned_remaster:blocks/dark_latex_blob_plant"
+  }
+}

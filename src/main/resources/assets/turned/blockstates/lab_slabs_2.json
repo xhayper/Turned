@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "turned_remaster:block/lab_slabs_2"
+    },
+    "type=top": {
+      "model": "turned_remaster:block/lab_slabs_2_top"
+    },
+    "type=double": {
+      "model": "turned_remaster:block/lab_slabs_2_full"
+    }
+  }
+}

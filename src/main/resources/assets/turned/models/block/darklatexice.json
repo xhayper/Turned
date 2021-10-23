@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "turned_remaster:blocks/dark_latex_ice",
+    "up": "turned_remaster:blocks/dark_latex_ice",
+    "north": "turned_remaster:blocks/dark_latex_ice",
+    "east": "turned_remaster:blocks/dark_latex_ice",
+    "south": "turned_remaster:blocks/dark_latex_ice",
+    "west": "turned_remaster:blocks/dark_latex_ice",
+    "particle": "turned_remaster:blocks/dark_latex_ice"
+  }
+}

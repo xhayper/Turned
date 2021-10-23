@@ -1,0 +1,7 @@
+{
+  "parent": "turned_remaster:custom/flare_gun",
+  "textures": {
+    "0": "turned_remaster:blocks/flaregun_texture",
+    "particle": "turned_remaster:items/m1911"
+  }
+}

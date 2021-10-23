@@ -1,0 +1,8 @@
+{
+  "parent": "turned_remaster:custom/laptop",
+  "textures": {
+    "all": "turned_remaster:blocks/laptop_texture_turned_on",
+    "particle": "turned_remaster:blocks/laptop_texture_turned_on",
+    "0": "turned_remaster:blocks/laptop_texture_turned_on"
+  }
+}

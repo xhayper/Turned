@@ -17,9 +17,6 @@ public class SyncTransfurCapability {
     public int transfurType;
     public boolean isTransfured;
 
-    public SyncTransfurCapability() {
-    }
-
     public SyncTransfurCapability(int entityID, int transfurType, boolean isTransfured) {
         this.entityID = entityID;
         this.transfurType = transfurType;

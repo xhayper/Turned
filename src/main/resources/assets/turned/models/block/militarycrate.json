@@ -1,0 +1,8 @@
+{
+  "parent": "turned_remaster:custom/crate",
+  "textures": {
+    "all": "turned_remaster:blocks/box_side_1",
+    "particle": "turned_remaster:blocks/box_side_1",
+    "0": "turned_remaster:blocks/military_crate"
+  }
+}

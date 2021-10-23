@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "turned_remaster:blocks/dark_latex_goo_block",
+    "particle": "turned_remaster:blocks/dark_latex_goo_block"
+  }
+}

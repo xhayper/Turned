@@ -1,0 +1,7 @@
+{
+  "parent": "turned_remaster:custom/sniper_rifle",
+  "textures": {
+    "0": "turned_remaster:blocks/sniper_rifle_texture",
+    "particle": "turned_remaster:items/rifle"
+  }
+}

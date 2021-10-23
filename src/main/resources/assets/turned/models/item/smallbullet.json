@@ -1,0 +1,7 @@
+{
+  "parent": "turned_remaster:custom/small_bullet",
+  "textures": {
+    "0": "turned_remaster:blocks/bullet_texture_small",
+    "particle": "turned_remaster:items/bullet"
+  }
+}

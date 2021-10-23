@@ -14,6 +14,8 @@ import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.util.LazyOptional;
+
+import javax.annotation.Nonnull;
 import java.util.Optional;
 
 public class LatexEntity extends CreatureEntity {
@@ -22,8 +24,8 @@ public class LatexEntity extends CreatureEntity {
     public boolean isTransfured;
     public int transfurType;
 
-    protected LatexEntity(EntityType<? extends LatexEntity> p_i48553_1_, World p_i48553_2_) {
-        super(p_i48553_1_, p_i48553_2_);
+    protected LatexEntity(EntityType<? extends LatexEntity> entityType, World level) {
+        super(entityType, level);
     }
 
     @Override
@@ -46,8 +48,7 @@ public class LatexEntity extends CreatureEntity {
         this.targetSelector.addGoal(1, (new HurtByTargetGoal(this)).setAlertOthers(LatexEntity.class));
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, 10, true, false, livingEntity -> {
             Optional<ITransfurCapability> optional = livingEntity.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).resolve();
-            if (optional.isPresent()) return !optional.get().isTransfured();
-            return true;
+            return optional.map(iTransfurCapability -> !iTransfurCapability.isTransfured()).orElse(true);
         }));
     }
 
@@ -57,7 +58,7 @@ public class LatexEntity extends CreatureEntity {
     }
 
     @Override
-    public void setBaby(boolean p_82227_1_) {
+    public void setBaby(boolean isBaby) {
     }
 
     protected void defineSynchedData() {
@@ -66,19 +67,19 @@ public class LatexEntity extends CreatureEntity {
         this.getEntityData().define(DATA_TRANSFUR_TYPE_ID, 0);
     }
 
-    public void addAdditionalSaveData(CompoundNBT compoundNBT) {
+    public void addAdditionalSaveData(@Nonnull CompoundNBT compoundNBT) {
         super.addAdditionalSaveData(compoundNBT);
         compoundNBT.putBoolean("isTransfured", this.isTransfured);
         compoundNBT.putInt("transfurType", this.transfurType);
     }
 
-    public void readAdditionalSaveData(CompoundNBT compoundNBT) {
+    public void readAdditionalSaveData(@Nonnull CompoundNBT compoundNBT) {
         super.readAdditionalSaveData(compoundNBT);
         this.isTransfured = compoundNBT.getBoolean("isTransfured");
         this.transfurType = compoundNBT.getInt("transfurType");
     }
 
-    public void killed(ServerWorld p_241847_1_, LivingEntity p_241847_2_) {
+    public void killed(ServerWorld serverWorld, LivingEntity livingEntity) {
         //when they kill someone
         //TODO: Insert transfur code
     }

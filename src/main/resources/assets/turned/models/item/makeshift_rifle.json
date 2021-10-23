@@ -1,0 +1,7 @@
+{
+  "parent": "turned_remaster:custom/makeshift_rifle",
+  "textures": {
+    "1": "turned_remaster:blocks/makeshift_rifle_texture",
+    "particle": "turned_remaster:items/cartoony_ak47"
+  }
+}

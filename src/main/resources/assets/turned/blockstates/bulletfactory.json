@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "turned_remaster:block/bulletfactory"
+    },
+    "facing=east": {
+      "model": "turned_remaster:block/bulletfactory",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "turned_remaster:block/bulletfactory",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "turned_remaster:block/bulletfactory",
+      "y": 270
+    }
+  }
+}

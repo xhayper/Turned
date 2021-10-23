@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "turned_remaster:blocks/elevator",
+    "up": "turned_remaster:blocks/elevator",
+    "north": "turned_remaster:blocks/elevator_down",
+    "east": "turned_remaster:blocks/elevator_down",
+    "south": "turned_remaster:blocks/elevator_down",
+    "west": "turned_remaster:blocks/elevator_down",
+    "particle": "turned_remaster:blocks/elevator"
+  }
+}

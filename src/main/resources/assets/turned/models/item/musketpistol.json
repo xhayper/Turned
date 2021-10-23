@@ -1,0 +1,8 @@
+{
+  "parent": "turned_remaster:custom/musket_pistol",
+  "textures": {
+    "0": "turned_remaster:blocks/musket_pistol",
+    "1": "turned_remaster:blocks/musket_mechanism",
+    "particle": "turned_remaster:items/mathlock_pistol"
+  }
+}

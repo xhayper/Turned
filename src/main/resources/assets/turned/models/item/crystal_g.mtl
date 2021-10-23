@@ -1,0 +1,21 @@
+newmtl Material
+Ka 1.0 1.0 1.0
+Kd 0.64 0.64 0.64
+Ks 0.5 0.5 0.5
+map_Kd turned_remaster:blocks/crystal
+Ns 96.07843
+d 1.0
+newmtl None.002
+Ka 0.8 0.8 0.8
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+map_Kd turned_remaster:blocks/crystal
+Ns 500.0
+d 1.0
+newmtl None.003
+Ka 0.8 0.8 0.8
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+map_Kd turned_remaster:blocks/crystal
+Ns 500.0
+d 1.0

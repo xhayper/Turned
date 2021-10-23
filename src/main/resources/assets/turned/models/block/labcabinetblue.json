@@ -1,0 +1,8 @@
+{
+  "parent": "turned_remaster:custom/cabinet",
+  "textures": {
+    "all": "turned_remaster:blocks/blue",
+    "particle": "turned_remaster:blocks/blue",
+    "0": "turned_remaster:blocks/blue_cabinet_texture"
+  }
+}

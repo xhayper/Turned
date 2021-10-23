@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "turned_remaster:block/blackgooslab"
+    },
+    "type=top": {
+      "model": "turned_remaster:block/blackgooslab_top"
+    },
+    "type=double": {
+      "model": "turned_remaster:block/blackgooslab_full"
+    }
+  }
+}

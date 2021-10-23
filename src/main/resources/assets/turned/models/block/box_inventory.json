@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "turned_remaster:blocks/box_down",
+    "up": "turned_remaster:blocks/box_up",
+    "north": "turned_remaster:blocks/box_side_3",
+    "east": "turned_remaster:blocks/box_side_1",
+    "south": "turned_remaster:blocks/box_side_3",
+    "west": "turned_remaster:blocks/box_side_2",
+    "particle": "turned_remaster:blocks/box_down"
+  }
+}

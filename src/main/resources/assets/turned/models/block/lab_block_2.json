@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "turned_remaster:blocks/cell_shaded_lab_block",
+    "up": "turned_remaster:blocks/cell_shaded_lab_block",
+    "north": "turned_remaster:blocks/cell_shaded_lab_block",
+    "east": "turned_remaster:blocks/cell_shaded_lab_block",
+    "south": "turned_remaster:blocks/cell_shaded_lab_block",
+    "west": "turned_remaster:blocks/cell_shaded_lab_block",
+    "particle": "turned_remaster:blocks/cell_shaded_lab_block"
+  }
+}

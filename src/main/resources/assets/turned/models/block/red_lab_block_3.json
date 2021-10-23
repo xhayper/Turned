@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "turned_remaster:blocks/screen",
+    "up": "turned_remaster:blocks/red_lab_block_variant_3_top",
+    "north": "turned_remaster:blocks/red_lab_block_variant_3",
+    "east": "turned_remaster:blocks/red_lab_block_variant_3",
+    "south": "turned_remaster:blocks/red_lab_block_variant_3",
+    "west": "turned_remaster:blocks/red_lab_block_variant_3",
+    "particle": "turned_remaster:blocks/screen"
+  }
+}

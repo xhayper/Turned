@@ -1,5 +1,6 @@
 package com.changedmc.turned.networking;
 
+import com.changedmc.turned.Main;
 import com.changedmc.turned.networking.packet.server.SyncTransfurCapability;
 import com.changedmc.turned.util.Reference;
 import net.minecraft.network.PacketBuffer;
@@ -20,10 +21,12 @@ public class NetworkManager {
             PROTOCOL_VERSION::equals,
             PROTOCOL_VERSION::equals
     );
+
     // client = Client -> Server
     // server = Server -> Client
 
     public static void registerPackets() {
+        Main.LOGGER.info("Registering Packet");
         registerPacket(SyncTransfurCapability.class, SyncTransfurCapability::encode, SyncTransfurCapability::decode, SyncTransfurCapability::handle);
     }
 

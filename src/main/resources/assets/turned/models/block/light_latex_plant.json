@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "turned_remaster:blocks/white_latex_plant",
+    "particle": "turned_remaster:blocks/white_latex_plant"
+  }
+}

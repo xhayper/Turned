@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "turned_remaster:block/bunkerblock"
+    },
+    "facing=east": {
+      "model": "turned_remaster:block/bunkerblock",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "turned_remaster:block/bunkerblock",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "turned_remaster:block/bunkerblock",
+      "y": 270
+    }
+  }
+}

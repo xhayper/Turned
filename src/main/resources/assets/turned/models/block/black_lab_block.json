@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "turned_remaster:blocks/blacklab2",
+    "up": "turned_remaster:blocks/blacklab2",
+    "north": "turned_remaster:blocks/blacklab2",
+    "east": "turned_remaster:blocks/blacklab2",
+    "south": "turned_remaster:blocks/blacklab2",
+    "west": "turned_remaster:blocks/blacklab2",
+    "particle": "turned_remaster:blocks/blacklab2"
+  }
+}

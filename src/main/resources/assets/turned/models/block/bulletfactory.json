@@ -1,0 +1,8 @@
+{
+  "parent": "turned_remaster:custom/bullet_factory",
+  "textures": {
+    "all": "turned_remaster:blocks/bullet_factory_front",
+    "particle": "turned_remaster:blocks/bullet_factory_front",
+    "0": "turned_remaster:blocks/bullet_factory"
+  }
+}

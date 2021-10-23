@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "turned_remaster:blocks/reinforced_bunker_top_bottom",
+    "up": "turned_remaster:blocks/reinforced_bunker_top_bottom",
+    "north": "turned_remaster:blocks/reinforced_bunker_door",
+    "east": "turned_remaster:blocks/reinforced_bunker_door",
+    "south": "turned_remaster:blocks/reinforced_bunker_door",
+    "west": "turned_remaster:blocks/reinforced_bunker_door",
+    "particle": "turned_remaster:blocks/reinforced_bunker_top_bottom"
+  }
+}

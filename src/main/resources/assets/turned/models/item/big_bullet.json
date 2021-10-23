@@ -1,0 +1,7 @@
+{
+  "parent": "turned_remaster:custom/big_bullet",
+  "textures": {
+    "0": "turned_remaster:blocks/high_calibrer_bullet",
+    "particle": "turned_remaster:items/bullet"
+  }
+}
