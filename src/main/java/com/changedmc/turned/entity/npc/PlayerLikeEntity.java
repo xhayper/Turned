@@ -15,14 +15,14 @@ import net.minecraft.world.World;
 
 import javax.annotation.Nonnull;
 
-public class NPCEntity extends CreatureEntity {
+public class PlayerLikeEntity extends CreatureEntity {
 
-    public NPCEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
+    public PlayerLikeEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
         super(type, worldIn);
     }
 
     public static AttributeModifierMap.MutableAttribute createAttributes() {
-        return LivingEntity.createLivingAttributes().add(Attributes.FOLLOW_RANGE, 1.0F).add(Attributes.ATTACK_DAMAGE, 1.0D).add(Attributes.MOVEMENT_SPEED, 0.1F).add(Attributes.ATTACK_SPEED).add(Attributes.LUCK).add(net.minecraftforge.common.ForgeMod.REACH_DISTANCE.get()).add(Attributes.ATTACK_KNOCKBACK);
+        return LivingEntity.createLivingAttributes().add(Attributes.FOLLOW_RANGE, 40.0D).add(Attributes.ATTACK_DAMAGE, 1.0D).add(Attributes.MOVEMENT_SPEED, 0.1F).add(Attributes.ATTACK_SPEED).add(Attributes.LUCK).add(net.minecraftforge.common.ForgeMod.REACH_DISTANCE.get()).add(Attributes.ATTACK_KNOCKBACK);
     }
 
     @Override
@@ -30,6 +30,8 @@ public class NPCEntity extends CreatureEntity {
         this.goalSelector.addGoal(1, new LookAtGoal(this, PlayerEntity.class, 8.0F));
         this.goalSelector.addGoal(2, new LookRandomlyGoal(this));
         this.goalSelector.addGoal(3, new RandomWalkingGoal(this, 1.2d));
+        this.goalSelector.addGoal(4, new PanicGoal(this, 1.2d));
+        this.goalSelector.addGoal(5, new HurtByTargetGoal(this).setAlertOthers(PlayerLikeEntity.class));
     }
 
     @Nonnull

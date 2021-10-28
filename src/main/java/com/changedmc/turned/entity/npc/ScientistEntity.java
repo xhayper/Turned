@@ -11,7 +11,7 @@ import net.minecraft.world.World;
 import javax.annotation.Nonnull;
 import java.util.Random;
 
-public class ScientistEntity extends NPCEntity {
+public class ScientistEntity extends PlayerLikeEntity {
     private static final DataParameter<Boolean> DATA_MOB_EVIL = EntityDataManager.defineId(ScientistEntity.class, DataSerializers.BOOLEAN);
 
     public ScientistEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
