@@ -2,11 +2,13 @@ package com.changedmc.turned.entity.npc;
 
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.world.World;
 
+import javax.annotation.Nonnull;
 import java.util.Random;
 
 public class ScientistEntity extends NPCEntity {
@@ -14,6 +16,16 @@ public class ScientistEntity extends NPCEntity {
 
     public ScientistEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
         super(type, worldIn);
+    }
+
+    public void addAdditionalSaveData(@Nonnull CompoundNBT compoundNBT) {
+        super.addAdditionalSaveData(compoundNBT);
+        compoundNBT.putBoolean("IsEvil", this.isEvil());
+    }
+
+    public void readAdditionalSaveData(@Nonnull CompoundNBT compoundNBT) {
+        super.readAdditionalSaveData(compoundNBT);
+        this.entityData.set(DATA_MOB_EVIL, compoundNBT.getBoolean("IsEvil"));
     }
 
     @Override
