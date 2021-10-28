@@ -1,6 +1,6 @@
-package com.changedmc.turned.client.render;
+package com.changedmc.turned.client.render.latex;
 
-import com.changedmc.turned.client.model.DarkLatexSnowLeopardModel;
+import com.changedmc.turned.client.model.latex.DarkLatexSnowLeopardModel;
 import com.changedmc.turned.entity.latex.DarkLatexSnowLeopardEntity;
 import com.changedmc.turned.util.Reference;
 import net.minecraft.client.renderer.entity.EntityRendererManager;

@@ -2,11 +2,11 @@ package com.changedmc.turned.event;
 
 import com.changedmc.turned.Main;
 import com.changedmc.turned.capability.transfur.TransfurCapability;
-import com.changedmc.turned.client.render.DarkLatexMaleRenderer;
-import com.changedmc.turned.client.render.DarkLatexSnowLeopardRenderer;
+import com.changedmc.turned.client.render.latex.DarkLatexFoxRenderer;
+import com.changedmc.turned.client.render.latex.DarkLatexSnowLeopardRenderer;
 import com.changedmc.turned.config.CommonConfig;
 import com.changedmc.turned.entity.TurnedEntityType;
-import com.changedmc.turned.entity.latex.DarkLatexMaleEntity;
+import com.changedmc.turned.entity.latex.DarkLatexFoxEntity;
 import com.changedmc.turned.entity.latex.DarkLatexSnowLeopardEntity;
 import com.changedmc.turned.networking.NetworkManager;
 import com.changedmc.turned.util.Reference;
@@ -28,7 +28,7 @@ public class EventLifecycle {
         NetworkManager.registerPackets();
         DeferredWorkQueue.runLater(() -> {
             if (CommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Dark Latex Male Attribute");
-            GlobalEntityTypeAttributes.put(TurnedEntityType.DARK_LATEX_MALE.get(), DarkLatexMaleEntity.createAttributes().build());
+            GlobalEntityTypeAttributes.put(TurnedEntityType.DARK_LATEX_FOX.get(), DarkLatexFoxEntity.createAttributes().build());
             if (CommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Dark Latex Snow Leopard Attribute");
             GlobalEntityTypeAttributes.put(TurnedEntityType.DARK_LATEX_SNOW_LEOPARD.get(), DarkLatexSnowLeopardEntity.createAttributes().build());
         });
@@ -38,7 +38,7 @@ public class EventLifecycle {
     @SubscribeEvent
     public static void onFMLClientSetupEvent(FMLClientSetupEvent event) {
         if (CommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Dark Latex Male Entity");
-        RenderingRegistry.registerEntityRenderingHandler(TurnedEntityType.DARK_LATEX_MALE.get(), DarkLatexMaleRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(TurnedEntityType.DARK_LATEX_FOX.get(), DarkLatexFoxRenderer::new);
         if (CommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Dark Latex Snow Leopard Entity");
         RenderingRegistry.registerEntityRenderingHandler(TurnedEntityType.DARK_LATEX_SNOW_LEOPARD.get(), DarkLatexSnowLeopardRenderer::new);
     }

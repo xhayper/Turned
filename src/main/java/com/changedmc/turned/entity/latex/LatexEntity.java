@@ -35,7 +35,7 @@ public class LatexEntity extends CreatureEntity {
                 return true;
             }));
         }
-        this.targetSelector.addGoal(6, (new HurtByTargetGoal(this)).setAlertOthers(DarkLatexMaleEntity.class));
+        this.targetSelector.addGoal(6, (new HurtByTargetGoal(this)).setAlertOthers(DarkLatexFoxEntity.class));
     }
 
     @Nonnull

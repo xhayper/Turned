@@ -1,4 +1,4 @@
-package com.changedmc.turned.client.model;
+package com.changedmc.turned.client.model.latex;
 
 import com.changedmc.turned.entity.latex.DarkLatexSnowLeopardEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
