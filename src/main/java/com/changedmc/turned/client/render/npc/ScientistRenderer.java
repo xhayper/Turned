@@ -17,6 +17,6 @@ public class ScientistRenderer extends BipedRenderer<ScientistEntity, BipedModel
     @Nonnull
     @Override
     public ResourceLocation getTextureLocation(@Nonnull ScientistEntity scientistEntity) {
-        return new ResourceLocation(Reference.MOD_ID, "textures/entity/scientist.png");
+        return new ResourceLocation(Reference.MOD_ID, scientistEntity.isEvil() ? "textures/entity/evil_scientist.png" : "textures/entity/scientist.png");
     }
 }
