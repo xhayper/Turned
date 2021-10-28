@@ -53,7 +53,7 @@ public class LatexEntity extends CreatureEntity {
         return SoundEvents.HOSTILE_SPLASH;
     }
 
-    protected SoundEvent getHurtSound(DamageSource damageSource) {
+    protected SoundEvent getHurtSound(@Nonnull DamageSource damageSource) {
         return SoundEvents.HOSTILE_HURT;
     }
 

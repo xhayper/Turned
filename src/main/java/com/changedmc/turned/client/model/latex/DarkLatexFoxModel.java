@@ -1,10 +1,12 @@
 package com.changedmc.turned.client.model.latex;
 
 import com.changedmc.turned.entity.latex.DarkLatexFoxEntity;
+import com.changedmc.turned.entity.latex.DarkLatexSnowLeopardEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
+import net.minecraft.util.math.MathHelper;
 
 import javax.annotation.Nonnull;
 
@@ -147,7 +149,12 @@ public class DarkLatexFoxModel<T extends DarkLatexFoxEntity> extends EntityModel
     }
 
     @Override
-    public void setupAnim(@Nonnull T p_225597_1_, float p_225597_2_, float p_225597_3_, float p_225597_4_, float p_225597_5_, float p_225597_6_) {
-
+    public void setupAnim(@Nonnull DarkLatexFoxEntity darkLatexFox, float f, float f1, float f2, float f3, float f4) {
+        this.RightArm.xRot = MathHelper.cos(f * 0.6662F + (float) Math.PI) * f1;
+        this.LeftLeg.xRot = MathHelper.cos(f) * -1.0F * f1;
+        this.Head.yRot = f3 / (180F / (float) Math.PI);
+        this.Head.xRot = f4 / (180F / (float) Math.PI);
+        this.LeftArm.xRot = MathHelper.cos(f * 0.6662F) * f1;
+        this.RightLeg.xRot = MathHelper.cos(f) * 1.0F * f1;
     }
 }

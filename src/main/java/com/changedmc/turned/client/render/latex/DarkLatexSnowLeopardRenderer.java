@@ -13,6 +13,7 @@ public class DarkLatexSnowLeopardRenderer extends MobRenderer<DarkLatexSnowLeopa
         super(rendererManager, new DarkLatexSnowLeopardModel<>(), 0.7F);
     }
 
+    @Nonnull
     @Override
     public ResourceLocation getTextureLocation(@Nonnull DarkLatexSnowLeopardEntity darkLatexSnowLeopardEntity) {
         return new ResourceLocation(Reference.MOD_ID, "textures/entity/dark_latex_snow_leopard.png");

@@ -7,6 +7,4 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class TurnedItem {
     public static DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Reference.MOD_ID);
-
-
 }

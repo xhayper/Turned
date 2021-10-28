@@ -13,6 +13,7 @@ public class DarkLatexFoxRenderer extends MobRenderer<DarkLatexFoxEntity, DarkLa
         super(rendererManager, new DarkLatexFoxModel<>(), 0.7F);
     }
 
+    @Nonnull
     @Override
     public ResourceLocation getTextureLocation(@Nonnull DarkLatexFoxEntity darkLatexFoxEntity) {
         return new ResourceLocation(Reference.MOD_ID, "textures/entity/dark_latex_fox.png");
