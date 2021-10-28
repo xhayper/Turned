@@ -1,7 +1,9 @@
 package com.changedmc.turned.entity.npc;
 
+import com.changedmc.turned.entity.latex.LatexEntity;
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.ai.goal.LookAtGoal;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
@@ -16,6 +18,12 @@ public class ScientistEntity extends PlayerLikeEntity {
 
     public ScientistEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
         super(type, worldIn);
+    }
+
+    protected void registerGoals() {
+        super.registerGoals();
+        this.goalSelector.addGoal(8, new LookAtGoal(this, ScientistEntity.class, 8.0F));
+        this.goalSelector.addGoal(8, new LookAtGoal(this, LatexEntity.class, 8.0F));
     }
 
     public void addAdditionalSaveData(@Nonnull CompoundNBT compoundNBT) {
