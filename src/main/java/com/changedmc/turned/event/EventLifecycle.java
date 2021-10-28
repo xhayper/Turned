@@ -29,9 +29,11 @@ public class EventLifecycle {
         if (CommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Network Packets");
         NetworkManager.registerPackets();
         DeferredWorkQueue.runLater(() -> {
-            if (CommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Dark Latex Fox Attribute");
+            if (CommonConfig.debug.get() || Reference.DEBUG_BUILD)
+                Main.LOGGER.debug("Registering Dark Latex Fox Attribute");
             GlobalEntityTypeAttributes.put(TurnedEntityType.DARK_LATEX_FOX.get(), DarkLatexFoxEntity.createAttributes().build());
-            if (CommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Dark Latex Snow Leopard Attribute");
+            if (CommonConfig.debug.get() || Reference.DEBUG_BUILD)
+                Main.LOGGER.debug("Registering Dark Latex Snow Leopard Attribute");
             GlobalEntityTypeAttributes.put(TurnedEntityType.DARK_LATEX_SNOW_LEOPARD.get(), DarkLatexSnowLeopardEntity.createAttributes().build());
             if (CommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Scientist Attribute");
             GlobalEntityTypeAttributes.put(TurnedEntityType.SCIENTIST.get(), ScientistEntity.createAttributes().build());
@@ -43,7 +45,8 @@ public class EventLifecycle {
     public static void onFMLClientSetupEvent(FMLClientSetupEvent event) {
         if (CommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Dark Latex Fox Entity");
         RenderingRegistry.registerEntityRenderingHandler(TurnedEntityType.DARK_LATEX_FOX.get(), DarkLatexFoxRenderer::new);
-        if (CommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Dark Latex Snow Leopard Entity");
+        if (CommonConfig.debug.get() || Reference.DEBUG_BUILD)
+            Main.LOGGER.debug("Registering Dark Latex Snow Leopard Entity");
         RenderingRegistry.registerEntityRenderingHandler(TurnedEntityType.DARK_LATEX_SNOW_LEOPARD.get(), DarkLatexSnowLeopardRenderer::new);
         if (CommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Scientist Entity");
         RenderingRegistry.registerEntityRenderingHandler(TurnedEntityType.SCIENTIST.get(), ScientistRenderer::new);

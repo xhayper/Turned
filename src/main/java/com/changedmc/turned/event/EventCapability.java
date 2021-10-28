@@ -14,7 +14,8 @@ public class EventCapability {
     @SubscribeEvent
     public static void onAttachCapabilitiesEvent(AttachCapabilitiesEvent<Entity> event) {
         if (!((event.getObject() instanceof PlayerEntity))) return;
-        if (CommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Attaching Transfur Capability to an Entity");
+        if (CommonConfig.debug.get() || Reference.DEBUG_BUILD)
+            Main.LOGGER.debug("Attaching Transfur Capability to an Entity");
         TransfurCapabilityProvider provider = new TransfurCapabilityProvider();
         event.addCapability(new ResourceLocation(Reference.MOD_ID, "transfur"), provider);
         event.addListener(provider::invalidate);

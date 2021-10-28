@@ -6,13 +6,16 @@ import net.minecraft.util.Direction;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.CapabilityInject;
 import net.minecraftforge.common.capabilities.CapabilityManager;
+
 import javax.annotation.Nullable;
 
 public class TransfurCapability {
     @CapabilityInject(ITransfurCapability.class)
     public static Capability<ITransfurCapability> TRANSFUR_CAPABILITY = null;
 
-    public static void register() { CapabilityManager.INSTANCE.register(ITransfurCapability.class, new TransfurStorage(), DefaultTransfurCapability::new); }
+    public static void register() {
+        CapabilityManager.INSTANCE.register(ITransfurCapability.class, new TransfurStorage(), DefaultTransfurCapability::new);
+    }
 
     public static class TransfurStorage implements Capability.IStorage<ITransfurCapability> {
         @Nullable

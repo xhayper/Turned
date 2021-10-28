@@ -11,7 +11,7 @@ import javax.annotation.Nonnull;
 
 public class ScientistRenderer extends BipedRenderer<ScientistEntity, BipedModel<ScientistEntity>> {
     public ScientistRenderer(EntityRendererManager rendererManager) {
-        super(rendererManager,  new BipedModel(0), 0.7F);
+        super(rendererManager, new BipedModel(0), 0.7F);
     }
 
     @Nonnull

@@ -132,7 +132,7 @@ public class DarkLatexFoxModel<T extends DarkLatexFoxEntity> extends EntityModel
     }
 
     @Override
-    public void renderToBuffer(@Nonnull MatrixStack matrixStack, @Nonnull IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha){
+    public void renderToBuffer(@Nonnull MatrixStack matrixStack, @Nonnull IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
         Head.render(matrixStack, buffer, packedLight, packedOverlay);
         Body.render(matrixStack, buffer, packedLight, packedOverlay);
         Tail.render(matrixStack, buffer, packedLight, packedOverlay);

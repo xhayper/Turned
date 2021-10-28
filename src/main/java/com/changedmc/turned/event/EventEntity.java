@@ -40,8 +40,9 @@ public class EventEntity {
         event.getEntity().getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent(iTransfurCapability -> {
             iTransfurCapability.setTransfured(!iTransfurCapability.isTransfured());
         });
-        if (CommonConfig.debug.get() || Reference.DEBUG_BUILD) event.getEntity().getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent(iTransfurCapability -> {
-            Main.LOGGER.debug(event.getEntity() + "'s isTransfured: " + iTransfurCapability.isTransfured());
-        });
+        if (CommonConfig.debug.get() || Reference.DEBUG_BUILD)
+            event.getEntity().getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent(iTransfurCapability -> {
+                Main.LOGGER.debug(event.getEntity() + "'s isTransfured: " + iTransfurCapability.isTransfured());
+            });
     }
 }

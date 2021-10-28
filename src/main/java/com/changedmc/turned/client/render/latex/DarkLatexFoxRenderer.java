@@ -6,6 +6,7 @@ import com.changedmc.turned.util.Reference;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.util.ResourceLocation;
+
 import javax.annotation.Nonnull;
 
 public class DarkLatexFoxRenderer extends MobRenderer<DarkLatexFoxEntity, DarkLatexFoxModel<DarkLatexFoxEntity>> {

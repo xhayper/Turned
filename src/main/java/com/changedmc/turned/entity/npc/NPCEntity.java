@@ -17,9 +17,13 @@ import javax.annotation.Nonnull;
 
 public class NPCEntity extends CreatureEntity {
 
-    public NPCEntity(EntityType<? extends CreatureEntity> type, World worldIn) { super(type, worldIn); }
+    public NPCEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
+        super(type, worldIn);
+    }
 
-    public static AttributeModifierMap.MutableAttribute createAttributes() { return LivingEntity.createLivingAttributes().add(Attributes.FOLLOW_RANGE, 1.0F).add(Attributes.ATTACK_DAMAGE, 1.0D).add(Attributes.MOVEMENT_SPEED, 0.1F).add(Attributes.ATTACK_SPEED).add(Attributes.LUCK).add(net.minecraftforge.common.ForgeMod.REACH_DISTANCE.get()).add(Attributes.ATTACK_KNOCKBACK); }
+    public static AttributeModifierMap.MutableAttribute createAttributes() {
+        return LivingEntity.createLivingAttributes().add(Attributes.FOLLOW_RANGE, 1.0F).add(Attributes.ATTACK_DAMAGE, 1.0D).add(Attributes.MOVEMENT_SPEED, 0.1F).add(Attributes.ATTACK_SPEED).add(Attributes.LUCK).add(net.minecraftforge.common.ForgeMod.REACH_DISTANCE.get()).add(Attributes.ATTACK_KNOCKBACK);
+    }
 
     @Override
     protected void registerGoals() {
@@ -52,5 +56,7 @@ public class NPCEntity extends CreatureEntity {
     }
 
     @Nonnull
-    protected SoundEvent getFallDamageSound(int fallDistance) { return fallDistance > 4 ? SoundEvents.PLAYER_BIG_FALL : SoundEvents.PLAYER_SMALL_FALL; }
+    protected SoundEvent getFallDamageSound(int fallDistance) {
+        return fallDistance > 4 ? SoundEvents.PLAYER_BIG_FALL : SoundEvents.PLAYER_SMALL_FALL;
+    }
 }

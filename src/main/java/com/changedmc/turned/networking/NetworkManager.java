@@ -9,12 +9,12 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.network.NetworkEvent;
 import net.minecraftforge.fml.network.NetworkRegistry;
 import net.minecraftforge.fml.network.simple.SimpleChannel;
+
 import java.util.function.BiConsumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
 public class NetworkManager {
-    private static int currentPacketId = 0;
     private static final String PROTOCOL_VERSION = "1";
     public static final SimpleChannel INSTANCE = NetworkRegistry.newSimpleChannel(
             new ResourceLocation(Reference.MOD_ID, "main"),
@@ -22,12 +22,14 @@ public class NetworkManager {
             PROTOCOL_VERSION::equals,
             PROTOCOL_VERSION::equals
     );
+    private static int currentPacketId = 0;
 
     // client = Client -> Server
     // server = Server -> Client
 
     public static void registerPackets() {
-        if (CommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering SyncTransfurCapability Packet");
+        if (CommonConfig.debug.get() || Reference.DEBUG_BUILD)
+            Main.LOGGER.debug("Registering SyncTransfurCapability Packet");
         registerPacket(SyncTransfurCapability.class, SyncTransfurCapability::encode, SyncTransfurCapability::decode, SyncTransfurCapability::handle);
     }
 

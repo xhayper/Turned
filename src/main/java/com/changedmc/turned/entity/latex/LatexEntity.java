@@ -11,12 +11,17 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.World;
+
 import javax.annotation.Nonnull;
 
 public class LatexEntity extends CreatureEntity {
-    public LatexEntity(EntityType<? extends CreatureEntity> type, World worldIn) { super(type, worldIn); }
+    public LatexEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
+        super(type, worldIn);
+    }
 
-    public static AttributeModifierMap.MutableAttribute createAttributes() { return MonsterEntity.createMonsterAttributes().add(Attributes.MAX_HEALTH, 10.0D).add(Attributes.FOLLOW_RANGE, 40.0D).add(Attributes.MOVEMENT_SPEED, 0.300045D).add(Attributes.ATTACK_DAMAGE, 2.0D).add(Attributes.ARMOR, 2.0D); }
+    public static AttributeModifierMap.MutableAttribute createAttributes() {
+        return MonsterEntity.createMonsterAttributes().add(Attributes.MAX_HEALTH, 10.0D).add(Attributes.FOLLOW_RANGE, 40.0D).add(Attributes.MOVEMENT_SPEED, 0.300045D).add(Attributes.ATTACK_DAMAGE, 2.0D).add(Attributes.ARMOR, 2.0D);
+    }
 
     @Override
     protected void registerGoals() {
@@ -62,5 +67,7 @@ public class LatexEntity extends CreatureEntity {
     }
 
     @Nonnull
-    protected SoundEvent getFallDamageSound(int fallDistance) { return fallDistance > 4 ? SoundEvents.HOSTILE_BIG_FALL : SoundEvents.HOSTILE_SMALL_FALL; }
+    protected SoundEvent getFallDamageSound(int fallDistance) {
+        return fallDistance > 4 ? SoundEvents.HOSTILE_BIG_FALL : SoundEvents.HOSTILE_SMALL_FALL;
+    }
 }
