@@ -3,5 +3,9 @@
   "entity.turned.latex": "Latex Creature",
   "entity.turned.dark_latex_fox": "Dark Latex Fox",
   "entity.turned.dark_latex_snow_leopard": "Dark Latex Snow Leopard",
-  "entity.turned.scientist": "Scientist"
+  "entity.turned.scientist": "Scientist",
+  "itemGroup.turned.utility": "Utility",
+  "item.turned.baton": "Baton",
+  "block.turned.dark_latex": "Dark Latex Block",
+  "block.turned.harmless_dark_latex": "Harmless Dark Latex Block"
 }

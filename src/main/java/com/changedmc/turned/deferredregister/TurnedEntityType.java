@@ -1,4 +1,4 @@
-package com.changedmc.turned.entity;
+package com.changedmc.turned.deferredregister;
 
 import com.changedmc.turned.entity.latex.DarkLatexFoxEntity;
 import com.changedmc.turned.entity.latex.DarkLatexSnowLeopardEntity;

@@ -6,7 +6,8 @@ import com.changedmc.turned.client.render.latex.DarkLatexFoxRenderer;
 import com.changedmc.turned.client.render.latex.DarkLatexSnowLeopardRenderer;
 import com.changedmc.turned.client.render.npc.ScientistRenderer;
 import com.changedmc.turned.config.CommonConfig;
-import com.changedmc.turned.entity.TurnedEntityType;
+import com.changedmc.turned.deferredregister.TurnedBiome;
+import com.changedmc.turned.deferredregister.TurnedEntityType;
 import com.changedmc.turned.entity.latex.DarkLatexFoxEntity;
 import com.changedmc.turned.entity.latex.DarkLatexSnowLeopardEntity;
 import com.changedmc.turned.entity.npc.ScientistEntity;
@@ -15,6 +16,7 @@ import com.changedmc.turned.util.Reference;
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -50,5 +52,7 @@ public class EventLifecycle {
         RenderingRegistry.registerEntityRenderingHandler(TurnedEntityType.DARK_LATEX_SNOW_LEOPARD.get(), DarkLatexSnowLeopardRenderer::new);
         if (CommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Scientist Entity");
         RenderingRegistry.registerEntityRenderingHandler(TurnedEntityType.SCIENTIST.get(), ScientistRenderer::new);
+        if (CommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Dark Latex Biome");
+        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(TurnedBiome.DARK_LATEX_KEY, 1));
     }
 }

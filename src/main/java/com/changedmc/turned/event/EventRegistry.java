@@ -1,3 +1,4 @@
 package com.changedmc.turned.event;
 
-public class EventRegistry { }
+public class EventRegistry {
+}
