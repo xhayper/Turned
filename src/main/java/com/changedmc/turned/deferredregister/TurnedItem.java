@@ -17,9 +17,6 @@ public class TurnedItem {
     public static final RegistryObject<Item> BATON = ITEMS.register("baton", BatonItem::new);
     public static final RegistryObject<Item> DARK_LATEX_AXE = ITEMS.register("dark_latex_axe", DarkLatexAxeItem::new);
     public static final RegistryObject<Item> DARK_LATEX_PICKAXE = ITEMS.register("dark_latex_pickaxe", DarkLatexPickaxeItem::new);
-
-
-    public static final RegistryObject<Item> DARK_LATEX_BLOCK = ITEMS.register("dark_latex", () -> new BlockItem(TurnedBlock.DARK_LATEX_BLOCK.get(), new Item.Properties().tab(TurnedItemGroup.Utility)));
-
-    public static final RegistryObject<Item> HARMLESS_DARK_LATEX_BLOCK = ITEMS.register("harmless_dark_latex", () -> new BlockItem(TurnedBlock.HARMLESS_DARK_LATEX_BLOCK.get(), new Item.Properties().tab(TurnedItemGroup.Utility)));
+    public static final RegistryObject<Item> DARK_LATEX_BLOCK = ITEMS.register("dark_latex", () -> new BlockItem(TurnedBlock.DARK_LATEX_BLOCK.get(), new Item.Properties().tab(TurnedItemGroup.BUILDING_BLOCKS)));
+    public static final RegistryObject<Item> HARMLESS_DARK_LATEX_BLOCK = ITEMS.register("harmless_dark_latex", () -> new BlockItem(TurnedBlock.HARMLESS_DARK_LATEX_BLOCK.get(), new Item.Properties().tab(TurnedItemGroup.BUILDING_BLOCKS)));
 }

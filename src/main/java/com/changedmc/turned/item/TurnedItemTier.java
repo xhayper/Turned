@@ -5,6 +5,8 @@ import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemTier;
 import net.minecraft.item.crafting.Ingredient;
 
+import javax.annotation.Nonnull;
+
 public enum TurnedItemTier implements IItemTier {
     DARK_LATEX(150, 12f, 5f, 2, 10, null); //(TurnedItem.DARK_LATEX_BLOCK.get())
 
@@ -27,31 +29,32 @@ public enum TurnedItemTier implements IItemTier {
 
     @Override
     public int getUses() {
-        return maxUses;
+        return this.maxUses;
     }
 
     @Override
     public float getSpeed(){
-        return speed;
+        return this.speed;
     }
 
     @Override
     public float getAttackDamageBonus() {
-        return attackDamage;
+        return this.attackDamage;
     }
 
     @Override
     public int getLevel() {
-        return level;
+        return this.level;
     }
 
     @Override
     public int getEnchantmentValue() {
-        return enchantmentValue;
-    }
-    @Override
-    public Ingredient getRepairIngredient() {
-        return null;
+        return this.enchantmentValue;
     }
 
+    @Nonnull
+    @Override
+    public Ingredient getRepairIngredient() {
+        return this.repairIngredient;
+    }
 }

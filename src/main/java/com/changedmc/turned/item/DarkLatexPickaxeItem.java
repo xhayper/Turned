@@ -12,7 +12,7 @@ public class DarkLatexPickaxeItem extends PickaxeItem {
             2,
             3f,
             new Item.Properties()
-                .tab(TurnedItemGroup.Utility)
+                .tab(TurnedItemGroup.COMBAT)
                 .rarity(Rarity.COMMON)
                 .durability(125)
                 .defaultDurability(125)
