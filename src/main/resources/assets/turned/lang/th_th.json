@@ -1,0 +1,14 @@
+{
+  "subtitles.entity.latex.transfur": "น้ำยางแปลงร่าง",
+  "entity.turned.latex": "สิงมีชิวิตน้ำยาง",
+  "entity.turned.dark_latex_fox": "สุนัขจ้งจอกน้ำยางดำ",
+  "entity.turned.dark_latex_snow_leopard": "เสือดาวหิมะน้ำยางดำ",
+  "entity.turned.scientist": "นักวิทยาศาสตร์",
+  "itemGroup.turned.building_blocks": "บล็อคก่อสร้าง",
+  "itemGroup.turned.combat": "การโจมตี",
+  "item.turned.baton": "กระบอง",
+  "block.turned.dark_latex": "บล็อคน้ำยางดำ",
+  "block.turned.harmless_dark_latex": "บล็อคน้ำยางดำที่ปลอดถัย",
+  "item.turned.dark_latex_axe": "ขวานน้ำยางดำ",
+  "item.turned.dark_latex_pickaxe": "เสียมน้ำยางดำ"
+}
