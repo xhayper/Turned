@@ -1,0 +1,33 @@
+{
+  "group": "turned",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    " 45",
+    "6  "
+  ],
+  "key": {
+    "0": {
+      "item": "turned:dark_latex_crystal"
+    },
+    "1": {
+      "item": "turned:dark_latex_crystal"
+    },
+    "2": {
+      "item": "turned:dark_latex_goo"
+    },
+    "4": {
+      "item": "turned:dark_latex_goo"
+    },
+    "5": {
+      "item": "turned:dark_latex_crystal"
+    },
+    "6": {
+      "item": "turned:dark_latex_goo"
+    }
+  },
+  "result": {
+    "item": "turned:dark_latex_scythe",
+    "count": 1
+  }
+}

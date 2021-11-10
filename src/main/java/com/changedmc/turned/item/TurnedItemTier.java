@@ -1,16 +1,12 @@
 package com.changedmc.turned.item;
 
-import com.changedmc.turned.deferredregister.TurnedItem;
 import net.minecraft.item.IItemTier;
-import net.minecraft.item.ItemTier;
 import net.minecraft.item.crafting.Ingredient;
 
 import javax.annotation.Nonnull;
 
 public enum TurnedItemTier implements IItemTier {
-    DARK_LATEX(150, 12f, 5f, 2, 10, null); //(TurnedItem.DARK_LATEX_BLOCK.get())
-
-    ;
+    DARK_LATEX(150, 12f, 5f, 2, 10, null); //(TurnedItem.DARK_LATEX_BLOCK.get());
     private final  int maxUses;
     private final float speed;
     private final float attackDamage;

@@ -1,7 +1,6 @@
 package com.changedmc.turned.client.model.latex;
 
 import com.changedmc.turned.entity.latex.DarkLatexFoxEntity;
-import com.changedmc.turned.entity.latex.DarkLatexSnowLeopardEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.model.EntityModel;
