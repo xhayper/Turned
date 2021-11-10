@@ -46,7 +46,18 @@ public class EventEntity {
 
     @SubscribeEvent
     public static void onRenderPlayerPre(RenderPlayerEvent.Pre event) {
-        PlayerEntity p = event.getPlayer();
-        if (p.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).orElseThrow(null).getTransfurType() == 1) { /*placeholder value check, write a different check later*/ }
+        PlayerEntity player = event.getPlayer();
+        player.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent(capability -> {
+            if (!capability.isTransfured()) return;
+            event.setCanceled(true);
+            switch(capability.getTransfurType()) {
+                case 1:
+                    // Placeholder
+                    break;
+                case 2:
+                    // Placeholder
+                    break;
+            }
+        });
     }
 }
