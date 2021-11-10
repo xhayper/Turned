@@ -9,7 +9,7 @@ public class ServerConfig {
     public static final ForgeConfigSpec.ConfigValue<Boolean> instantTransfur;
 
     static {
-        instantTransfur = BUILDER.define("instantTransfur", true);
+        instantTransfur = BUILDER.comment("Should the mod transfur you instantly when you stop on latex puddles?").define("instantTransfur", true);
         SPEC = BUILDER.build();
     }
 }

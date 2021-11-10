@@ -3,7 +3,7 @@ loaderVersion="[36,)"
 license="All rights reserved"
 [[mods]]
 modId="turned"
-version="1.4"
+version="1.4.0"
 displayName="Turned"
 logoFile="logo.png"
 credits="Thanks for this example mod goes to Java"
