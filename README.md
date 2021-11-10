@@ -15,6 +15,12 @@ W - Working on it, N - Will get to it
 [1] - Finish porting and removing unused imports/implementations and replace with the new ones<br>
 [2] - Rewriting the transfur code that Block was working on<br>
 
+This list might be outdated, Use Trello to keep track of the TODOs.
+
+## Credits
+
+[Vampirism](https://github.com/TeamLapen/Vampirism) - Biome Generation Code<br>
+
 ## Note
 
 ### Other developers, please edit this as we work on the project and keep track of what is done
