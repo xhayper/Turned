@@ -83,7 +83,6 @@ jar {
 }
 
 jar.finalizedBy('reobfJar')
-// publish.dependsOn('reobfJar')
 
 publishing {
     publications {
