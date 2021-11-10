@@ -10,8 +10,8 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 public class TransfurCapabilityProvider implements ICapabilitySerializable<CompoundNBT> {
-    private final DefaultTransfurCapability pickup = new DefaultTransfurCapability();
-    private final LazyOptional<ITransfurCapability> pickupOptional = LazyOptional.of(() -> pickup);
+    private final DefaultTransfurCapability defaultCapability = new DefaultTransfurCapability();
+    private final LazyOptional<ITransfurCapability> pickupOptional = LazyOptional.of(() -> defaultCapability);
 
     public void invalidate() {
         pickupOptional.invalidate();
@@ -28,14 +28,14 @@ public class TransfurCapabilityProvider implements ICapabilitySerializable<Compo
         if (TransfurCapability.TRANSFUR_CAPABILITY == null) {
             return new CompoundNBT();
         } else {
-            return (CompoundNBT) TransfurCapability.TRANSFUR_CAPABILITY.writeNBT(pickup, null);
+            return (CompoundNBT) TransfurCapability.TRANSFUR_CAPABILITY.writeNBT(defaultCapability, null);
         }
     }
 
     @Override
     public void deserializeNBT(CompoundNBT nbt) {
         if (TransfurCapability.TRANSFUR_CAPABILITY != null) {
-            TransfurCapability.TRANSFUR_CAPABILITY.readNBT(pickup, null, nbt);
+            TransfurCapability.TRANSFUR_CAPABILITY.readNBT(defaultCapability, null, nbt);
         }
     }
 }
