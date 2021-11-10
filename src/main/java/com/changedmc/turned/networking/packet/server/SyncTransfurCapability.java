@@ -40,9 +40,9 @@ public class SyncTransfurCapability {
             if (world == null) return;
             Entity entity = world.getEntity(message.entityID);
             if (entity == null) return;
-            entity.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent(iTransfur -> {
-                iTransfur.setTransfured(message.isTransfured);
-                iTransfur.setTransfurType(message.transfurType);
+            entity.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent(capability -> {
+                capability.setTransfured(message.isTransfured);
+                capability.setTransfurType(message.transfurType);
             });
         }));
         context.setPacketHandled(true);

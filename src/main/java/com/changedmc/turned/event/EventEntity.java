@@ -19,6 +19,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.network.PacketDistributor;
 
 public class EventEntity {
+    // TODO: Not sure if we need to only sync the player or we need to sync all entity, maybe make it work with entity later?
     @SubscribeEvent
     public static void onEntityJoin(EntityJoinWorldEvent event) {
         if (!(event.getEntity() instanceof PlayerEntity)) return;
@@ -27,21 +28,22 @@ public class EventEntity {
         Entity entity = event.getEntity();
         MinecraftServer server = world.getServer();
         if (server == null) return;
-        entity.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent(iTransfurCapability -> {
+        entity.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent(capability -> {
             for (ServerPlayerEntity serverPlayerEntity : server.getPlayerList().getPlayers()) {
                 if (serverPlayerEntity.level.dimension().location() == entity.level.dimension().location()) {
-                    NetworkManager.INSTANCE.send(PacketDistributor.PLAYER.with(() -> serverPlayerEntity), new SyncTransfurCapability(entity.getId(), iTransfurCapability.getTransfurType(), iTransfurCapability.isTransfured()));
+                    NetworkManager.INSTANCE.send(PacketDistributor.PLAYER.with(() -> serverPlayerEntity), new SyncTransfurCapability(entity.getId(), capability.getTransfurType(), capability.isTransfured()));
                 }
             }
         });
     }
 
+    // TODO: Remove this event when we manage to get transfur capability to work properly
     @SubscribeEvent
     public static void onEntityItemPickup(EntityItemPickupEvent event) {
         if (event.getEntity().level.isClientSide()) return;
-        event.getEntity().getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent(iTransfurCapability -> iTransfurCapability.setTransfured(!iTransfurCapability.isTransfured()));
+        event.getEntity().getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent(capability -> capability.setTransfured(!capability.isTransfured()));
         if (CommonConfig.debug.get() || Reference.DEBUG_BUILD)
-            event.getEntity().getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent(iTransfurCapability -> Main.LOGGER.debug(event.getEntity() + "'s isTransfured: " + iTransfurCapability.isTransfured()));
+            event.getEntity().getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent(capability -> Main.LOGGER.debug(event.getEntity() + "'s isTransfured: " + capability.isTransfured()));
     }
 
     @SubscribeEvent
