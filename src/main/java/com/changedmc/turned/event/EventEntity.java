@@ -57,6 +57,7 @@ public class EventEntity {
             event.getEntity().getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent(capability -> Main.LOGGER.debug(event.getEntity() + "'s isTransfured: " + capability.isTransfured()));
     }
 
+    // TODO: Find better way to handle rendering
     @SubscribeEvent
     @OnlyIn(Dist.CLIENT)
     public static void onRenderPlayerPre(RenderPlayerEvent.Pre event) {
@@ -76,26 +77,27 @@ public class EventEntity {
         });
     }
 
+    //TODO: Find better way to handle rendering
     @SubscribeEvent
     @OnlyIn(Dist.CLIENT)
     public static void onRenderPlayerHandPre(RenderHandEvent event) {
-        ClientPlayerEntity player = Minecraft.getInstance().player;
-        if (player == null) return;
-        player.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent(capability -> {
-            if (!capability.isTransfured()) return;
-            event.setCanceled(true);
-            switch(capability.getTransfurType()) {
-                case 1:
-//                    PlayerDarkLatexFoxModel<ClientPlayerEntity> playerDarkLatexFoxModel = new PlayerDarkLatexFoxModel<>();
-//                    playerDarkLatexFoxModel.translateToHand(event.getHand() == Hand.MAIN_HAND ? HandSide.RIGHT : HandSide.LEFT, event.getMatrixStack());
-                    PlayerDarkLatexFoxRenderer<ClientPlayerEntity> playerDarkLatexFoxRenderer = new PlayerDarkLatexFoxRenderer<>(Minecraft.getInstance().getEntityRenderDispatcher());
-                    playerDarkLatexFoxRenderer.getModel().translateToHand(event.getHand() == Hand.MAIN_HAND ? HandSide.LEFT : HandSide.RIGHT, event.getMatrixStack());
-                    playerDarkLatexFoxRenderer.render(player, 0.0f, 0.0f, event.getMatrixStack(), event.getBuffers(), event.getLight());
-                    break;
-                case 2:
-                    // Placeholder
-                    break;
-            }
-        });
+//        ClientPlayerEntity player = Minecraft.getInstance().player;
+//        if (player == null) return;
+//        player.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent(capability -> {
+//            if (!capability.isTransfured()) return;
+//            event.setCanceled(true);
+//            switch(capability.getTransfurType()) {
+//                case 1:
+////                    PlayerDarkLatexFoxModel<ClientPlayerEntity> playerDarkLatexFoxModel = new PlayerDarkLatexFoxModel<>();
+////                    playerDarkLatexFoxModel.translateToHand(event.getHand() == Hand.MAIN_HAND ? HandSide.RIGHT : HandSide.LEFT, event.getMatrixStack());
+//                    PlayerDarkLatexFoxRenderer<ClientPlayerEntity> playerDarkLatexFoxRenderer = new PlayerDarkLatexFoxRenderer<>(Minecraft.getInstance().getEntityRenderDispatcher());
+//                    playerDarkLatexFoxRenderer.getModel().translateToHand(event.getHand() == Hand.MAIN_HAND ? HandSide.LEFT : HandSide.RIGHT, event.getMatrixStack());
+//                    playerDarkLatexFoxRenderer.render(player, 0.0f, 0.0f, event.getMatrixStack(), event.getBuffers(), event.getLight());
+//                    break;
+//                case 2:
+//                    // Placeholder
+//                    break;
+//            }
+//        });
     }
 }
