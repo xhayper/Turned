@@ -14,7 +14,10 @@ import javax.annotation.Nonnull;
  */
 public class PlayerDarkLatexFoxModel<T extends LivingEntity> extends PlayerModel<T> {
     private final ModelRenderer Head;
+    private final ModelRenderer Muzzle;
+    private final ModelRenderer LeftEar;
     private final ModelRenderer Mask;
+    private final ModelRenderer RightEar;
     private final ModelRenderer Body;
     private final ModelRenderer Tail;
     private final ModelRenderer LeftArm;
@@ -31,16 +34,23 @@ public class PlayerDarkLatexFoxModel<T extends LivingEntity> extends PlayerModel
     private final ModelRenderer cube_r8;
 
     public PlayerDarkLatexFoxModel() {
-        super(1.0f, false);
+        super(0.0f, true);
         texWidth = 64;
         texHeight = 64;
 
         Head = new ModelRenderer(this);
         Head.setPos(0.0F, 0.0F, 0.0F);
-        Head.texOffs(47, 39).addBox(-2.0F, -2.9F, -6.5F, 4.0F, 3.0F, 3.0F, 0.0F, false);
         Head.texOffs(0, 16).addBox(-4.0F, -7.0F, -3.5F, 8.0F, 7.0F, 7.0F, 0.0F, false);
-        Head.texOffs(20, 0).addBox(-4.0F, -10.0F, -0.5F, 3.0F, 3.0F, 2.0F, 0.0F, false);
-        Head.texOffs(0, 3).addBox(1.0F, -10.0F, -0.5F, 3.0F, 3.0F, 2.0F, 0.0F, false);
+
+        Muzzle = new ModelRenderer(this);
+        Muzzle.setPos(0.0F, 0.1F, 0.5F);
+        Head.addChild(Muzzle);
+        Muzzle.texOffs(47, 39).addBox(-2.0F, -3.0F, -7.0F, 4.0F, 3.0F, 3.0F, 0.0F, false);
+
+        LeftEar = new ModelRenderer(this);
+        LeftEar.setPos(0.0F, 0.0F, 0.5F);
+        Head.addChild(LeftEar);
+        LeftEar.texOffs(20, 0).addBox(-4.0F, -10.0F, -1.0F, 3.0F, 3.0F, 2.0F, 0.0F, false);
 
         Mask = new ModelRenderer(this);
         Mask.setPos(0.0F, 0.0F, 0.5F);
@@ -58,6 +68,11 @@ public class PlayerDarkLatexFoxModel<T extends LivingEntity> extends PlayerModel
         Mask.texOffs(20, 7).addBox(-3.0F, -3.2F, -4.2F, 1.0F, 3.0F, 0.0F, 0.0F, false);
         Mask.texOffs(10, 3).addBox(-4.0F, -5.2F, -4.2F, 1.0F, 4.0F, 0.0F, 0.0F, false);
         Mask.texOffs(0, 0).addBox(-2.0F, -3.2F, -7.2F, 4.0F, 0.0F, 3.0F, 0.0F, false);
+
+        RightEar = new ModelRenderer(this);
+        RightEar.setPos(0.0F, 0.0F, 0.5F);
+        Head.addChild(RightEar);
+        RightEar.texOffs(0, 3).addBox(1.0F, -10.0F, -1.0F, 3.0F, 3.0F, 2.0F, 0.0F, false);
 
         Body = new ModelRenderer(this);
         Body.setPos(0.0F, 0.0F, 0.0F);
@@ -91,13 +106,13 @@ public class PlayerDarkLatexFoxModel<T extends LivingEntity> extends PlayerModel
         cube_r2.setPos(0.0F, 4.6268F, 2.2794F);
         LeftLeg.addChild(cube_r2);
         setRotationAngle(cube_r2, -0.3927F, 0.0F, 0.0F);
-        cube_r2.texOffs(46, 0).addBox(-2.0F, 0.0F, -1.0F, 4.0F, 7.0F, 3.0F, 0.0F, false);
+        cube_r2.texOffs(46, 0).addBox(-2.0F, 1.0F, -1.0F, 4.0F, 7.0F, 3.0F, 0.0F, false);
 
         cube_r3 = new ModelRenderer(this);
         cube_r3.setPos(0.0F, 2.5637F, -2.5296F);
         LeftLeg.addChild(cube_r3);
         setRotationAngle(cube_r3, 0.7854F, 0.0F, 0.0F);
-        cube_r3.texOffs(14, 38).addBox(-2.0F, 0.0F, -2.0F, 4.0F, 6.0F, 4.0F, 0.0F, false);
+        cube_r3.texOffs(14, 38).addBox(-2.0F, 1.0F, -1.0F, 4.0F, 6.0F, 4.0F, 0.0F, false);
 
         cube_r4 = new ModelRenderer(this);
         cube_r4.setPos(0.0F, -0.8F, 0.2F);
