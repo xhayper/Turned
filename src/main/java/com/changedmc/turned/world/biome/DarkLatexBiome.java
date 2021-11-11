@@ -30,7 +30,8 @@ public class DarkLatexBiome {
         MobSpawnInfo.Builder builder = new MobSpawnInfo.Builder();
         builder.creatureGenerationProbability(0.25f);
         builder.setPlayerCanSpawn();
-        builder.addSpawn(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(TurnedEntityType.DARK_LATEX_FOX.get(), 3, 1, 1));
+        builder.addSpawn(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(TurnedEntityType.DARK_LATEX_FOX.get(), 10, 1, 6));
+        builder.addSpawn(EntityClassification.CREATURE, new MobSpawnInfo.Spawners(TurnedEntityType.DARK_LATEX_SNOW_LEOPARD.get(), 10, 1, 6));
         return builder;
     }
 

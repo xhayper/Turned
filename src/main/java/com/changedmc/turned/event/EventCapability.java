@@ -5,7 +5,6 @@ import com.changedmc.turned.capability.transfur.TransfurCapabilityProvider;
 import com.changedmc.turned.config.CommonConfig;
 import com.changedmc.turned.util.Reference;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
