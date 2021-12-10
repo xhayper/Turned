@@ -2,7 +2,6 @@ package com.changedmc.turned.event;
 
 import com.changedmc.turned.Main;
 import com.changedmc.turned.config.CommonConfig;
-import com.changedmc.turned.deferredregister.TurnedBiome;
 import com.changedmc.turned.deferredregister.TurnedBlock;
 import com.changedmc.turned.deferredregister.TurnedEntityType;
 import com.changedmc.turned.deferredregister.TurnedItem;
@@ -25,8 +24,6 @@ public class EventManager {
         TurnedEntityType.ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
         if (CommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering ITEMS");
         TurnedItem.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        if (CommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering BIOMES");
-        TurnedBiome.BIOMES.register(FMLJavaModLoadingContext.get().getModEventBus());
         if (CommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering BLOCKS");
         TurnedBlock.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }

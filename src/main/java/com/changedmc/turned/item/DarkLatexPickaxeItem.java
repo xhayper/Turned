@@ -1,9 +1,9 @@
 package com.changedmc.turned.item;
 
-import com.changedmc.turned.util.TurnedItemGroup;
-import net.minecraft.item.Item;
-import net.minecraft.item.PickaxeItem;
-import net.minecraft.item.Rarity;
+import com.changedmc.turned.util.TurnedCreativeModeTab;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.Rarity;
 
 public class DarkLatexPickaxeItem extends PickaxeItem {
     public DarkLatexPickaxeItem() {
@@ -12,7 +12,7 @@ public class DarkLatexPickaxeItem extends PickaxeItem {
             2,
             3f,
             new Item.Properties()
-                .tab(TurnedItemGroup.COMBAT)
+                .tab(TurnedCreativeModeTab.COMBAT)
                 .rarity(Rarity.COMMON)
                 .durability(125)
                 .defaultDurability(125)

@@ -1,37 +1,63 @@
 package com.changedmc.turned.capability.transfur;
 
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.nbt.INBT;
-import net.minecraft.util.Direction;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.capabilities.CapabilityInject;
-import net.minecraftforge.common.capabilities.CapabilityManager;
+import com.changedmc.turned.networking.NetworkManager;
+import com.changedmc.turned.networking.packet.server.SyncTransfurCapability;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.Entity;
+import net.minecraftforge.network.PacketDistributor;
 
-import javax.annotation.Nullable;
+// https://github.com/TeamTwilight/twilightforest/blob/1.18.x/src/main/java/twilightforest/capabilities/shield/ShieldCapabilityHandler.java
 
-public class TransfurCapability {
-    @CapabilityInject(ITransfurCapability.class)
-    public static Capability<ITransfurCapability> TRANSFUR_CAPABILITY = null;
+public class TransfurCapability implements ITransfurCapability {
 
-    public static void register() {
-        CapabilityManager.INSTANCE.register(ITransfurCapability.class, new TransfurStorage(), DefaultTransfurCapability::new);
+    private boolean isTransfured;
+    private int transfurType;
+    private Entity entity;
+
+    @Override
+    public CompoundTag serializeNBT() {
+        CompoundTag compoundTag = new CompoundTag();
+        compoundTag.putBoolean("isTransfured", this.isTransfured());
+        compoundTag.putInt("transfurType", this.getTransfurType());
+        return compoundTag;
     }
 
-    public static class TransfurStorage implements Capability.IStorage<ITransfurCapability> {
-        @Nullable
-        @Override
-        public INBT writeNBT(Capability<ITransfurCapability> capability, ITransfurCapability instance, Direction side) {
-            CompoundNBT compoundNBT = new CompoundNBT();
-            compoundNBT.putInt("transfurType", instance.getTransfurType());
-            compoundNBT.putBoolean("isTransfured", instance.isTransfured());
-            return compoundNBT;
-        }
+    @Override
+    public void deserializeNBT(CompoundTag tag) {
+        this.isTransfured = tag.getBoolean("isTransfured");
+        this.transfurType = tag.getInt("transfurType");
+    }
 
-        @Override
-        public void readNBT(Capability<ITransfurCapability> capability, ITransfurCapability instance, Direction side, INBT nbt) {
-            CompoundNBT compoundNBT = ((CompoundNBT) nbt);
-            instance.setTransfurType(compoundNBT.getInt("transfurType"));
-            instance.setTransfured(compoundNBT.getBoolean("isTransfured"));
-        }
+    @Override
+    public int getTransfurType() {
+        return this.transfurType;
+    }
+
+    @Override
+    public boolean isTransfured() {
+        return this.isTransfured;
+    }
+
+    @Override
+    public void setTransfured(boolean isTransfured) {
+        this.isTransfured = isTransfured;
+        this.syncCapability();
+
+    }
+    @Override
+    public void setTransfurType(int transfurType) {
+        this.transfurType = transfurType;
+        this.syncCapability();
+    }
+
+    @Override
+    public void setEntity(Entity entity) {
+        this.entity = entity;
+    }
+
+    public void syncCapability() {
+        if (!(this.entity instanceof ServerPlayer)) return;
+        NetworkManager.INSTANCE.send(PacketDistributor.TRACKING_ENTITY_AND_SELF.with(() -> this.entity), new SyncTransfurCapability(this.entity.getId(), this.transfurType, this.isTransfured()));
     }
 }

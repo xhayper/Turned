@@ -1,28 +1,24 @@
 package com.changedmc.turned.item;
 
-import com.changedmc.turned.util.TurnedItemGroup;
+import com.changedmc.turned.util.TurnedCreativeModeTab;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
-import net.minecraft.block.BlockState;
-import net.minecraft.entity.ai.attributes.Attribute;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
-import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.state.BlockState;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-
-public class DarkLatexScytheItem extends Item  {
+public class DarkLatexScytheItem extends Item {
     public DarkLatexScytheItem() {
-        super(new Item.Properties().tab(TurnedItemGroup.COMBAT).durability(225));
+        super(new Item.Properties().tab(TurnedCreativeModeTab.COMBAT).durability(225));
     }
 
     @Override
-    public Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(@Nonnull EquipmentSlotType equipmentSlot) {
-        if (equipmentSlot == EquipmentSlotType.MAINHAND) {
+    public Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(@Nonnull EquipmentSlot equipmentSlot) {
+        if (equipmentSlot == EquipmentSlot.MAINHAND) {
             ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
             builder.putAll(super.getDefaultAttributeModifiers(equipmentSlot));
             builder.put(Attributes.ATTACK_DAMAGE,
@@ -34,10 +30,10 @@ public class DarkLatexScytheItem extends Item  {
         return super.getDefaultAttributeModifiers(equipmentSlot);
     }
 
-    @Override
-    public int getHarvestLevel(@Nonnull ItemStack stack, @Nonnull net.minecraftforge.common.ToolType tool, @Nullable PlayerEntity player, @Nullable BlockState blockState) {
-        return 2;
-    }
+//    @Override
+//    public int getHarvestLevel(@Nonnull ItemStack stack, @Nonnull net.minecraftforge.common.ToolType tool, @Nullable PlayerEntity player, @Nullable BlockState blockState) {
+//        return 2;
+//    }
 
     @Override
     public float getDestroySpeed(@Nonnull ItemStack itemstack, @Nonnull BlockState blockstate) {

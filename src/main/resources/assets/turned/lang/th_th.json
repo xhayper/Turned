@@ -11,5 +11,7 @@
   "block.turned.harmless_dark_latex": "บล็อคน้ำยางดำที่ปลอดถัย",
   "item.turned.dark_latex_axe": "ขวานน้ำยางดำ",
   "item.turned.dark_latex_pickaxe": "เสียมน้ำยางดำ",
-  "item.turned.dark_latex_scythe": "เคียวน้ำยางดำ"
+  "item.turned.dark_latex_scythe": "เคียวน้ำยางดำ",
+  "item.turned.dark_latex_fox_spawn_egg": "ไข่เกิดสุนัขจ้งจอกน้ำยางดำ",
+  "item.turned.dark_latex_snow_leopard_spawn_egg": "ไข่เกิดเสือดาวหิมะน้ำยางดำ"
 }

@@ -1,6 +1,9 @@
 package com.changedmc.turned.capability.transfur;
 
-public interface ITransfurCapability {
+import com.changedmc.turned.capability.BaseCapability;
+
+
+public interface ITransfurCapability extends BaseCapability {
     boolean isTransfured();
 
     void setTransfured(boolean isTransfured);

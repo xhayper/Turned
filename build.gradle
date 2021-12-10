@@ -15,13 +15,11 @@ version = '1.4.0'
 group = 'com.changedmc.turned'
 archivesBaseName = 'turned'
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(16)
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
-    mappings channel: 'official', version: '1.16.5'
-    //mappings channel: 'official', version: '1.17.1' // Will break everything :wheeze:
-    //mappings channel: 'official', version: '1.18' // Me waiting for 1.18 and forge 1.18 to come out
+    mappings channel: 'official', version: '1.18'
     runs {
         client {
             workingDirectory project.file('run')
@@ -66,9 +64,7 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.16.5-36.2.9'
-    //minecraft 'net.minecraftforge:forge:1.17.1-37.0.107' // Will break everything :wheeze:
-    //minecraft 'net.minecraftforge:forge:1.18' // Me waiting for 1.18 and forge 1.18 to come out
+    minecraft 'net.minecraftforge:forge:1.18-38.0.17'
 }
 
 jar {

@@ -1,22 +1,22 @@
 package com.changedmc.turned.client.render.latex;
 
 import com.changedmc.turned.client.model.latex.DarkLatexSnowLeopardModel;
-import com.changedmc.turned.entity.latex.DarkLatexSnowLeopardEntity;
+import com.changedmc.turned.entity.latex.DarkLatexSnowLeopard;
 import com.changedmc.turned.util.Reference;
-import net.minecraft.client.renderer.entity.EntityRendererManager;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.resources.ResourceLocation;
 
 import javax.annotation.Nonnull;
 
-public class DarkLatexSnowLeopardRenderer extends MobRenderer<DarkLatexSnowLeopardEntity, DarkLatexSnowLeopardModel<DarkLatexSnowLeopardEntity>> {
-    public DarkLatexSnowLeopardRenderer(EntityRendererManager rendererManager) {
-        super(rendererManager, new DarkLatexSnowLeopardModel<>(), 0.7F);
+public class DarkLatexSnowLeopardRenderer extends MobRenderer<DarkLatexSnowLeopard, DarkLatexSnowLeopardModel<DarkLatexSnowLeopard>> {
+    public DarkLatexSnowLeopardRenderer(EntityRendererProvider.Context entityRendererProvider) {
+        super(entityRendererProvider, new DarkLatexSnowLeopardModel<>(entityRendererProvider.bakeLayer(DarkLatexSnowLeopardModel.LAYER_LOCATION)), 0.7F);
     }
 
     @Nonnull
     @Override
-    public ResourceLocation getTextureLocation(@Nonnull DarkLatexSnowLeopardEntity darkLatexSnowLeopardEntity) {
+    public ResourceLocation getTextureLocation(@Nonnull DarkLatexSnowLeopard darkLatexSnowLeopard) {
         return new ResourceLocation(Reference.MOD_ID, "textures/entity/dark_latex_snow_leopard.png");
     }
 }
