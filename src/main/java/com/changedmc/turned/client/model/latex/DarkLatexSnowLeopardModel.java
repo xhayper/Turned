@@ -131,14 +131,4 @@ public class DarkLatexSnowLeopardModel<T extends DarkLatexSnowLeopard> extends A
             this.LeftLeg.zRot = -0.07853982F;
         }
     }
-
-    @Override
-    public void renderToBuffer(PoseStack poseStack, VertexConsumer buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
-        Head.render(poseStack, buffer, packedLight, packedOverlay);
-        Body.render(poseStack, buffer, packedLight, packedOverlay);
-        LeftArm.render(poseStack, buffer, packedLight, packedOverlay);
-        RightArm.render(poseStack, buffer, packedLight, packedOverlay);
-        LeftLeg.render(poseStack, buffer, packedLight, packedOverlay);
-        RightLeg.render(poseStack, buffer, packedLight, packedOverlay);
-    }
 }
