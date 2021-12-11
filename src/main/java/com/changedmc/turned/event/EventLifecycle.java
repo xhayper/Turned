@@ -2,6 +2,8 @@ package com.changedmc.turned.event;
 
 import com.changedmc.turned.Main;
 import com.changedmc.turned.capability.transfur.ITransfurCapability;
+import com.changedmc.turned.capability.transfur.TransfurCapability;
+import com.changedmc.turned.capability.transfur.TransfurCapabilityProvider;
 import com.changedmc.turned.client.model.latex.DarkLatexFoxModel;
 import com.changedmc.turned.client.model.latex.DarkLatexSnowLeopardModel;
 import com.changedmc.turned.client.render.latex.DarkLatexFoxRenderer;
@@ -40,7 +42,7 @@ public class EventLifecycle {
 
     @SubscribeEvent
     public static void onRegisterCapabilities(RegisterCapabilitiesEvent event) {
-        event.register(ITransfurCapability.class);
+        TransfurCapability.register(event);
     }
 
     @OnlyIn(Dist.CLIENT)

@@ -10,10 +10,12 @@ import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.Mob;
 
 import javax.annotation.Nonnull;
 
-public class DarkLatexFoxModel<T extends DarkLatexFox> extends AgeableListModel<T> {
+public class DarkLatexFoxModel<T extends Entity> extends AgeableListModel<T> {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(Reference.MOD_ID, "dark_latex_fox"), "main");
 
     private final ModelPart Head;

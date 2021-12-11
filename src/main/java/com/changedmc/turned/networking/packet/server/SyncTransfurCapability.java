@@ -1,6 +1,6 @@
 package com.changedmc.turned.networking.packet.server;
 
-import com.changedmc.turned.capability.TurnedCapability;
+import com.changedmc.turned.capability.transfur.TransfurCapability;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.Entity;
@@ -40,7 +40,7 @@ public class SyncTransfurCapability {
             if (level == null) return;
             Entity entity = level.getEntity(message.entityID);
             if (entity == null) return;
-            entity.getCapability(TurnedCapability.TRANSFUR).ifPresent(capability -> {
+            entity.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent(capability -> {
                 capability.setTransfured(message.isTransfured);
                 capability.setTransfurType(message.transfurType);
             });

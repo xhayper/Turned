@@ -1,5 +1,6 @@
 package com.changedmc.turned.fluid;
 
+import com.changedmc.turned.Main;
 import com.changedmc.turned.deferredregister.TurnedBlock;
 import com.changedmc.turned.deferredregister.TurnedFluid;
 import com.changedmc.turned.deferredregister.TurnedItem;
@@ -7,6 +8,7 @@ import com.changedmc.turned.util.Reference;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.schedule.Schedule;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -16,6 +18,7 @@ import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.material.*;
+import net.minecraft.world.ticks.ScheduledTick;
 import net.minecraftforge.fluids.FluidAttributes;
 
 import javax.annotation.Nonnull;
@@ -24,7 +27,7 @@ import java.util.List;
 // TODO: Make it swimable but not behave like water.
 public abstract class DarkLatexFluid extends FlowingFluid {
 
-    private static final List<Direction> spreadDirectionList = List.of(Direction.EAST, Direction.WEST, Direction.NORTH, Direction.SOUTH);
+    private static final List<Direction> spreadDirectionList = List.of(Direction.EAST, Direction.WEST, Direction.NORTH, Direction.SOUTH, Direction.DOWN);
 
     @Nonnull
     public Fluid getFlowing() {
@@ -71,13 +74,6 @@ public abstract class DarkLatexFluid extends FlowingFluid {
     }
 
     protected void spreadTo(@Nonnull LevelAccessor levelAccessor, @Nonnull BlockPos blockPos, @Nonnull BlockState blockState, @Nonnull Direction direction, @Nonnull FluidState p_76009_) {
-        if (direction == Direction.DOWN) {
-            FluidState fluidState = levelAccessor.getFluidState(blockPos);
-            if (Fluids.WATER.isSame(fluidState.getType())) {
-                levelAccessor.setBlock(blockPos, this.createLegacyBlock(fluidState), 11);
-                return;
-            }
-        }
         super.spreadTo(levelAccessor, blockPos, blockState, direction, p_76009_);
     }
 
