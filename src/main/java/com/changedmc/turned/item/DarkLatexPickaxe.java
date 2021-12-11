@@ -5,8 +5,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.Rarity;
 
-public class DarkLatexPickaxeItem extends PickaxeItem {
-    public DarkLatexPickaxeItem() {
+public class DarkLatexPickaxe extends PickaxeItem {
+    public DarkLatexPickaxe() {
         super(
             TurnedItemTier.DARK_LATEX,
             2,

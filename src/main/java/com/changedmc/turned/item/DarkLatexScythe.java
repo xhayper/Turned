@@ -16,8 +16,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import javax.annotation.Nonnull;
 
-public class DarkLatexScytheItem extends Item implements Vanishable {
-    public DarkLatexScytheItem() {
+public class DarkLatexScythe extends Item implements Vanishable {
+    public DarkLatexScythe() {
         super(new Item.Properties().tab(TurnedCreativeModeTab.COMBAT).durability(225));
     }
 

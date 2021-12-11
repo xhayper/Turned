@@ -4,6 +4,7 @@ import com.changedmc.turned.Main;
 import com.changedmc.turned.config.TurnedCommonConfig;
 import com.changedmc.turned.deferredregister.TurnedBlock;
 import com.changedmc.turned.deferredregister.TurnedEntityType;
+import com.changedmc.turned.deferredregister.TurnedFluid;
 import com.changedmc.turned.deferredregister.TurnedItem;
 import com.changedmc.turned.util.Reference;
 import net.minecraftforge.common.MinecraftForge;
@@ -26,5 +27,7 @@ public class EventManager {
         TurnedItem.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering BLOCKS");
         TurnedBlock.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering FLUIDS");
+        TurnedFluid.FLUIDS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 }

@@ -1,4 +1,4 @@
-package com.changedmc.turned.blocks;
+package com.changedmc.turned.block;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -10,8 +10,6 @@ public class HarmlessDarkLatexBlock extends Block {
                 .sound(SoundType.SLIME_BLOCK)
                 .strength(0.75f, 5f)
                 .lightLevel(s -> 0)
-//                .harvestLevel(0)
-//                .harvestTool(ToolType.SHOVEL)
                 .friction(0.8f)
                 .speedFactor(0.5f)
                 .jumpFactor(0.5f));

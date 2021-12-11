@@ -5,6 +5,7 @@
   "entity.turned.dark_latex_snow_leopard": "เสือดาวหิมะน้ำยางดำ",
   "entity.turned.scientist": "นักวิทยาศาสตร์",
   "itemGroup.turned.building_blocks": "บล็อคก่อสร้าง",
+  "itemGroup.turned.miscellaneous": "Miscellaneous",
   "itemGroup.turned.combat": "การโจมตี",
   "item.turned.baton": "กระบอง",
   "block.turned.dark_latex": "บล็อคน้ำยางดำ",
@@ -13,5 +14,7 @@
   "item.turned.dark_latex_pickaxe": "เสียมน้ำยางดำ",
   "item.turned.dark_latex_scythe": "เคียวน้ำยางดำ",
   "item.turned.dark_latex_fox_spawn_egg": "ไข่เกิดสุนัขจ้งจอกน้ำยางดำ",
-  "item.turned.dark_latex_snow_leopard_spawn_egg": "ไข่เกิดเสือดาวหิมะน้ำยางดำ"
+  "item.turned.dark_latex_snow_leopard_spawn_egg": "ไข่เกิดเสือดาวหิมะน้ำยางดำ",
+  "item.turned.dark_latex_bucket": "ถังน้ำยางดำ",
+  "fluid.turned.dark_latex_fluid": "น้ำยางดำ"
 }

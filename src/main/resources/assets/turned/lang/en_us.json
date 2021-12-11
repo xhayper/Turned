@@ -5,6 +5,7 @@
   "entity.turned.dark_latex_snow_leopard": "Dark Latex Snow Leopard",
   "entity.turned.scientist": "Scientist",
   "itemGroup.turned.building_blocks": "Building Blocks",
+  "itemGroup.turned.miscellaneous": "Miscellaneous",
   "itemGroup.turned.combat": "Combat",
   "item.turned.baton": "Baton",
   "block.turned.dark_latex": "Dark Latex Block",
@@ -13,5 +14,7 @@
   "item.turned.dark_latex_pickaxe": "Dark Latex Pickaxe",
   "item.turned.dark_latex_scythe": "Dark Latex Scythe",
   "item.turned.dark_latex_fox_spawn_egg": "Dark Latex Fox Spawn Egg",
-  "item.turned.dark_latex_snow_leopard_spawn_egg": "Dark Latex Snow Leopard Spawn Egg"
+  "item.turned.dark_latex_snow_leopard_spawn_egg": "Dark Latex Snow Leopard Spawn Egg",
+  "item.turned.dark_latex_bucket": "Dark Latex Bucket",
+  "fluid.turned.dark_latex_fluid": "Dark Latex Fluid"
 }
