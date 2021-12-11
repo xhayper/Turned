@@ -1,6 +1,6 @@
-package com.changedmc.turned.entity.npc;
+package com.changedmc.turned.entity.latex;
 
-import com.changedmc.turned.entity.latex.Latex;
+import com.changedmc.turned.config.TurnedServerConfig;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -9,53 +9,51 @@ import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.SpawnGroupData;
-import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
+import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import java.util.Random;
 
-public class Scientist extends PlayerLike {
-    private static final EntityDataAccessor<Boolean> DATA_EVIL_ID = SynchedEntityData.defineId(Scientist.class, EntityDataSerializers.BOOLEAN);
+public class AgeableLatex extends Latex {
+    private static final EntityDataAccessor<Boolean> DATA_BABY_ID = SynchedEntityData.defineId(AgeableLatex.class, EntityDataSerializers.BOOLEAN);
 
-    public Scientist(EntityType<? extends PlayerLike> type, Level levelIn) {
+    public AgeableLatex(EntityType<? extends Monster> type, Level levelIn) {
         super(type, levelIn);
-    }
-
-    protected void registerGoals() {
-        super.registerGoals();
-        this.goalSelector.addGoal(4, new LookAtPlayerGoal(this, Scientist.class, 6.0F));
-        this.goalSelector.addGoal(5, new LookAtPlayerGoal(this, Latex.class, 6.0F));
     }
 
     @Nullable
     public SpawnGroupData finalizeSpawn(@Nonnull ServerLevelAccessor serverLevelAccessor, @Nonnull DifficultyInstance difficultyInstance, @Nonnull MobSpawnType mobSpawnType, @Nullable SpawnGroupData spawnGroupData, @Nullable CompoundTag compoundTag) {
-        this.setEvil(this.random.nextFloat() < 0.55F);
+        this.setBaby(getSpawnAsBabyOdds(this.random));
         return spawnGroupData;
+    }
+
+    protected void defineSynchedData() {
+        super.defineSynchedData();
+        this.getEntityData().define(DATA_BABY_ID, false);
     }
 
     public void addAdditionalSaveData(@Nonnull CompoundTag compoundTag) {
         super.addAdditionalSaveData(compoundTag);
-        compoundTag.putBoolean("IsEvil", this.isEvil());
+        compoundTag.putBoolean("IsBaby", this.isBaby());
     }
 
     public void readAdditionalSaveData(@Nonnull CompoundTag compoundTag) {
         super.readAdditionalSaveData(compoundTag);
-        this.getEntityData().set(DATA_EVIL_ID, compoundTag.getBoolean("IsEvil"));
+        this.getEntityData().set(DATA_BABY_ID, compoundTag.getBoolean("IsBaby"));
     }
 
-    @Override
-    protected void defineSynchedData() {
-        super.defineSynchedData();
-        this.getEntityData().define(DATA_EVIL_ID, false);
+    public boolean isBaby() {
+        return this.getEntityData().get(DATA_BABY_ID);
     }
 
-    public void setEvil(boolean isEvil) {
-        this.getEntityData().set(DATA_EVIL_ID, isEvil);
+    public void setBaby(boolean isBaby) {
+        this.getEntityData().set(DATA_BABY_ID, isBaby);
     }
 
-    public boolean isEvil() {
-        return this.getEntityData().get(DATA_EVIL_ID);
+    public static boolean getSpawnAsBabyOdds(Random random) {
+        return random.nextFloat() < TurnedServerConfig.latexBabyChance.get();
     }
 }

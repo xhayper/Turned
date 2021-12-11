@@ -3,20 +3,25 @@ package com.changedmc.turned.item;
 import com.changedmc.turned.util.TurnedCreativeModeTab;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
+import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Vanishable;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import javax.annotation.Nonnull;
-public class DarkLatexScytheItem extends Item {
+
+public class DarkLatexScytheItem extends Item implements Vanishable {
     public DarkLatexScytheItem() {
         super(new Item.Properties().tab(TurnedCreativeModeTab.COMBAT).durability(225));
     }
 
-    @Override
+    @Nonnull
     public Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(@Nonnull EquipmentSlot equipmentSlot) {
         if (equipmentSlot == EquipmentSlot.MAINHAND) {
             ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
@@ -30,27 +35,18 @@ public class DarkLatexScytheItem extends Item {
         return super.getDefaultAttributeModifiers(equipmentSlot);
     }
 
-//    @Override
-//    public int getHarvestLevel(@Nonnull ItemStack stack, @Nonnull net.minecraftforge.common.ToolType tool, @Nullable PlayerEntity player, @Nullable BlockState blockState) {
-//        return 2;
-//    }
-
-    @Override
     public float getDestroySpeed(@Nonnull ItemStack itemstack, @Nonnull BlockState blockstate) {
         return 5.5f;
     }
 
-//    @Override
-//    public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-//        stack.damageItem(1, attacker, i -> i.sendBreakAnimation(EquipmentSlotType.MAINHAND));
-//        return true;
-//    }
-//
-//    @Override
-//    public boolean onBlockDestroyed(ItemStack stack, World worldIn, BlockState state, BlockPos pos, LivingEntity entityLiving) {
-//        stack.damageItem(1, entityLiving, i -> i.sendBreakAnimation(EquipmentSlotType.MAINHAND));
-//        return true;
-//    }
+    public boolean hurtEnemy(ItemStack itemStack, @Nonnull LivingEntity p_43279_, @Nonnull LivingEntity p_43280_) {
+        itemStack.hurtAndBreak(1, p_43280_, (p_43296_) -> p_43296_.broadcastBreakEvent(EquipmentSlot.MAINHAND));
+        return true;
+    }
+
+    public boolean mineBlock(@Nonnull ItemStack itemStack, @Nonnull Level level, @Nonnull BlockState blockState, @Nonnull BlockPos blockPos, @Nonnull LivingEntity livingEntity) {
+        return false;
+    }
 
     @Override
     public int getEnchantmentValue() {

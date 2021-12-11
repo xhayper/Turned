@@ -7,7 +7,7 @@ import com.changedmc.turned.client.model.latex.DarkLatexSnowLeopardModel;
 import com.changedmc.turned.client.render.latex.DarkLatexFoxRenderer;
 import com.changedmc.turned.client.render.latex.DarkLatexSnowLeopardRenderer;
 import com.changedmc.turned.client.render.npc.ScientistRenderer;
-import com.changedmc.turned.config.CommonConfig;
+import com.changedmc.turned.config.TurnedCommonConfig;
 import com.changedmc.turned.deferredregister.TurnedEntityType;
 import com.changedmc.turned.entity.latex.DarkLatexFox;
 import com.changedmc.turned.entity.latex.DarkLatexSnowLeopard;
@@ -27,7 +27,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 public class EventLifecycle {
     @SubscribeEvent
     public static void onFMLCommonSetupEvent(FMLCommonSetupEvent event) {
-        if (CommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Network Packets");
+        if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Network Packets");
         NetworkManager.registerPackets();
     }
 
@@ -53,12 +53,12 @@ public class EventLifecycle {
     @OnlyIn(Dist.CLIENT)
     @SubscribeEvent
     public static void onFMLClientSetupEvent(FMLClientSetupEvent event) {
-        if (CommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Dark Latex Fox Entity");
+        if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Dark Latex Fox Entity");
         EntityRenderers.register(TurnedEntityType.DARK_LATEX_FOX.get(), DarkLatexFoxRenderer::new);
-        if (CommonConfig.debug.get() || Reference.DEBUG_BUILD)
+        if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD)
             Main.LOGGER.debug("Registering Dark Latex Snow Leopard Entity");
         EntityRenderers.register(TurnedEntityType.DARK_LATEX_SNOW_LEOPARD.get(), DarkLatexSnowLeopardRenderer::new);
-        if (CommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Scientist Entity");
+        if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Scientist Entity");
         EntityRenderers.register(TurnedEntityType.SCIENTIST.get(), ScientistRenderer::new);
     }
 }

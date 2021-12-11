@@ -1,33 +1,21 @@
 package com.changedmc.turned.entity.latex;
 
-import com.changedmc.turned.Main;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.network.syncher.EntityDataSerializers;
-import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
-import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.ServerLevelAccessor;
 
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 public class Latex extends Monster {
-    private static final EntityDataAccessor<Boolean> DATA_BABY_ID = SynchedEntityData.defineId(Latex.class, EntityDataSerializers.BOOLEAN);
-
     public Latex(EntityType<? extends Monster> type, Level levelIn) {
         super(type, levelIn);
     }
@@ -54,22 +42,6 @@ public class Latex extends Monster {
         return true;
     }
 
-    @Nullable
-    public SpawnGroupData finalizeSpawn(@Nonnull ServerLevelAccessor serverLevelAccessor, @Nonnull DifficultyInstance difficultyInstance, @Nonnull MobSpawnType mobSpawnType, @Nullable SpawnGroupData spawnGroupData, @Nullable CompoundTag compoundTag) {
-        this.setBaby(this.random.nextBoolean());
-        return spawnGroupData;
-    }
-
-    public void addAdditionalSaveData(@Nonnull CompoundTag compoundTag) {
-        super.addAdditionalSaveData(compoundTag);
-        compoundTag.putBoolean("IsBaby", this.isBaby());
-    }
-
-    public void readAdditionalSaveData(@Nonnull CompoundTag compoundTag) {
-        super.readAdditionalSaveData(compoundTag);
-        this.getEntityData().set(DATA_BABY_ID, compoundTag.getBoolean("IsBaby"));
-    }
-
     @Nonnull
     public SoundSource getSoundSource() {
         return SoundSource.HOSTILE;
@@ -93,20 +65,7 @@ public class Latex extends Monster {
         return SoundEvents.HOSTILE_DEATH;
     }
 
-    protected void defineSynchedData() {
-        super.defineSynchedData();
-        this.getEntityData().define(DATA_BABY_ID, false);
-    }
-
-    protected float getStandingEyeHeight(Pose p_34313_, EntityDimensions p_34314_) {
+    protected float getStandingEyeHeight(@Nonnull Pose pose, @Nonnull EntityDimensions entityDimensions) {
         return this.isBaby() ? 0.93F : 1.74F;
-    }
-
-    public boolean isBaby() {
-        return this.getEntityData().get(DATA_BABY_ID);
-    }
-
-    public void setBaby(boolean isBaby) {
-        this.getEntityData().set(DATA_BABY_ID, isBaby);
     }
 }

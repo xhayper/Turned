@@ -1,7 +1,7 @@
 package com.changedmc.turned.networking;
 
 import com.changedmc.turned.Main;
-import com.changedmc.turned.config.CommonConfig;
+import com.changedmc.turned.config.TurnedCommonConfig;
 import com.changedmc.turned.networking.packet.server.SyncTransfurCapability;
 import com.changedmc.turned.util.Reference;
 import net.minecraft.network.FriendlyByteBuf;
@@ -28,7 +28,7 @@ public class NetworkManager {
     // server = Server -> Client
 
     public static void registerPackets() {
-        if (CommonConfig.debug.get() || Reference.DEBUG_BUILD)
+        if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD)
             Main.LOGGER.debug("Registering SyncTransfurCapability Packet");
         registerPacket(SyncTransfurCapability.class, SyncTransfurCapability::encode, SyncTransfurCapability::decode, SyncTransfurCapability::handle);
     }

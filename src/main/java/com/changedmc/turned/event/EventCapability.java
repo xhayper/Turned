@@ -3,7 +3,7 @@ package com.changedmc.turned.event;
 import com.changedmc.turned.Main;
 import com.changedmc.turned.capability.BaseCapability;
 import com.changedmc.turned.capability.transfur.TransfurCapability;
-import com.changedmc.turned.config.CommonConfig;
+import com.changedmc.turned.config.TurnedCommonConfig;
 import com.changedmc.turned.util.Reference;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -48,7 +48,7 @@ public class EventCapability {
 
     @SubscribeEvent
     public static void onAttachCapabilitiesEvent(AttachCapabilitiesEvent<Entity> event) {
-        if (CommonConfig.debug.get() || Reference.DEBUG_BUILD)
+        if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD)
             Main.LOGGER.debug("Attaching Transfur Capability to an Entity");
         addCapability(event, new ResourceLocation(Reference.MOD_ID, "transfur"), new TransfurCapability());
     }

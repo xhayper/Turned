@@ -2,7 +2,7 @@ package com.changedmc.turned.event;
 
 import com.changedmc.turned.Main;
 import com.changedmc.turned.capability.TurnedCapability;
-import com.changedmc.turned.config.CommonConfig;
+import com.changedmc.turned.config.TurnedCommonConfig;
 import com.changedmc.turned.util.Reference;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.AbstractClientPlayer;
@@ -19,7 +19,7 @@ public class EventEntity {
     public static void onEntityItemPickup(EntityItemPickupEvent event) {
         if (event.getEntity().level.isClientSide()) return;
         event.getEntity().getCapability(TurnedCapability.TRANSFUR).ifPresent(capability -> { capability.setTransfurType(1);capability.setTransfured(true); });
-        if (CommonConfig.debug.get() || Reference.DEBUG_BUILD)
+        if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD)
             event.getEntity().getCapability(TurnedCapability.TRANSFUR).ifPresent(capability -> Main.LOGGER.debug(event.getEntity() + "'s isTransfured: " + capability.isTransfured()));
     }
 
