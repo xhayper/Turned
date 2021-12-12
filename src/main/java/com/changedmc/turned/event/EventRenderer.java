@@ -25,7 +25,7 @@ public class EventRenderer {
 
         ////////////////////////
         if (!TurnedClientConfig.enderDragonBooba.get() || Minecraft.getInstance().options.hideGui) return;
-        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 0.0F);
+        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderTexture(0, new ResourceLocation(Reference.MOD_ID, "textures/gui/enderdragon_booba.png"));
         GuiComponent.blit(
