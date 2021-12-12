@@ -13,7 +13,7 @@ public class EventRenderer {
 
     @SubscribeEvent
     @OnlyIn(Dist.CLIENT)
-    public static void onRenderGameOverlay(RenderGameOverlayEvent.Post event) {
+    public static void onRenderGameOverlay(RenderGameOverlayEvent.Pre event) {
         if (Minecraft.getInstance().player == null) return;
         latexIndicator.render(event.getMatrixStack(), event.getWindow());
     }

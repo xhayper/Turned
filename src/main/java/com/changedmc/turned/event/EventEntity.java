@@ -1,5 +1,6 @@
 package com.changedmc.turned.event;
 
+import com.changedmc.turned.Main;
 import com.changedmc.turned.capability.transfur.ITransfurCapability;
 import com.changedmc.turned.capability.transfur.TransfurCapability;
 import com.changedmc.turned.client.render.player.PlayerDarkLatexFoxRenderer;
@@ -53,27 +54,14 @@ public class EventEntity {
         });
     }
 
-    // TODO: Find better way to handle rendering
     @SubscribeEvent
     @OnlyIn(Dist.CLIENT)
-    public static void onRenderPlayer(RenderPlayerEvent event) {
+    public static void onRenderPlayer(RenderPlayerEvent.Pre event) {
         AbstractClientPlayer player = Minecraft.getInstance().player;
         if (player == null) return;
         ITransfurCapability transfurCapability = player.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).resolve().orElse(null);
         if (transfurCapability != null && transfurCapability.isTransfured()) {
-            event.setCanceled(true);
-            switch (transfurCapability.getTransfurType()) {
-                case 1 -> {
-                    PlayerDarkLatexFoxRenderer playerDarkLatexFoxRenderer = new PlayerDarkLatexFoxRenderer(Utility.getEntityRendererContext());
-                    playerDarkLatexFoxRenderer.render(player, 1, event.getPartialTick(), event.getPoseStack(), event.getMultiBufferSource(), event.getPackedLight());
-                }
-                // Placeholder #1
-                case 2 -> {
-                    PlayerDarkLatexSnowLeopardRenderer playerDarkLatexSnowLeopardRenderer = new PlayerDarkLatexSnowLeopardRenderer(Utility.getEntityRendererContext());
-                    playerDarkLatexSnowLeopardRenderer.render(player, 1, event.getPartialTick(), event.getPoseStack(), event.getMultiBufferSource(), event.getPackedLight());
-                }
-                // Placeholder #2
-            }
+            Main.TRANSFUR_MANAGER.render(event, transfurCapability.getTransfurType());
         }
     }
 }
