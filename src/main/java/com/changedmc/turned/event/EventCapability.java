@@ -15,8 +15,9 @@ public class EventCapability {
     public static void onAttachCapabilitiesEvent(AttachCapabilitiesEvent<Entity> event) {
         if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD)
             Main.LOGGER.debug("Attaching Transfur Capability to an Entity");
-        TransfurCapabilityProvider provider = new TransfurCapabilityProvider(event.getObject());
-        event.addCapability(new ResourceLocation(Reference.MOD_ID, "transfur_capability"), provider);
-        event.addListener(provider::invalidate);
+        TransfurCapabilityProvider transfurCapabilityProvider = new TransfurCapabilityProvider(event.getObject());
+        event.addCapability(new ResourceLocation(Reference.MOD_ID, "transfur_capability"), transfurCapabilityProvider);
+        event.addListener(transfurCapabilityProvider::invalidate);
     }
+
 }

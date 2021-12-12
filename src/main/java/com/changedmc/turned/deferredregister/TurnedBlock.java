@@ -1,6 +1,7 @@
 package com.changedmc.turned.deferredregister;
 
 import com.changedmc.turned.block.DarkLatexBlock;
+import com.changedmc.turned.block.DarkLatexFluid;
 import com.changedmc.turned.block.HarmlessDarkLatexBlock;
 import com.changedmc.turned.util.Reference;
 import net.minecraft.world.level.block.Block;
@@ -16,5 +17,5 @@ public class TurnedBlock {
 
     public static final RegistryObject<DarkLatexBlock> DARK_LATEX_BLOCK = BLOCKS.register("dark_latex", DarkLatexBlock::new);
     public static final RegistryObject<HarmlessDarkLatexBlock> HARMLESS_DARK_LATEX_BLOCK = BLOCKS.register("harmless_dark_latex", HarmlessDarkLatexBlock::new);
-    public static final RegistryObject<LiquidBlock> DARK_LATEX_FLUID = BLOCKS.register("dark_latex_fluid", () -> new LiquidBlock(TurnedFluid.DARK_LATEX, BlockBehaviour.Properties.of(Material.WATER).noCollission().randomTicks().strength(100.0F).noDrops()));
+    public static final RegistryObject<LiquidBlock> DARK_LATEX_FLUID = BLOCKS.register("dark_latex_fluid", DarkLatexFluid::new);
 }

@@ -7,4 +7,8 @@ public class DarkLatexSnowLeopard extends AgeableLatex {
     public DarkLatexSnowLeopard(EntityType<? extends Latex> type, Level levelIn) {
         super(type, levelIn);
     }
+
+    public int getTransfurType() {
+        return 2;
+    }
 }

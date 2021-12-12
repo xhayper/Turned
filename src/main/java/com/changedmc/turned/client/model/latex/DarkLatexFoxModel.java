@@ -27,7 +27,7 @@ public class DarkLatexFoxModel<T extends Entity> extends AgeableListModel<T> {
     private final ModelPart RightLeg;
 
     public DarkLatexFoxModel(ModelPart root) {
-        super(false, 12.0F, 0.0F, 2.0F,2.0F, 24.0F);
+        super(false, 12.0F, 0.0F, 2.0F, 2.0F, 24.0F);
         this.Head = root.getChild("Head");
         this.Body = root.getChild("Body");
         this.Tail = root.getChild("Tail");

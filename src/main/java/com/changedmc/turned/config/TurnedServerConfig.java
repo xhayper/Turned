@@ -10,7 +10,7 @@ public class TurnedServerConfig {
     public static final ForgeConfigSpec.DoubleValue latexBabyChance;
 
     static {
-        instantTransfur = BUILDER.comment("Should the mod transfur you instantly when you stop on latex puddles?").define("instantTransfur", true);
+        instantTransfur = BUILDER.comment("Should the mod ignore latex level mechanic and transfur you instantly?").define("instantTransfur", false);
         latexBabyChance = BUILDER.comment("Chance that a AgeableLatex (or subclass) is a baby. Allows changing the ageable latex spawning mechanic.").defineInRange("latexBabyChance", 0.05D, 0.0D, 1.0D);
         SPEC = BUILDER.build();
     }

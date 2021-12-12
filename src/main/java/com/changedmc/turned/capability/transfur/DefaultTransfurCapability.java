@@ -11,6 +11,7 @@ public class DefaultTransfurCapability implements ITransfurCapability {
     private Entity entity;
 
     private int transfurType;
+    private int latexLevel;
     private boolean isTransfured;
 
     @Override
@@ -35,12 +36,25 @@ public class DefaultTransfurCapability implements ITransfurCapability {
         this.syncCapability();
     }
 
+    @Override
     public void setEntity(Entity entity) {
         this.entity = entity;
     }
 
+    @Override
+    public int getLatexLevel() {
+        return this.latexLevel;
+    }
+
+    @Override
+    public void setLatexLevel(int latexLevel) {
+        this.latexLevel = Math.min(latexLevel, 100);
+        this.syncCapability();
+    }
+
+    @Override
     public void syncCapability() {
         if (!(this.entity instanceof ServerPlayer)) return;
-        NetworkManager.INSTANCE.send(PacketDistributor.TRACKING_ENTITY_AND_SELF.with(() -> this.entity), new SyncTransfurCapability(this.entity.getId(), this.transfurType, this.isTransfured()));
+        NetworkManager.INSTANCE.send(PacketDistributor.TRACKING_ENTITY_AND_SELF.with(() -> this.entity), new SyncTransfurCapability(this.entity.getId(), this.transfurType, this.getLatexLevel(), this.isTransfured()));
     }
 }

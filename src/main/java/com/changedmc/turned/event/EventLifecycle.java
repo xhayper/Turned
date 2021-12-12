@@ -1,9 +1,7 @@
 package com.changedmc.turned.event;
 
 import com.changedmc.turned.Main;
-import com.changedmc.turned.capability.transfur.ITransfurCapability;
 import com.changedmc.turned.capability.transfur.TransfurCapability;
-import com.changedmc.turned.capability.transfur.TransfurCapabilityProvider;
 import com.changedmc.turned.client.model.latex.DarkLatexFoxModel;
 import com.changedmc.turned.client.model.latex.DarkLatexSnowLeopardModel;
 import com.changedmc.turned.client.render.latex.DarkLatexFoxRenderer;
@@ -14,6 +12,7 @@ import com.changedmc.turned.deferredregister.TurnedEntityType;
 import com.changedmc.turned.entity.latex.DarkLatexFox;
 import com.changedmc.turned.entity.latex.DarkLatexSnowLeopard;
 import com.changedmc.turned.entity.npc.Scientist;
+import com.changedmc.turned.gamerules.TurnedGamerules;
 import com.changedmc.turned.networking.NetworkManager;
 import com.changedmc.turned.util.Reference;
 import net.minecraft.client.renderer.entity.EntityRenderers;
@@ -31,6 +30,8 @@ public class EventLifecycle {
     public static void onFMLCommonSetupEvent(FMLCommonSetupEvent event) {
         if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Network Packets");
         NetworkManager.registerPackets();
+        //noinspection ALL
+        new TurnedGamerules();
     }
 
     @SubscribeEvent
@@ -55,7 +56,8 @@ public class EventLifecycle {
     @OnlyIn(Dist.CLIENT)
     @SubscribeEvent
     public static void onFMLClientSetupEvent(FMLClientSetupEvent event) {
-        if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Dark Latex Fox Entity");
+        if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD)
+            Main.LOGGER.debug("Registering Dark Latex Fox Entity");
         EntityRenderers.register(TurnedEntityType.DARK_LATEX_FOX.get(), DarkLatexFoxRenderer::new);
         if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD)
             Main.LOGGER.debug("Registering Dark Latex Snow Leopard Entity");

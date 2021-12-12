@@ -1,14 +1,13 @@
 package com.changedmc.turned.fluid;
 
-import com.changedmc.turned.Main;
 import com.changedmc.turned.deferredregister.TurnedBlock;
 import com.changedmc.turned.deferredregister.TurnedFluid;
 import com.changedmc.turned.deferredregister.TurnedItem;
+import com.changedmc.turned.gamerules.TurnedGamerules;
 import com.changedmc.turned.util.Reference;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.schedule.Schedule;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -18,7 +17,6 @@ import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.material.*;
-import net.minecraft.world.ticks.ScheduledTick;
 import net.minecraftforge.fluids.FluidAttributes;
 
 import javax.annotation.Nonnull;
@@ -78,11 +76,13 @@ public abstract class DarkLatexFluid extends FlowingFluid {
     }
 
     public void tick(@Nonnull Level level, @Nonnull BlockPos blockPos, @Nonnull FluidState p_75997_) {
-        for (Direction spreadDirection : spreadDirectionList) {
-            BlockPos newBlockPos = blockPos.relative(spreadDirection);
-            FluidState fluidstate = level.getFluidState(newBlockPos);
-            if (Fluids.WATER.isSame(fluidstate.getType()))
-                level.setBlock(newBlockPos, this.createLegacyBlock(fluidstate), 11);
+        if (level.getGameRules().getBoolean(TurnedGamerules.RULE_DO_DARK_LATEX_SPREAD)) {
+            for (Direction spreadDirection : spreadDirectionList) {
+                BlockPos newBlockPos = blockPos.relative(spreadDirection);
+                FluidState fluidstate = level.getFluidState(newBlockPos);
+                if (Fluids.WATER.isSame(fluidstate.getType()))
+                    level.setBlock(newBlockPos, this.createLegacyBlock(fluidstate), 11);
+            }
         }
         super.tick(level, blockPos, p_75997_);
     }

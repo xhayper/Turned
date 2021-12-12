@@ -21,6 +21,8 @@ public class EventManager {
         if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering EventEntity");
         MinecraftForge.EVENT_BUS.register(EventEntity.class);
 
+        MinecraftForge.EVENT_BUS.register(EventRenderer.class);
+
         if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering ENTITY_TYPES");
         TurnedEntityType.ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
         if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering ITEMS");

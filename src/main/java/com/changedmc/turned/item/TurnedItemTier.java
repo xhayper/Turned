@@ -7,7 +7,7 @@ import javax.annotation.Nonnull;
 
 public enum TurnedItemTier implements Tier {
     DARK_LATEX(150, 12f, 5f, 2, 10, null);
-    private final  int maxUses;
+    private final int maxUses;
     private final float speed;
     private final float attackDamage;
     private final int level;
@@ -29,7 +29,7 @@ public enum TurnedItemTier implements Tier {
     }
 
     @Override
-    public float getSpeed(){
+    public float getSpeed() {
         return this.speed;
     }
 

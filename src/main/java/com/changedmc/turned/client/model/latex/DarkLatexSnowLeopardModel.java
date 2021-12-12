@@ -12,10 +12,11 @@ import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
+import net.minecraft.world.entity.Entity;
 
 import javax.annotation.Nonnull;
 
-public class DarkLatexSnowLeopardModel<T extends DarkLatexSnowLeopard> extends AgeableListModel<T> {
+public class DarkLatexSnowLeopardModel<T extends Entity> extends AgeableListModel<T> {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(Reference.MOD_ID, "dark_latex_snow_leopard"), "main");
 
     private final ModelPart Head;
@@ -26,7 +27,7 @@ public class DarkLatexSnowLeopardModel<T extends DarkLatexSnowLeopard> extends A
     private final ModelPart RightLeg;
 
     public DarkLatexSnowLeopardModel(ModelPart root) {
-        super(false, 12.0F, 0.0F, 2.0F,2.0F, 24.0F);
+        super(false, 12.0F, 0.0F, 2.0F, 2.0F, 24.0F);
         this.Head = root.getChild("Head");
         this.Body = root.getChild("Body");
         this.LeftArm = root.getChild("LeftArm");

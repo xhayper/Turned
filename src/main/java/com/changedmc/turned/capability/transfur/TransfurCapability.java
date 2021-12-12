@@ -6,10 +6,9 @@ import net.minecraftforge.common.capabilities.CapabilityToken;
 import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent;
 
 public class TransfurCapability {
-    public static final Capability<ITransfurCapability> TRANSFUR_CAPABILITY = CapabilityManager.get(new CapabilityToken<>(){});
+    public static final Capability<ITransfurCapability> TRANSFUR_CAPABILITY = CapabilityManager.get(new CapabilityToken<>() {});
 
-    public static void register(RegisterCapabilitiesEvent event)
-    {
+    public static void register(RegisterCapabilitiesEvent event) {
         event.register(ITransfurCapability.class);
     }
 }

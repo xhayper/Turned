@@ -51,11 +51,11 @@ public class Scientist extends PlayerLike {
         this.getEntityData().define(DATA_EVIL_ID, false);
     }
 
-    public void setEvil(boolean isEvil) {
-        this.getEntityData().set(DATA_EVIL_ID, isEvil);
-    }
-
     public boolean isEvil() {
         return this.getEntityData().get(DATA_EVIL_ID);
+    }
+
+    public void setEvil(boolean isEvil) {
+        this.getEntityData().set(DATA_EVIL_ID, isEvil);
     }
 }
