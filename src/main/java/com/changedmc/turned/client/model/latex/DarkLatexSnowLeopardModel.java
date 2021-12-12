@@ -1,10 +1,7 @@
 package com.changedmc.turned.client.model.latex;
 
-import com.changedmc.turned.entity.latex.DarkLatexSnowLeopard;
 import com.changedmc.turned.util.Reference;
 import com.google.common.collect.ImmutableList;
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.model.AgeableListModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;

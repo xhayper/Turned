@@ -4,7 +4,6 @@ import com.changedmc.turned.item.*;
 import com.changedmc.turned.util.Reference;
 import com.changedmc.turned.util.TurnedCreativeModeTab;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.registries.DeferredRegister;

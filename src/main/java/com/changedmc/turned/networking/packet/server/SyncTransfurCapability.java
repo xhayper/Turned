@@ -4,14 +4,12 @@ import com.changedmc.turned.capability.transfur.ITransfurCapability;
 import com.changedmc.turned.capability.transfur.TransfurCapability;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.network.NetworkEvent;
 
-import java.util.UUID;
 import java.util.function.Supplier;
 
 public class SyncTransfurCapability {

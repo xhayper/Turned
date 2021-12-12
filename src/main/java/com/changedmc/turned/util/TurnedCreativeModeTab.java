@@ -17,6 +17,7 @@ public class TurnedCreativeModeTab {
     };
 
     public static final CreativeModeTab MISCELLANEOUS = new CreativeModeTab(Reference.MOD_ID + ".miscellaneous") {
+        @Nonnull
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(TurnedItem.DARK_LATEX_BUCKET.get());

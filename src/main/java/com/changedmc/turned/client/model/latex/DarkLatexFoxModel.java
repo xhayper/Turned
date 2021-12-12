@@ -1,6 +1,5 @@
 package com.changedmc.turned.client.model.latex;
 
-import com.changedmc.turned.entity.latex.DarkLatexFox;
 import com.changedmc.turned.util.Reference;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.client.model.AgeableListModel;
@@ -11,7 +10,6 @@ import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.Mob;
 
 import javax.annotation.Nonnull;
 

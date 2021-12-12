@@ -1,6 +1,5 @@
 package com.changedmc.turned.capability.transfur;
 
-import com.changedmc.turned.Main;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.Entity;

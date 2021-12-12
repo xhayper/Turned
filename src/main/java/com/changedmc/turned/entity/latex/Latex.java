@@ -1,6 +1,5 @@
 package com.changedmc.turned.entity.latex;
 
-import com.changedmc.turned.Main;
 import com.changedmc.turned.capability.transfur.ITransfurCapability;
 import com.changedmc.turned.capability.transfur.TransfurCapability;
 import com.changedmc.turned.config.TurnedServerConfig;
