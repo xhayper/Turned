@@ -25,13 +25,14 @@ public class LatexIndicator extends GuiComponent {
     }
 
     public void render(PoseStack poseStack, Window window) {
-        if (Minecraft.getInstance().player == null) return;
+        if (Minecraft.getInstance().player == null || Minecraft.getInstance().options.hideGui) return;
         ITransfurCapability transfurCapability = Minecraft.getInstance().player.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).resolve().orElse(null);
         if (transfurCapability == null || (0 >= transfurCapability.getLatexLevel() && !transfurCapability.isTransfured())) return;
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderTexture(0, LATEX_INDICATOR);
         int texYPosition = transfurCapability.getLatexLevel() == 0 ? 0 : Math.max(Math.min(Math.round((transfurCapability.getLatexLevel()/(100f/texYPos.length))-1), texYPos.length-1), 0);
+
         blit(
                 poseStack, // MatrixStack / PoseStack
                 (window.getGuiScaledWidth()/2) - 106, // x
