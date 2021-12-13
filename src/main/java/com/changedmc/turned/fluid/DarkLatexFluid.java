@@ -1,5 +1,6 @@
 package com.changedmc.turned.fluid;
 
+import com.changedmc.turned.config.TurnedServerConfig;
 import com.changedmc.turned.deferredregister.TurnedBlock;
 import com.changedmc.turned.deferredregister.TurnedFluid;
 import com.changedmc.turned.deferredregister.TurnedItem;
@@ -46,16 +47,8 @@ public abstract class DarkLatexFluid extends FlowingFluid {
         return !fluid.isSame(Fluids.WATER);
     }
 
-    public int getSpreadDelay(@Nonnull Level level, @Nonnull BlockPos blockPos, FluidState p_76205_, @Nonnull FluidState p_76206_) {
-        int i = this.getTickDelay(level);
-        if (!p_76205_.isEmpty() && !p_76206_.isEmpty() && !p_76205_.getValue(FALLING) && !p_76206_.getValue(FALLING) && p_76206_.getHeight(level, blockPos) > p_76205_.getHeight(level, blockPos) && level.getRandom().nextInt(4) != 0) {
-            i *= 4;
-        }
-        return i;
-    }
-
     public int getTickDelay(@Nonnull LevelReader levelReader) {
-        return 30;
+        return TurnedServerConfig.darkLatexSpreadDelay.get();
     }
 
     protected float getExplosionResistance() {
@@ -107,7 +100,7 @@ public abstract class DarkLatexFluid extends FlowingFluid {
         return FluidAttributes.builder(
                         new ResourceLocation(Reference.MOD_ID, "blocks/dark_latex_fluid"),
                         new ResourceLocation(Reference.MOD_ID, "blocks/flowing_dark_latex_fluid"))
-                .density(3000).viscosity(6000)
+//                .density(3000).viscosity(6000)
                 .build(TurnedFluid.DARK_LATEX.get());
     }
 

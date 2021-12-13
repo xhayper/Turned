@@ -1,5 +1,6 @@
 package com.changedmc.turned.entity.npc;
 
+import com.changedmc.turned.config.TurnedServerConfig;
 import com.changedmc.turned.entity.latex.Latex;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -15,6 +16,7 @@ import net.minecraft.world.level.ServerLevelAccessor;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import java.util.Random;
 
 public class Scientist extends PlayerLike {
     private static final EntityDataAccessor<Boolean> DATA_EVIL_ID = SynchedEntityData.defineId(Scientist.class, EntityDataSerializers.BOOLEAN);
