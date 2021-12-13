@@ -3,7 +3,6 @@ package com.changedmc.turned.client.render.npc;
 import com.changedmc.turned.entity.npc.Scientist;
 import com.changedmc.turned.util.Reference;
 import net.minecraft.client.model.HumanoidModel;
-import net.minecraft.client.model.PlayerModel;
 import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.HumanoidMobRenderer;
@@ -11,10 +10,9 @@ import net.minecraft.resources.ResourceLocation;
 
 import javax.annotation.Nonnull;
 
-
 public class ScientistRenderer extends HumanoidMobRenderer<Scientist, HumanoidModel<Scientist>> {
     public ScientistRenderer(EntityRendererProvider.Context entityRendererProvider) {
-        super(entityRendererProvider, new PlayerModel<>(entityRendererProvider.bakeLayer(ModelLayers.PLAYER), false), 0.7F);
+        super(entityRendererProvider, new HumanoidModel<>(entityRendererProvider.bakeLayer(ModelLayers.PLAYER)), 0.7F);
     }
 
     @Nonnull

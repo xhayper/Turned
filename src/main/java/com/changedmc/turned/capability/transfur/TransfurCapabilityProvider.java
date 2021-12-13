@@ -32,11 +32,11 @@ public class TransfurCapabilityProvider implements ICapabilitySerializable<Compo
     }
 
     @Override
-    public void deserializeNBT(CompoundTag nbt) {
+    public void deserializeNBT(CompoundTag compoundTag) {
         if (TransfurCapability.TRANSFUR_CAPABILITY != null) {
-            defaultTransfurCapability.setTransfurType(nbt.getInt("transfurType"));
-            defaultTransfurCapability.setLatexLevel(nbt.getInt("latexLevel"));
-            defaultTransfurCapability.setTransfured(nbt.getBoolean("isTransfured"));
+            defaultTransfurCapability.setTransfurType(compoundTag.getInt("transfurType"));
+            defaultTransfurCapability.setLatexLevel(compoundTag.getInt("latexLevel"));
+            defaultTransfurCapability.setTransfured(compoundTag.getBoolean("isTransfured"));
         }
     }
 

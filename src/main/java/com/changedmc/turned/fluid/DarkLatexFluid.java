@@ -3,7 +3,7 @@ package com.changedmc.turned.fluid;
 import com.changedmc.turned.deferredregister.TurnedBlock;
 import com.changedmc.turned.deferredregister.TurnedFluid;
 import com.changedmc.turned.deferredregister.TurnedItem;
-import com.changedmc.turned.gamerules.TurnedGamerules;
+import com.changedmc.turned.gamerule.TurnedGamerules;
 import com.changedmc.turned.util.Reference;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

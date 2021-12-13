@@ -10,7 +10,7 @@ public class DarkLatexSnowLeopardTransfur implements ITransfurType {
     @Override
     public void render(RenderPlayerEvent.Pre event) {
         PlayerDarkLatexSnowLeopardRenderer playerDarkLatexSnowLeopardRenderer = new PlayerDarkLatexSnowLeopardRenderer(Utility.getEntityRendererContext());
-        playerDarkLatexSnowLeopardRenderer.render(event.getPlayer(), 1, event.getPartialTick(), event.getPoseStack(), event.getMultiBufferSource(), event.getPackedLight());
+        playerDarkLatexSnowLeopardRenderer.render(event.getPlayer(), event.getEntity().getViewYRot(event.getPartialTick()), event.getPartialTick(), event.getPoseStack(), event.getMultiBufferSource(), event.getPackedLight());
     }
 
     @Override

@@ -12,7 +12,7 @@ import com.changedmc.turned.deferredregister.TurnedEntityType;
 import com.changedmc.turned.entity.latex.DarkLatexFox;
 import com.changedmc.turned.entity.latex.DarkLatexSnowLeopard;
 import com.changedmc.turned.entity.npc.Scientist;
-import com.changedmc.turned.gamerules.TurnedGamerules;
+import com.changedmc.turned.gamerule.TurnedGamerules;
 import com.changedmc.turned.networking.NetworkManager;
 import com.changedmc.turned.util.Reference;
 import net.minecraft.client.renderer.entity.EntityRenderers;

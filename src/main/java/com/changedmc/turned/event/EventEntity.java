@@ -16,39 +16,37 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public class EventEntity {
 
-    private static void sc(Entity entity) {
+    private static void syncCapability(Entity entity) {
         entity.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent(ITransfurCapability::syncCapability);
     }
 
     @SubscribeEvent
     public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
         if (event.getEntity().level.isClientSide()) return;
-        sc(event.getEntity());
+        syncCapability(event.getEntity());
     }
 
     @SubscribeEvent
     public static void onPlayerRespawn(PlayerEvent.PlayerRespawnEvent event) {
         if (event.getEntity().level.isClientSide()) return;
-        sc(event.getEntity());
+        syncCapability(event.getEntity());
     }
 
     @SubscribeEvent
     public static void onPlayerChangeDimension(PlayerEvent.PlayerChangedDimensionEvent event) {
         if (event.getEntity().level.isClientSide()) return;
-        sc(event.getEntity());
+        syncCapability(event.getEntity());
     }
 
     @SubscribeEvent
     public static void onEntityJoinWorld(EntityJoinWorldEvent event) {
         if (event.getEntity().level.isClientSide()) return;
-        sc(event.getEntity());
+        syncCapability(event.getEntity());
     }
 
     @SubscribeEvent
     public static void onEntityDied(LivingDeathEvent event) {
-        event.getEntity().getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent((transfurCapability) -> {
-            transfurCapability.setLatexLevel(0);
-        });
+        event.getEntity().getCapability(TransfurCapability.TRANSFUR_CAPABILITY).ifPresent((transfurCapability) -> transfurCapability.setLatexLevel(0));
     }
 
     @SubscribeEvent

@@ -10,7 +10,7 @@ public class DarkLatexFoxTransfur implements ITransfurType {
     @Override
     public void render(RenderPlayerEvent.Pre event) {
         PlayerDarkLatexFoxRenderer playerDarkLatexFoxRenderer = new PlayerDarkLatexFoxRenderer(Utility.getEntityRendererContext());
-        playerDarkLatexFoxRenderer.render(event.getPlayer(), 1, event.getPartialTick(), event.getPoseStack(), event.getMultiBufferSource(), event.getPackedLight());
+        playerDarkLatexFoxRenderer.render(event.getPlayer(), event.getEntity().getViewYRot(event.getPartialTick()), event.getPartialTick(), event.getPoseStack(), event.getMultiBufferSource(), event.getPackedLight());
     }
 
     @Override

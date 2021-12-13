@@ -5,10 +5,10 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.DifficultyInstance;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.SpawnGroupData;
+import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
@@ -25,8 +25,8 @@ public class Scientist extends PlayerLike {
 
     protected void registerGoals() {
         super.registerGoals();
-        this.goalSelector.addGoal(4, new LookAtPlayerGoal(this, Scientist.class, 6.0F));
-        this.goalSelector.addGoal(5, new LookAtPlayerGoal(this, Latex.class, 6.0F));
+        this.goalSelector.addGoal(8, new LookAtPlayerGoal(this, Scientist.class, 6.0F));
+        this.goalSelector.addGoal(8, new LookAtPlayerGoal(this, Latex.class, 6.0F));
     }
 
     @Nullable

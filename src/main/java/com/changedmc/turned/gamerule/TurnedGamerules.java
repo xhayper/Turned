@@ -1,4 +1,4 @@
-package com.changedmc.turned.gamerules;
+package com.changedmc.turned.gamerule;
 
 import com.changedmc.turned.util.GamerulesUtility;
 import net.minecraft.world.level.GameRules;
