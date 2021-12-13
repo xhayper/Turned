@@ -10,6 +10,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiComponent;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.GameType;
 
 public class LatexIndicator extends GuiComponent {
 
@@ -25,7 +26,7 @@ public class LatexIndicator extends GuiComponent {
     }
 
     public void render(PoseStack poseStack, Window window) {
-        if (Minecraft.getInstance().player == null || Minecraft.getInstance().options.hideGui) return;
+        if (Minecraft.getInstance().player == null || Minecraft.getInstance().gameMode == null || Minecraft.getInstance().options.hideGui || Minecraft.getInstance().gameMode.getPlayerMode() == GameType.SPECTATOR) return;
         ITransfurCapability transfurCapability = Minecraft.getInstance().player.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).resolve().orElse(null);
         if (transfurCapability == null || (0 >= transfurCapability.getLatexLevel() && !transfurCapability.isTransfured())) return;
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);

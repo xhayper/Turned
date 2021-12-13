@@ -16,8 +16,6 @@ public class EventManager {
         FMLJavaModLoadingContext.get().getModEventBus().register(EventLifecycle.class);
         if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering EventCapability");
         MinecraftForge.EVENT_BUS.register(EventCapability.class);
-        if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering EventRegistry");
-        MinecraftForge.EVENT_BUS.register(EventRegistry.class);
         if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering EventEntity");
         MinecraftForge.EVENT_BUS.register(EventEntity.class);
 

@@ -58,10 +58,10 @@ public abstract class Latex extends PathfinderMob {
 
     @Override
     public boolean doHurtTarget(@Nonnull Entity entity) {
-        boolean flag = super.doHurtTarget(entity);
         ITransfurCapability transfurCapability = entity.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).resolve().orElse(null);
         if (transfurCapability == null || (transfurCapability.isTransfured() || transfurCapability.getLatexLevel() >= 100))
             return false;
+        boolean flag = super.doHurtTarget(entity);
         if (flag && (!(entity instanceof Player player) || !usingShield(player))) {
             int nextLevel = Math.min(transfurCapability.getLatexLevel() + this.random.nextInt(10) + 1, 100);
             if (nextLevel >= 100 || TurnedServerConfig.instantTransfur.get()) {

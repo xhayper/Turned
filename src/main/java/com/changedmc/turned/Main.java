@@ -6,6 +6,7 @@ import com.changedmc.turned.config.TurnedServerConfig;
 import com.changedmc.turned.event.EventManager;
 import com.changedmc.turned.transfur.TransfurManager;
 import com.changedmc.turned.util.Reference;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
@@ -15,7 +16,6 @@ import org.apache.logging.log4j.Logger;
 @Mod(Reference.MOD_ID)
 public class Main {
     public static final Logger LOGGER = LogManager.getLogger(Reference.MOD_ID);
-    public static final TransfurManager TRANSFUR_MANAGER = new TransfurManager();
 
     public Main() {
         EventManager.registerEvents();

@@ -14,6 +14,7 @@ import com.changedmc.turned.entity.latex.DarkLatexSnowLeopard;
 import com.changedmc.turned.entity.npc.Scientist;
 import com.changedmc.turned.gamerule.TurnedGamerules;
 import com.changedmc.turned.networking.NetworkManager;
+import com.changedmc.turned.transfur.TransfurManager;
 import com.changedmc.turned.util.Reference;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
@@ -32,6 +33,7 @@ public class EventLifecycle {
         NetworkManager.registerPackets();
         //noinspection ALL
         new TurnedGamerules();
+        TransfurManager.init();
     }
 
     @SubscribeEvent

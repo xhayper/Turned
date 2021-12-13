@@ -55,6 +55,11 @@ public class DefaultTransfurCapability implements ITransfurCapability {
     @Override
     public void syncCapability() {
         if (!(this.entity instanceof ServerPlayer)) return;
-        NetworkManager.INSTANCE.send(PacketDistributor.TRACKING_ENTITY_AND_SELF.with(() -> this.entity), new SyncTransfurCapability(this.entity.getId(), this.transfurType, this.getLatexLevel(), this.isTransfured()));
+        NetworkManager.INSTANCE.send(PacketDistributor.ALL.noArg(), new SyncTransfurCapability(this.entity.getId(), this.transfurType, this.getLatexLevel(), this.isTransfured()));
+    }
+
+    @Override
+    public void syncTo(ServerPlayer player) {
+        NetworkManager.INSTANCE.send(PacketDistributor.PLAYER.with(() -> player), new SyncTransfurCapability(this.entity.getId(), this.transfurType, this.getLatexLevel(), this.isTransfured()));
     }
 }
