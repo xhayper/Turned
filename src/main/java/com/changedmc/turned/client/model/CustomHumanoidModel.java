@@ -153,7 +153,7 @@ public class CustomHumanoidModel<T extends LivingEntity> extends AgeableListMode
             }
         }
 
-        this.setupAttackAnimation(pEntity, pAgeInTicks);
+        this.setupAttackAnimation(pEntity);
         if (this.crouching) {
             this.body.xRot = 0.5F;
             this.rightArm.xRot += 0.4F;
@@ -285,7 +285,7 @@ public class CustomHumanoidModel<T extends LivingEntity> extends AgeableListMode
 
     }
 
-    protected void setupAttackAnimation(T pLivingEntity, float pAgeInTicks) {
+    protected void setupAttackAnimation(T pLivingEntity) {
         if (!(this.attackTime <= 0.0F)) {
             HumanoidArm humanoidarm = this.getAttackArm(pLivingEntity);
             ModelPart modelpart = this.getArm(humanoidarm);
@@ -331,19 +331,6 @@ public class CustomHumanoidModel<T extends LivingEntity> extends AgeableListMode
         return -65.0F * pLimbSwing + pLimbSwing * pLimbSwing;
     }
 
-    public void copyPropertiesTo(HumanoidModel<T> pModel) {
-        super.copyPropertiesTo(pModel);
-        pModel.leftArmPose = this.leftArmPose;
-        pModel.rightArmPose = this.rightArmPose;
-        pModel.crouching = this.crouching;
-        pModel.head.copyFrom(this.head);
-        pModel.body.copyFrom(this.body);
-        pModel.rightArm.copyFrom(this.rightArm);
-        pModel.leftArm.copyFrom(this.leftArm);
-        pModel.rightLeg.copyFrom(this.rightLeg);
-        pModel.leftLeg.copyFrom(this.leftLeg);
-    }
-
     public void setAllVisible(boolean pVisible) {
         this.head.visible = pVisible;
         this.body.visible = pVisible;
@@ -370,26 +357,4 @@ public class CustomHumanoidModel<T extends LivingEntity> extends AgeableListMode
         HumanoidArm humanoidarm = pEntity.getMainArm();
         return pEntity.swingingArm == InteractionHand.MAIN_HAND ? humanoidarm : humanoidarm.getOpposite();
     }
-
-//    @OnlyIn(Dist.CLIENT)
-//    public static enum ArmPose {
-//        EMPTY(false),
-//        ITEM(false),
-//        BLOCK(false),
-//        BOW_AND_ARROW(true),
-//        THROW_SPEAR(false),
-//        CROSSBOW_CHARGE(true),
-//        CROSSBOW_HOLD(true),
-//        SPYGLASS(false);
-//
-//        private final boolean twoHanded;
-//
-//        private ArmPose(boolean p_102896_) {
-//            this.twoHanded = p_102896_;
-//        }
-//
-//        public boolean isTwoHanded() {
-//            return this.twoHanded;
-//        }
-//    }
 }

@@ -3,17 +3,11 @@ package com.changedmc.turned.entity.ai;
 import com.changedmc.turned.capability.transfur.ITransfurCapability;
 import com.changedmc.turned.capability.transfur.TransfurCapability;
 import com.changedmc.turned.entity.latex.Latex;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.ai.goal.Goal;
-import net.minecraft.world.entity.ai.goal.ZombieAttackGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
-import net.minecraft.world.entity.ai.targeting.TargetingConditions;
-import net.minecraft.world.entity.player.Player;
 
 import javax.annotation.Nullable;
-import java.util.EnumSet;
 import java.util.function.Predicate;
 
 public class LatexNearestAttackableTargetGoal<T extends LivingEntity> extends NearestAttackableTargetGoal<T> {

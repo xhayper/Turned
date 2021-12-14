@@ -1,5 +1,4 @@
 package com.changedmc.turned.client.render.entity.player;
-
 import com.changedmc.turned.client.model.CustomHumanoidModel;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Vector3f;
@@ -50,6 +49,7 @@ public abstract class HumanoidPlayerRenderer<E extends Player, M extends CustomH
         if (pClientPlayer.isSpectator()) {
             playermodel.setAllVisible(false);
             playermodel.head.visible = true;
+
         } else {
             playermodel.setAllVisible(true);
             playermodel.crouching = pClientPlayer.isCrouching();

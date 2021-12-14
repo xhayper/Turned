@@ -5,7 +5,6 @@ import com.changedmc.turned.config.TurnedCommonConfig;
 import com.changedmc.turned.config.TurnedServerConfig;
 import com.changedmc.turned.event.EventManager;
 import com.changedmc.turned.reference.Reference;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;

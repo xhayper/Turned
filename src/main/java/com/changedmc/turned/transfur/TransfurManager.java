@@ -6,10 +6,8 @@ import com.changedmc.turned.transfur.types.DarkLatexSnowLeopardTransfur;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraftforge.client.event.RenderArmEvent;
-import net.minecraftforge.client.event.RenderHandEvent;
 import net.minecraftforge.client.event.RenderPlayerEvent;
 
-import javax.swing.text.html.parser.Entity;
 import java.util.HashMap;
 
 public class TransfurManager {

@@ -1,22 +1,18 @@
 package com.changedmc.turned.entity.npc;
 
-import com.changedmc.turned.config.TurnedServerConfig;
 import com.changedmc.turned.entity.latex.Latex;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.entity.*;
-import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import java.util.Random;
 
 public class Scientist extends PlayerLike {
     private static final EntityDataAccessor<Boolean> DATA_EVIL_ID = SynchedEntityData.defineId(Scientist.class, EntityDataSerializers.BOOLEAN);

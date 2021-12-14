@@ -1,12 +1,11 @@
 package com.changedmc.turned.util;
 
-import com.changedmc.turned.Main;
 import com.changedmc.turned.config.TurnedServerConfig;
 import com.changedmc.turned.item.LatexUsableItem;
 import com.changedmc.turned.reference.TurnedItemTier;
+import com.google.common.collect.ImmutableList;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.Entity;
@@ -18,6 +17,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SpawnEggItem;
 import net.minecraft.world.item.TieredItem;
 
+import javax.annotation.Nonnull;
+import java.util.List;
 import java.util.Random;
 
 public class Utility {
@@ -29,6 +30,28 @@ public class Utility {
                 Minecraft.getInstance().getResourceManager(),
                 Minecraft.getInstance().getEntityModels(),
                 Minecraft.getInstance().font);
+    }
+
+    public static void removeAllNonLatexItem(@Nonnull Entity entity) {
+        if (TurnedServerConfig.CAN_LATEX_ONLY_USE_LATEX_ITEM.get()) {
+            if (entity instanceof Player p && !p.isCreative() && !p.isSpectator()) {
+                for (List<ItemStack> list : ImmutableList.of(p.getInventory().items, p.getInventory().armor, p.getInventory().offhand)) {
+                    for (int i = 0; i < list.size(); i++) {
+                        ItemStack itemstack = list.get(i);
+                        if (itemstack.isEmpty() || Utility.isItemLatexHoldable(itemstack.getItem())) continue;
+                        ItemEntity itemEntity = Utility.dropItem(p, itemstack, true, true, true);
+                        if (itemEntity != null) {
+                            list.set(i, ItemStack.EMPTY);
+                        }
+                    }
+                }
+            } else {
+                for (ItemStack itemstack : entity.getAllSlots()) {
+                    if (itemstack.isEmpty() || Utility.isItemLatexHoldable(itemstack.getItem())) continue;
+                    Utility.dropItem(entity, itemstack, true, true, true);
+                }
+            }
+        }
     }
 
     public static ItemEntity dropItem(Entity entity, ItemStack pDroppedItem, boolean autoAddEntity, boolean pDropAround, boolean pTraceItem) {
