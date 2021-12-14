@@ -2,6 +2,7 @@ package com.changedmc.turned.client.model.latex;
 
 import com.changedmc.turned.client.model.CustomHumanoidModel;
 import com.changedmc.turned.reference.Reference;
+import com.google.common.collect.ImmutableList;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
@@ -9,6 +10,8 @@ import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
+
+import javax.annotation.Nonnull;
 
 public class DarkLatexSnowLeopardModel<T extends LivingEntity> extends CustomHumanoidModel<T> {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(Reference.MOD_ID, "dark_latex_snow_leopard"), "main");

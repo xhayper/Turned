@@ -25,6 +25,7 @@ import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLDedicatedServerSetupEvent;
 
 public class EventLifecycle {
     @SubscribeEvent
@@ -33,7 +34,6 @@ public class EventLifecycle {
         NetworkManager.registerPackets();
         //noinspection ALL
         new TurnedGamerules();
-        TransfurManager.init();
     }
 
     @SubscribeEvent
@@ -55,6 +55,12 @@ public class EventLifecycle {
         event.registerLayerDefinition(DarkLatexSnowLeopardModel.LAYER_LOCATION, DarkLatexSnowLeopardModel::createBodyLayer);
     }
 
+    @OnlyIn(Dist.DEDICATED_SERVER)
+    @SubscribeEvent
+    public static void onFMLDedicatedServerSetup(FMLDedicatedServerSetupEvent event) {
+        TransfurManager.init(true, false);
+    }
+
     @OnlyIn(Dist.CLIENT)
     @SubscribeEvent
     public static void onFMLClientSetupEvent(FMLClientSetupEvent event) {
@@ -66,5 +72,6 @@ public class EventLifecycle {
         EntityRenderers.register(TurnedEntityType.DARK_LATEX_SNOW_LEOPARD.get(), DarkLatexSnowLeopardRenderer::new);
         if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Scientist Entity");
         EntityRenderers.register(TurnedEntityType.SCIENTIST.get(), ScientistRenderer::new);
+        TransfurManager.init(false, false);
     }
 }

@@ -10,6 +10,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiComponent;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.GameType;
 
 public class LatexIndicator extends GuiComponent {
@@ -36,7 +37,7 @@ public class LatexIndicator extends GuiComponent {
 
         blit(
                 poseStack, // MatrixStack / PoseStack
-                (window.getGuiScaledWidth()/2) - 106, // x
+                (window.getGuiScaledWidth()/2) - (Minecraft.getInstance().player.getOffhandItem().is(Items.AIR) ? 106 : 135), // x
                 window.getGuiScaledHeight() - 24, // y
                 12, // width
                 24, // height

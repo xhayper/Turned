@@ -15,14 +15,15 @@ public class TransfurManager {
     public final static HashMap<Integer, ITransfurType> transfurTypeHashMap = new HashMap<>();
     public final static HashMap<Integer, EntityType<? extends Mob>> entityTypeHashMap = new HashMap<>();
 
-    public static void init() {
-        register(1, TurnedEntityType.DARK_LATEX_FOX.get(), new DarkLatexFoxTransfur());
-        register(2, TurnedEntityType.DARK_LATEX_SNOW_LEOPARD.get(), new DarkLatexSnowLeopardTransfur());
-    }
-
-    public static void register(int type, EntityType<? extends Mob> entityType, ITransfurType transfurType) {
-        transfurTypeHashMap.put(type, transfurType);
-        entityTypeHashMap.put(type, entityType);
+    public static void init(boolean dontRegisterTransfurType, boolean dontRegisterEntityType) {
+        if (!dontRegisterTransfurType) {
+            transfurTypeHashMap.put(1, new DarkLatexFoxTransfur());
+            transfurTypeHashMap.put(2, new DarkLatexSnowLeopardTransfur());
+        }
+        if (!dontRegisterEntityType) {
+            entityTypeHashMap.put(1, TurnedEntityType.DARK_LATEX_FOX.get());
+            entityTypeHashMap.put(2, TurnedEntityType.DARK_LATEX_SNOW_LEOPARD.get());
+        }
     }
 
     public static void render(RenderPlayerEvent.Pre event, int type) {

@@ -2,6 +2,7 @@ package com.changedmc.turned.client.model.latex;
 
 import com.changedmc.turned.client.model.CustomHumanoidModel;
 import com.changedmc.turned.reference.Reference;
+import com.google.common.collect.ImmutableList;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
@@ -10,11 +11,16 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
 
+import javax.annotation.Nonnull;
+
 public class DarkLatexFoxModel<T extends LivingEntity> extends CustomHumanoidModel<T> {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(Reference.MOD_ID, "dark_latex_fox"), "main");
 
+    private final ModelPart Tail;
+
     public DarkLatexFoxModel(ModelPart root) {
         super(RenderType::entityCutoutNoCull, root.getChild("Head"), root.getChild("Body"), root.getChild("LeftArm"), root.getChild("RightArm"), root.getChild("LeftLeg"), root.getChild("RightLeg"));
+        this.Tail = root.getChild("Tail");
     }
 
     public static LayerDefinition createBodyLayer() {
@@ -70,5 +76,14 @@ public class DarkLatexFoxModel<T extends LivingEntity> extends CustomHumanoidMod
         PartDefinition cube_r8 = RightLeg.addOrReplaceChild("cube_r8", CubeListBuilder.create().texOffs(42, 13).addBox(-2.0F, 0.0F, -2.0F, 4.0F, 6.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, -0.8F, 0.2F, -0.3927F, 0.0F, 0.0F));
 
         return LayerDefinition.create(meshdefinition, 64, 64);
+    }
+
+    @Nonnull
+    protected Iterable<ModelPart> bodyParts() {
+        return ImmutableList.of(this.body, this.rightArm, this.leftArm, this.rightLeg, this.leftLeg, this.Tail);
+    }
+
+    public void setupAnim(T pEntity, float pLimbSwing, float pLimbSwingAmount, float pAgeInTicks, float pNetHeadYaw, float pHeadPitch) {
+        super.setupAnim(pEntity, pLimbSwing, pLimbSwingAmount, pAgeInTicks, pNetHeadYaw, pHeadPitch);
     }
 }
