@@ -2,7 +2,7 @@ package com.changedmc.turned.client.gui.component;
 
 import com.changedmc.turned.capability.transfur.ITransfurCapability;
 import com.changedmc.turned.capability.transfur.TransfurCapability;
-import com.changedmc.turned.util.Reference;
+import com.changedmc.turned.reference.Reference;
 import com.mojang.blaze3d.platform.Window;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;

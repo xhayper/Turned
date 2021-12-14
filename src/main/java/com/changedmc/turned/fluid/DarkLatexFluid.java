@@ -5,7 +5,7 @@ import com.changedmc.turned.deferredregister.TurnedBlock;
 import com.changedmc.turned.deferredregister.TurnedFluid;
 import com.changedmc.turned.deferredregister.TurnedItem;
 import com.changedmc.turned.gamerule.TurnedGamerules;
-import com.changedmc.turned.util.Reference;
+import com.changedmc.turned.reference.Reference;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
@@ -48,7 +48,7 @@ public abstract class DarkLatexFluid extends FlowingFluid {
     }
 
     public int getTickDelay(@Nonnull LevelReader levelReader) {
-        return TurnedServerConfig.darkLatexSpreadDelay.get();
+        return TurnedServerConfig.DARK_LATEX_SPREAD_DELAY.get();
     }
 
     protected float getExplosionResistance() {
@@ -100,7 +100,7 @@ public abstract class DarkLatexFluid extends FlowingFluid {
         return FluidAttributes.builder(
                         new ResourceLocation(Reference.MOD_ID, "blocks/dark_latex_fluid"),
                         new ResourceLocation(Reference.MOD_ID, "blocks/flowing_dark_latex_fluid"))
-//                .density(3000).viscosity(6000)
+                .density(3000).viscosity(6000)
                 .build(TurnedFluid.DARK_LATEX.get());
     }
 

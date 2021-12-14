@@ -6,7 +6,7 @@ import com.changedmc.turned.deferredregister.TurnedBlock;
 import com.changedmc.turned.deferredregister.TurnedEntityType;
 import com.changedmc.turned.deferredregister.TurnedFluid;
 import com.changedmc.turned.deferredregister.TurnedItem;
-import com.changedmc.turned.util.Reference;
+import com.changedmc.turned.reference.Reference;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 

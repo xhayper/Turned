@@ -3,7 +3,7 @@ package com.changedmc.turned.event;
 import com.changedmc.turned.Main;
 import com.changedmc.turned.capability.transfur.TransfurCapabilityProvider;
 import com.changedmc.turned.config.TurnedCommonConfig;
-import com.changedmc.turned.util.Reference;
+import com.changedmc.turned.reference.Reference;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraftforge.event.AttachCapabilitiesEvent;

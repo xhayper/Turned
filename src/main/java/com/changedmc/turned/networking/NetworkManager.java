@@ -3,7 +3,7 @@ package com.changedmc.turned.networking;
 import com.changedmc.turned.Main;
 import com.changedmc.turned.config.TurnedCommonConfig;
 import com.changedmc.turned.networking.packet.server.SyncTransfurCapability;
-import com.changedmc.turned.util.Reference;
+import com.changedmc.turned.reference.Reference;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.network.NetworkEvent;

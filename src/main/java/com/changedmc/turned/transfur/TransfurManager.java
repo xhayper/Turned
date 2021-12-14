@@ -5,6 +5,7 @@ import com.changedmc.turned.transfur.types.DarkLatexFoxTransfur;
 import com.changedmc.turned.transfur.types.DarkLatexSnowLeopardTransfur;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
+import net.minecraftforge.client.event.RenderArmEvent;
 import net.minecraftforge.client.event.RenderHandEvent;
 import net.minecraftforge.client.event.RenderPlayerEvent;
 
@@ -13,8 +14,8 @@ import java.util.HashMap;
 
 public class TransfurManager {
 
-    public static HashMap<Integer, ITransfurType> transfurTypeHashMap = new HashMap<>();
-    public static HashMap<Integer, EntityType<? extends Mob>> entityTypeHashMap = new HashMap<>();
+    public final static HashMap<Integer, ITransfurType> transfurTypeHashMap = new HashMap<>();
+    public final static HashMap<Integer, EntityType<? extends Mob>> entityTypeHashMap = new HashMap<>();
 
     public static void init() {
         register(1, TurnedEntityType.DARK_LATEX_FOX.get(), new DarkLatexFoxTransfur());
@@ -32,9 +33,9 @@ public class TransfurManager {
         event.setCanceled(true);
     }
 
-    public static void renderHand(RenderHandEvent event, int type) {
+    public static void renderArm(RenderArmEvent event, int type) {
         if (!transfurTypeHashMap.containsKey(type)) return;
-        transfurTypeHashMap.get(type).renderHand(event);
+        transfurTypeHashMap.get(type).renderArm(event);
         event.setCanceled(true);
     }
 

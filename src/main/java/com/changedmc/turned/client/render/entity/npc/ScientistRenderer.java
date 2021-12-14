@@ -1,7 +1,7 @@
-package com.changedmc.turned.client.render.npc;
+package com.changedmc.turned.client.render.entity.npc;
 
 import com.changedmc.turned.entity.npc.Scientist;
-import com.changedmc.turned.util.Reference;
+import com.changedmc.turned.reference.Reference;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;

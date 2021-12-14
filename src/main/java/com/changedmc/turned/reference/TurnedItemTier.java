@@ -1,4 +1,4 @@
-package com.changedmc.turned.item;
+package com.changedmc.turned.reference;
 
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -6,7 +6,9 @@ import net.minecraft.world.item.crafting.Ingredient;
 import javax.annotation.Nonnull;
 
 public enum TurnedItemTier implements Tier {
+
     DARK_LATEX(150, 12f, 5f, 2, 10, null);
+
     private final int maxUses;
     private final float speed;
     private final float attackDamage;

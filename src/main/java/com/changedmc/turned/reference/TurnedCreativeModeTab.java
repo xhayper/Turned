@@ -1,4 +1,4 @@
-package com.changedmc.turned.util;
+package com.changedmc.turned.reference;
 
 import com.changedmc.turned.deferredregister.TurnedItem;
 import net.minecraft.world.item.CreativeModeTab;

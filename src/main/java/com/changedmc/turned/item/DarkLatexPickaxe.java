@@ -1,6 +1,7 @@
 package com.changedmc.turned.item;
 
-import com.changedmc.turned.util.TurnedCreativeModeTab;
+import com.changedmc.turned.reference.TurnedItemTier;
+import com.changedmc.turned.reference.TurnedCreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.Rarity;

@@ -5,10 +5,10 @@ The mod focuses on having mostly transform-based mechanics and various NPCs/Mons
 
 ## TODO
 
-| Task | Status | Taken By |
-| :---: | :---: | :---: |
-| Port code [1] | N | - |
-| Rewrite transfur code [2] | N | - |
+|           Task            | Status | Taken By |
+|:-------------------------:|:------:|:--------:|
+|       Port code [1]       |   N    |    -     |
+| Rewrite transfur code [2] |   N    |    -     |
 
 W - Working on it, N - Will get to it
 

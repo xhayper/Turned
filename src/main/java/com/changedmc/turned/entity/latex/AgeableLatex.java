@@ -25,7 +25,7 @@ public class AgeableLatex extends Latex {
     }
 
     public static boolean getSpawnAsBabyOdds(Random random) {
-        return random.nextFloat() < TurnedServerConfig.latexBabyChance.get();
+        return random.nextFloat() < TurnedServerConfig.LATEX_BABY_CHANCE.get();
     }
 
     @Nullable

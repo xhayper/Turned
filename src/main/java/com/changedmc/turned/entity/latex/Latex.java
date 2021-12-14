@@ -7,24 +7,27 @@ import com.changedmc.turned.entity.ai.LatexMeleeAttackGoal;
 import com.changedmc.turned.entity.ai.LatexNearestAttackableTargetGoal;
 import com.changedmc.turned.entity.ai.LatexPanicGoal;
 import com.changedmc.turned.entity.npc.Scientist;
+import com.changedmc.turned.util.Utility;
+import com.google.common.collect.ImmutableList;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.util.Mth;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
+import net.minecraft.world.entity.animal.Sheep;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.Level;
 
 import javax.annotation.Nonnull;
+import java.util.List;
 
 public abstract class Latex extends PathfinderMob {
 
@@ -44,7 +47,7 @@ public abstract class Latex extends PathfinderMob {
         this.goalSelector.addGoal(8, new LookAtPlayerGoal(this, Player.class, 8.0F));
         this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
         this.targetSelector.addGoal(1, new LatexNearestAttackableTargetGoal<>(this, Player.class, true));
-        this.targetSelector.addGoal(1, new LatexNearestAttackableTargetGoal<>(this, Scientist.class, true, (LivingEntity livingEntity) -> (livingEntity instanceof Scientist) && !((Scientist) livingEntity).isEvil()));
+        this.targetSelector.addGoal(2, new LatexNearestAttackableTargetGoal<>(this, Scientist.class, true, (LivingEntity livingEntity) -> (livingEntity instanceof Scientist) && !((Scientist) livingEntity).isEvil()));
     }
 
     protected boolean usingShield(Player player) {
@@ -55,21 +58,39 @@ public abstract class Latex extends PathfinderMob {
         return (EntityType<T>) this.getType();
     }
 
-
     @Override
     public boolean doHurtTarget(@Nonnull Entity entity) {
         ITransfurCapability transfurCapability = entity.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).resolve().orElse(null);
         if (transfurCapability == null || (transfurCapability.isTransfured() || transfurCapability.getLatexLevel() >= 100))
             return false;
         boolean flag = super.doHurtTarget(entity);
-        if (flag && (!(entity instanceof Player player) || !usingShield(player))) {
+        this.swing(InteractionHand.MAIN_HAND);
+        if (flag && (!(entity instanceof Player player) || !usingShield(player)) && !transfurCapability.isTransfured()) {
             int nextLevel = Math.min(transfurCapability.getLatexLevel() + this.random.nextInt(10) + 1, 100);
-            if (nextLevel >= 100 || TurnedServerConfig.instantTransfur.get()) {
-                if (entity instanceof Player) {
-                    transfurCapability.setTransfurType(this.getTransfurType());
-                    transfurCapability.setTransfured(true);
-                    transfurCapability.setLatexLevel(0);
-                } else if (entity instanceof Mob) {
+            if ((nextLevel >= 100 || TurnedServerConfig.INSTANT_TRANSFUR.get())) {
+                if (TurnedServerConfig.CAN_LATEX_ONLY_USE_LATEX_ITEM.get()) {
+                    if (entity instanceof Player player && !player.isCreative() && !player.isSpectator()) {
+                        for (List<ItemStack> list : ImmutableList.of(player.getInventory().items, player.getInventory().armor, player.getInventory().offhand)) {
+                            for (int i = 0; i < list.size(); i++) {
+                                ItemStack itemstack = list.get(i);
+                                if (itemstack.isEmpty() || Utility.isItemLatexHoldable(itemstack.getItem())) continue;
+                                ItemEntity itemEntity = Utility.dropItem(player, itemstack, true, true, true);
+                                if (itemEntity != null) {
+                                    list.set(i, ItemStack.EMPTY);
+                                }
+                            }
+                        }
+                    } else {
+                        for (ItemStack itemstack : entity.getAllSlots()) {
+                            if (itemstack.isEmpty() || Utility.isItemLatexHoldable(itemstack.getItem())) continue;
+                            Utility.dropItem(entity, itemstack, true, true, true);
+                        }
+                    }
+                }
+                transfurCapability.setTransfurType(this.getTransfurType());
+                transfurCapability.setTransfured(true);
+                transfurCapability.setLatexLevel(0);
+                if (entity instanceof Mob) {
                     Mob newMob = ((Mob) entity).convertTo(this.getTypedType(), true);
                     if (newMob == null) return true;
                     newMob.setDeltaMovement(entity.getDeltaMovement());

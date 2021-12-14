@@ -1,6 +1,6 @@
 package com.changedmc.turned.item;
 
-import com.changedmc.turned.util.TurnedCreativeModeTab;
+import com.changedmc.turned.reference.TurnedCreativeModeTab;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
 import net.minecraft.core.BlockPos;
@@ -16,7 +16,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import javax.annotation.Nonnull;
 
-public class DarkLatexScythe extends Item implements Vanishable {
+public class DarkLatexScythe extends LatexUsableItem implements Vanishable {
     public DarkLatexScythe() {
         super(new Item.Properties().tab(TurnedCreativeModeTab.COMBAT).durability(225));
     }

@@ -1,7 +1,7 @@
 package com.changedmc.turned.item;
 
 import com.changedmc.turned.deferredregister.TurnedFluid;
-import com.changedmc.turned.util.TurnedCreativeModeTab;
+import com.changedmc.turned.reference.TurnedCreativeModeTab;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 
