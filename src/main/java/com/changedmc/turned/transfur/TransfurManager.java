@@ -3,6 +3,7 @@ package com.changedmc.turned.transfur;
 import com.changedmc.turned.deferredregister.TurnedEntityType;
 import com.changedmc.turned.transfur.types.DarkLatexFoxTransfur;
 import com.changedmc.turned.transfur.types.DarkLatexSnowLeopardTransfur;
+import com.changedmc.turned.transfur.types.DarkLatexTransfur;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraftforge.client.event.RenderArmEvent;
@@ -19,10 +20,12 @@ public class TransfurManager {
         if (!dontRegisterTransfurType) {
             transfurTypeHashMap.put(1, new DarkLatexFoxTransfur());
             transfurTypeHashMap.put(2, new DarkLatexSnowLeopardTransfur());
+            transfurTypeHashMap.put(3, new DarkLatexTransfur());
         }
         if (!dontRegisterEntityType) {
             entityTypeHashMap.put(1, TurnedEntityType.DARK_LATEX_FOX.get());
             entityTypeHashMap.put(2, TurnedEntityType.DARK_LATEX_SNOW_LEOPARD.get());
+            entityTypeHashMap.put(3, TurnedEntityType.DARK_LATEX.get());
         }
     }
 

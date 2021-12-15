@@ -39,10 +39,10 @@ public class CustomHumanoidModel<T extends LivingEntity> extends AgeableListMode
     }
 
     public CustomHumanoidModel(ModelPart pRoot, Function<ResourceLocation, RenderType> pRenderType) {
-        this(pRenderType, pRoot.getChild("head"), pRoot.getChild("body"), pRoot.getChild("right_arm"), pRoot.getChild("left_arm"), pRoot.getChild("right_leg"), pRoot.getChild("left_leg"));
+        this(pRenderType, pRoot.getChild("head"), pRoot.getChild("body"), pRoot.getChild("left_arm"), pRoot.getChild("right_arm"), pRoot.getChild("left_leg"), pRoot.getChild("right_leg"));
     }
 
-    public CustomHumanoidModel(Function<ResourceLocation, RenderType> pRenderType, ModelPart pHead, ModelPart pBody, ModelPart pRightArm, ModelPart pLeftArm, ModelPart pRightLeg, ModelPart pLeftLeg) {
+    public CustomHumanoidModel(Function<ResourceLocation, RenderType> pRenderType, ModelPart pHead, ModelPart pBody, ModelPart pLeftArm, ModelPart pRightArm, ModelPart pLeftLeg, ModelPart pRightLeg) {
         super(pRenderType, true, 16.0F, 0.0F, 2.0F, 2.0F, 24.0F);
         this.head = pHead;
         this.body = pBody;

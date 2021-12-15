@@ -15,7 +15,7 @@ public class EventManager {
         MinecraftForge.EVENT_BUS.register(EventCapability.class);
         if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering EventEntity");
         MinecraftForge.EVENT_BUS.register(EventEntity.class);
-
+        if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering EventRenderer");
         MinecraftForge.EVENT_BUS.register(EventRenderer.class);
 
         if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering ENTITY_TYPES");

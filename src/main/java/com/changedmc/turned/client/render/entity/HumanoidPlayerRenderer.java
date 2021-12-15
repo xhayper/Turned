@@ -1,4 +1,4 @@
-package com.changedmc.turned.client.render.entity.player;
+package com.changedmc.turned.client.render.entity;
 import com.changedmc.turned.client.model.CustomHumanoidModel;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Vector3f;

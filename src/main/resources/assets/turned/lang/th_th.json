@@ -1,6 +1,7 @@
 {
   "subtitles.entity.latex.transfur": "น้ำยางแปลงร่าง",
   "entity.turned.latex": "สิงมีชิวิตน้ำยาง",
+  "entity.turned.dark_latex": "น้ำยางดำ",
   "entity.turned.dark_latex_fox": "สุนัขจ้งจอกน้ำยางดำ",
   "entity.turned.dark_latex_snow_leopard": "เสือดาวหิมะน้ำยางดำ",
   "entity.turned.scientist": "นักวิทยาศาสตร์",
@@ -13,6 +14,7 @@
   "item.turned.dark_latex_axe": "ขวานน้ำยางดำ",
   "item.turned.dark_latex_pickaxe": "เสียมน้ำยางดำ",
   "item.turned.dark_latex_scythe": "เคียวน้ำยางดำ",
+  "item.turned.dark_latex_spawn_egg": "ไข่เกิดน้ำยางดำ",
   "item.turned.dark_latex_fox_spawn_egg": "ไข่เกิดสุนัขจ้งจอกน้ำยางดำ",
   "item.turned.dark_latex_snow_leopard_spawn_egg": "ไข่เกิดเสือดาวหิมะน้ำยางดำ",
   "item.turned.scientist_spawn_egg": "ไข่เกิดนักวิทยาศาสตร์",

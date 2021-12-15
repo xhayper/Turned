@@ -1,5 +1,6 @@
 package com.changedmc.turned.entity.npc;
 
+import com.changedmc.turned.entity.PlayerLike;
 import com.changedmc.turned.entity.latex.Latex;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;

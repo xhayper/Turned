@@ -1,4 +1,4 @@
-package com.changedmc.turned.entity.npc;
+package com.changedmc.turned.entity;
 
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;

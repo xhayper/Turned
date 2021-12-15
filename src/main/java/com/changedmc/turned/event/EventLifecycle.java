@@ -3,12 +3,15 @@ package com.changedmc.turned.event;
 import com.changedmc.turned.Main;
 import com.changedmc.turned.capability.transfur.TransfurCapability;
 import com.changedmc.turned.client.model.latex.DarkLatexFoxModel;
+import com.changedmc.turned.client.model.latex.DarkLatexModel;
 import com.changedmc.turned.client.model.latex.DarkLatexSnowLeopardModel;
 import com.changedmc.turned.client.render.entity.latex.DarkLatexFoxRenderer;
+import com.changedmc.turned.client.render.entity.latex.DarkLatexRenderer;
 import com.changedmc.turned.client.render.entity.latex.DarkLatexSnowLeopardRenderer;
 import com.changedmc.turned.client.render.entity.npc.ScientistRenderer;
 import com.changedmc.turned.config.TurnedCommonConfig;
 import com.changedmc.turned.deferredregister.TurnedEntityType;
+import com.changedmc.turned.entity.latex.DarkLatex;
 import com.changedmc.turned.entity.latex.DarkLatexFox;
 import com.changedmc.turned.entity.latex.DarkLatexSnowLeopard;
 import com.changedmc.turned.entity.npc.Scientist;
@@ -39,8 +42,9 @@ public class EventLifecycle {
 
     @SubscribeEvent
     public static void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
-        event.put(TurnedEntityType.DARK_LATEX_FOX.get(), DarkLatexFox.createAttributes().build());
         event.put(TurnedEntityType.DARK_LATEX_SNOW_LEOPARD.get(), DarkLatexSnowLeopard.createAttributes().build());
+        event.put(TurnedEntityType.DARK_LATEX_FOX.get(), DarkLatexFox.createAttributes().build());
+        event.put(TurnedEntityType.DARK_LATEX.get(), DarkLatex.createAttributes().build());
         event.put(TurnedEntityType.SCIENTIST.get(), Scientist.createAttributes().build());
     }
 
@@ -52,8 +56,9 @@ public class EventLifecycle {
     @OnlyIn(Dist.CLIENT)
     @SubscribeEvent
     public static void onRegisterLayerDefinition(EntityRenderersEvent.RegisterLayerDefinitions event) {
-        event.registerLayerDefinition(DarkLatexFoxModel.LAYER_LOCATION, DarkLatexFoxModel::createBodyLayer);
         event.registerLayerDefinition(DarkLatexSnowLeopardModel.LAYER_LOCATION, DarkLatexSnowLeopardModel::createBodyLayer);
+        event.registerLayerDefinition(DarkLatexFoxModel.LAYER_LOCATION, DarkLatexFoxModel::createBodyLayer);
+        event.registerLayerDefinition(DarkLatexModel.LAYER_LOCATION, DarkLatexModel::createBodyLayer);
     }
 
     @OnlyIn(Dist.DEDICATED_SERVER)
@@ -65,13 +70,9 @@ public class EventLifecycle {
     @OnlyIn(Dist.CLIENT)
     @SubscribeEvent
     public static void onFMLClientSetupEvent(FMLClientSetupEvent event) {
-        if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD)
-            Main.LOGGER.debug("Registering Dark Latex Fox Entity");
-        EntityRenderers.register(TurnedEntityType.DARK_LATEX_FOX.get(), DarkLatexFoxRenderer::new);
-        if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD)
-            Main.LOGGER.debug("Registering Dark Latex Snow Leopard Entity");
         EntityRenderers.register(TurnedEntityType.DARK_LATEX_SNOW_LEOPARD.get(), DarkLatexSnowLeopardRenderer::new);
-        if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Scientist Entity");
+        EntityRenderers.register(TurnedEntityType.DARK_LATEX_FOX.get(), DarkLatexFoxRenderer::new);
+        EntityRenderers.register(TurnedEntityType.DARK_LATEX.get(), DarkLatexRenderer::new);
         EntityRenderers.register(TurnedEntityType.SCIENTIST.get(), ScientistRenderer::new);
         if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Running Biome Manager");
         TurnedBiomeManager.register();
