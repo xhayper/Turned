@@ -11,10 +11,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.client.event.RenderArmEvent;
-import net.minecraftforge.client.event.RenderPlayerEvent;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
@@ -98,27 +94,6 @@ public class EventEntity {
             }
         } else {
             entityTransfurCapability.setLatexLevel(nextLevel);
-        }
-    }
-
-    @SubscribeEvent
-    @OnlyIn(Dist.CLIENT)
-    public static void onRenderPlayer(RenderPlayerEvent.Pre event) {
-        Player player = event.getPlayer();
-        ITransfurCapability transfurCapability = player.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).resolve().orElse(null);
-        if (transfurCapability != null && transfurCapability.isTransfured()) {
-            TransfurManager.render(event, transfurCapability.getTransfurType());
-        }
-    }
-
-
-    @SubscribeEvent
-    @OnlyIn(Dist.CLIENT)
-    public static void onRenderArm(RenderArmEvent event) {
-        Player player = event.getPlayer();
-        ITransfurCapability transfurCapability = player.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).resolve().orElse(null);
-        if (transfurCapability != null && transfurCapability.isTransfured()) {
-            TransfurManager.renderArm(event, transfurCapability.getTransfurType());
         }
     }
 }

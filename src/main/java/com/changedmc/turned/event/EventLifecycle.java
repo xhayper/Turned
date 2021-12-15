@@ -13,9 +13,10 @@ import com.changedmc.turned.entity.latex.DarkLatexFox;
 import com.changedmc.turned.entity.latex.DarkLatexSnowLeopard;
 import com.changedmc.turned.entity.npc.Scientist;
 import com.changedmc.turned.gamerule.TurnedGamerules;
-import com.changedmc.turned.networking.NetworkManager;
+import com.changedmc.turned.reference.networking.NetworkManager;
 import com.changedmc.turned.transfur.TransfurManager;
 import com.changedmc.turned.reference.Reference;
+import com.changedmc.turned.world.TurnedBiomeManager;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -72,6 +73,8 @@ public class EventLifecycle {
         EntityRenderers.register(TurnedEntityType.DARK_LATEX_SNOW_LEOPARD.get(), DarkLatexSnowLeopardRenderer::new);
         if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Scientist Entity");
         EntityRenderers.register(TurnedEntityType.SCIENTIST.get(), ScientistRenderer::new);
+        if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Running Biome Manager");
+        TurnedBiomeManager.register();
         TransfurManager.init(false, false);
     }
 }

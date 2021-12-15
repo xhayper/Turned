@@ -34,7 +34,6 @@ public class LatexIndicator extends GuiComponent {
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderTexture(0, LATEX_INDICATOR);
         int texYPosition = transfurCapability.getLatexLevel() == 0 ? 0 : Math.max(Math.min(Math.round((transfurCapability.getLatexLevel()/(100f/texYPos.length))-1), texYPos.length-1), 0);
-
         blit(
                 poseStack, // MatrixStack / PoseStack
                 (window.getGuiScaledWidth()/2) - (Minecraft.getInstance().player.getOffhandItem().is(Items.AIR) ? 106 : 135), // x

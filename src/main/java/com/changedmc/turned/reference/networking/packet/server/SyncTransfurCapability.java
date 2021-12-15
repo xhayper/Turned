@@ -1,4 +1,4 @@
-package com.changedmc.turned.networking.packet.server;
+package com.changedmc.turned.reference.networking.packet.server;
 
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraftforge.api.distmarker.Dist;

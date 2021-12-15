@@ -1,8 +1,8 @@
-package com.changedmc.turned.networking;
+package com.changedmc.turned.reference.networking;
 
 import com.changedmc.turned.Main;
 import com.changedmc.turned.config.TurnedCommonConfig;
-import com.changedmc.turned.networking.packet.server.SyncTransfurCapability;
+import com.changedmc.turned.reference.networking.packet.server.SyncTransfurCapability;
 import com.changedmc.turned.reference.Reference;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;

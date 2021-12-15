@@ -1,7 +1,7 @@
 package com.changedmc.turned.capability.transfur;
 
-import com.changedmc.turned.networking.NetworkManager;
-import com.changedmc.turned.networking.packet.server.SyncTransfurCapability;
+import com.changedmc.turned.reference.networking.NetworkManager;
+import com.changedmc.turned.reference.networking.packet.server.SyncTransfurCapability;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraftforge.network.PacketDistributor;
