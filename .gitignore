@@ -15,5 +15,6 @@ run/
 # MacOS system files
 .DS_STORE
 
-# Classpath file
+# the "IDK"
 .classpath
+.project
