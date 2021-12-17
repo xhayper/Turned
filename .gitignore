@@ -14,3 +14,6 @@ run/
 
 # MacOS system files
 .DS_STORE
+
+# Classpath file
+.classpath
