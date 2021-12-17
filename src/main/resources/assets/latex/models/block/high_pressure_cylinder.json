@@ -1,0 +1,8 @@
+{
+  "parent": "latex:custom/high-pressure_gas_cylinder",
+  "textures": {
+    "all": "latex:blocks/high-pressure_gas_cylinder",
+    "particle": "latex:blocks/high-pressure_gas_cylinder",
+    "0": "latex:blocks/high-pressure_gas_cylinder"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/flaskcontainer"
+    },
+    "facing=east": {
+      "model": "latex:block/flaskcontainer",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/flaskcontainer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/flaskcontainer",
+      "y": 270
+    }
+  }
+}

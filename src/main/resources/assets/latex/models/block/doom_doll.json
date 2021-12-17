@@ -1,0 +1,8 @@
+{
+  "parent": "latex:custom/doomdoll",
+  "textures": {
+    "all": "latex:blocks/doom_doll_texture",
+    "particle": "latex:blocks/doom_doll_texture",
+    "0": "latex:blocks/doom_doll_texture"
+  }
+}

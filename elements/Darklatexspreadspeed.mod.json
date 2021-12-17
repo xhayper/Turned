@@ -1,0 +1,12 @@
+{
+  "_fv": 24,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Number",
+    "displayName": "Dark latex Spread Speed",
+    "description": "Regulate how fast does the dark latex block spread. (from 0 to 100)",
+    "category": "UPDATES",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 50
+  }
+}

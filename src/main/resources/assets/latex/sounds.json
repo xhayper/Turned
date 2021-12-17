@@ -1,0 +1,209 @@
+{
+  "computer_on": {
+    "category": "block",
+    "subtitle": "subtitles.computer_on",
+    "sounds": [
+      {
+        "name": "latex:decision1",
+        "stream": false
+      }
+    ]
+  },
+  "dart_shot": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "latex:silencer-soundbible.com-1632156458",
+        "stream": false
+      }
+    ]
+  },
+  "puro_the_block_music": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "latex:puro_the_black_goo",
+        "stream": true
+      }
+    ]
+  },
+  "burp": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "latex:burp_sound_effect",
+        "stream": false
+      }
+    ]
+  },
+  "robot_burp": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "latex:burp_sound_effect",
+        "stream": false
+      }
+    ]
+  },
+  "death_beep": {
+    "category": "neutral",
+    "subtitle": "subtitles.death_beep",
+    "sounds": [
+      {
+        "name": "latex:robot_dead",
+        "stream": false
+      }
+    ]
+  },
+  "robot_beep": {
+    "category": "neutral",
+    "subtitle": "subtitles.robot_beep",
+    "sounds": [
+      {
+        "name": "latex:robot_beep_2",
+        "stream": false
+      },
+      {
+        "name": "latex:robot_beep_1",
+        "stream": false
+      },
+      {
+        "name": "latex:robot_beep_3",
+        "stream": false
+      }
+    ]
+  },
+  "gunshot": {
+    "category": "master",
+    "subtitle": "subtitles.gunshot",
+    "sounds": [
+      {
+        "name": "latex:heavy_pistol_gunshot",
+        "stream": false
+      }
+    ]
+  },
+  "gas_mask_wear": {
+    "category": "master",
+    "subtitle": "subtitles.gas_mask_wear",
+    "sounds": [
+      {
+        "name": "latex:gas_mask_wear",
+        "stream": false
+      }
+    ]
+  },
+  "transfur": {
+    "category": "master",
+    "subtitle": "subtitles.transfur",
+    "sounds": [
+      {
+        "name": "latex:transfur",
+        "stream": false
+      }
+    ]
+  },
+  "deny_beep": {
+    "category": "block",
+    "subtitle": "subtitles.deny_beep",
+    "sounds": [
+      {
+        "name": "latex:buzzer2",
+        "stream": false
+      }
+    ]
+  },
+  "approve_beep": {
+    "category": "master",
+    "subtitle": "subtitles.approve_beep",
+    "sounds": [
+      {
+        "name": "latex:item1",
+        "stream": false
+      },
+      {
+        "name": "latex:chime2",
+        "stream": false
+      }
+    ]
+  },
+  "click_noise": {
+    "category": "block",
+    "subtitle": "subtitles.click_noise",
+    "sounds": [
+      {
+        "name": "latex:switch1",
+        "stream": false
+      }
+    ]
+  },
+  "rifle_shot": {
+    "category": "master",
+    "subtitle": "subtitles.rifle_shot",
+    "sounds": [
+      {
+        "name": "latex:akm_shot",
+        "stream": false
+      }
+    ]
+  },
+  "tank_shot": {
+    "category": "master",
+    "subtitle": "subtitles.tank_shot",
+    "sounds": [
+      {
+        "name": "latex:tank_shot",
+        "stream": false
+      }
+    ]
+  },
+  "silenced_shot": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "latex:silencer-soundbible.com-1632156458",
+        "stream": false
+      }
+    ]
+  },
+  "shotgun-blast": {
+    "category": "master",
+    "subtitle": "subtitles.shotgun-blast",
+    "sounds": [
+      {
+        "name": "latex:shotgun_blast",
+        "stream": false
+      }
+    ]
+  },
+  "latex_tune": {
+    "category": "master",
+    "subtitle": "subtitles.latex_tune",
+    "sounds": [
+      {
+        "name": "latex:musiclatexbiomebyloki616",
+        "stream": false
+      }
+    ]
+  },
+  "armageddon": {
+    "category": "master",
+    "subtitle": "subtitles.armageddon",
+    "sounds": [
+      {
+        "name": "latex:armageddon",
+        "stream": false
+      }
+    ]
+  },
+  "the_only_thing_they_fear_is_you": {
+    "category": "music",
+    "subtitle": "subtitles.the_only_thing_they_fear_is_you",
+    "sounds": [
+      {
+        "name": "latex:doom-eternal-ost-the-only-thing-they-fear-is-you-_old-new-merged_",
+        "stream": true
+      }
+    ]
+  }
+}

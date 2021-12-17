@@ -1,0 +1,51 @@
+{
+  "_fv": 24,
+  "_type": "rangeditem",
+  "definition": {
+    "renderType": 1,
+    "texture": "dev_gun",
+    "customModelName": "latex_dart_rifle:default",
+    "name": "Dart Rifle",
+    "specialInfo": [
+      "Latex Mode"
+    ],
+    "creativeTab": {
+      "value": "No creative tab entry"
+    },
+    "stackSize": 1,
+    "ammoItem": {
+      "value": "CUSTOM:Latexdart"
+    },
+    "shootConstantly": false,
+    "usageCount": 0,
+    "actionSound": {
+      "value": "CUSTOM:dart_shot"
+    },
+    "hasGlow": false,
+    "animation": "none",
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "onRangedItemUsed": {
+      "name": "DartrifleRangedItemUsed"
+    },
+    "onEntitySwing": {
+      "name": "DartrifleEntitySwingsItem"
+    },
+    "useCondition": {
+      "name": "LatexDartRifleCanUseRangedItem"
+    },
+    "bulletPower": 2.5,
+    "bulletDamage": 1.5,
+    "bulletKnockback": 0,
+    "bulletParticles": false,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": ""
+    },
+    "bulletModel": "Modellatex_dart",
+    "customBulletModelTexture": "latexdart.png",
+    "onBulletHitsEntity": {
+      "name": "DartrifleBulletHitsLivingEntity"
+    }
+  }
+}

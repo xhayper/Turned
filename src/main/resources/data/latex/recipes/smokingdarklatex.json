@@ -1,0 +1,12 @@
+{
+  "group": "latex",
+  "type": "minecraft:smoking",
+  "experience": 1,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "latex:darklatexlog"
+  },
+  "result": {
+    "item": "minecraft:dark_oak_log"
+  }
+}

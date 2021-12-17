@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/planter"
+    },
+    "facing=east": {
+      "model": "latex:block/planter",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/planter",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/planter",
+      "y": 270
+    }
+  }
+}

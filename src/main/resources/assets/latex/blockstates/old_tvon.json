@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/old_tvon"
+    },
+    "facing=east": {
+      "model": "latex:block/old_tvon",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/old_tvon",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/old_tvon",
+      "y": 270
+    }
+  }
+}

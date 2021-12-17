@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "latex:blocks/metal_box",
+    "up": "latex:blocks/metalbox_top",
+    "north": "latex:blocks/metal_box",
+    "east": "latex:blocks/metal_box",
+    "south": "latex:blocks/metal_box",
+    "west": "latex:blocks/metal_box",
+    "particle": "latex:blocks/metal_box"
+  }
+}

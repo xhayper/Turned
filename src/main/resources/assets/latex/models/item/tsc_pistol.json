@@ -1,0 +1,7 @@
+{
+  "parent": "latex:custom/tsc_pistol",
+  "textures": {
+    "0": "latex:blocks/tsc_pistol_texture",
+    "particle": "latex:items/matchlock_bayonet_modern_shotgun"
+  }
+}

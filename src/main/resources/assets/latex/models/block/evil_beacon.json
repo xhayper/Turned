@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "latex:blocks/evilbeaconoff",
+    "up": "latex:blocks/evilbeaconoff",
+    "north": "latex:blocks/evilbeaconoff",
+    "east": "latex:blocks/evilbeaconoff",
+    "south": "latex:blocks/evilbeaconoff",
+    "west": "latex:blocks/evilbeaconoff",
+    "particle": "latex:blocks/evilbeaconoff"
+  }
+}

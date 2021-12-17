@@ -1,0 +1,8 @@
+{
+  "parent": "latex:custom/the_c_o_n_e",
+  "textures": {
+    "all": "latex:blocks/box_side_1",
+    "particle": "latex:blocks/box_side_1",
+    "0": "latex:blocks/the_c_o_n_e"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "latex:custom/old_tv_off",
+  "textures": {
+    "all": "latex:blocks/broken_tv",
+    "particle": "latex:blocks/broken_tv",
+    "0": "latex:blocks/old_tv_off_texture"
+  }
+}

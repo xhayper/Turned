@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/broken_tv"
+    },
+    "facing=east": {
+      "model": "latex:block/broken_tv",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/broken_tv",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/broken_tv",
+      "y": 270
+    }
+  }
+}

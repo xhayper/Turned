@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/cryopod"
+    },
+    "facing=east": {
+      "model": "latex:block/cryopod",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/cryopod",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/cryopod",
+      "y": 270
+    }
+  }
+}

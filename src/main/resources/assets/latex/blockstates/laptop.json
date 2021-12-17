@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/laptop"
+    },
+    "facing=east": {
+      "model": "latex:block/laptop",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/laptop",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/laptop",
+      "y": 270
+    }
+  }
+}

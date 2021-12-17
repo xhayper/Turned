@@ -1,0 +1,125 @@
+{
+  "_fv": 24,
+  "_type": "structure",
+  "definition": {
+    "structure": "underground_evil_lab",
+    "randomlyRotateStructure": false,
+    "surfaceDetectionType": "First motion blocking block",
+    "spawnProbability": 4375,
+    "minCountPerChunk": 1,
+    "maxCountPerChunk": 1,
+    "spawnLocation": "Underground",
+    "spawnHeightOffset": 0,
+    "spawnXOffset": 0,
+    "spawnZOffset": 0,
+    "spawnWorldTypes": [
+      "Surface"
+    ],
+    "restrictionBlocks": [],
+    "restrictionBiomes": [
+      {
+        "value": "plains"
+      },
+      {
+        "value": "forest"
+      },
+      {
+        "value": "swamp"
+      },
+      {
+        "value": "snowy_tundra"
+      },
+      {
+        "value": "mushroom_fields"
+      },
+      {
+        "value": "birch_forest"
+      },
+      {
+        "value": "redwood_taiga"
+      },
+      {
+        "value": "savanna"
+      },
+      {
+        "value": "mutated_plains"
+      },
+      {
+        "value": "mountains"
+      },
+      {
+        "value": "mutated_forest"
+      },
+      {
+        "value": "mutated_taiga"
+      },
+      {
+        "value": "mutated_jungle"
+      },
+      {
+        "value": "mutated_jungle_edge"
+      },
+      {
+        "value": "mutated_birch_forest"
+      },
+      {
+        "value": "mutated_birch_forest_hills"
+      },
+      {
+        "value": "desert"
+      },
+      {
+        "value": "stone_beach"
+      },
+      {
+        "value": "cold_beach"
+      },
+      {
+        "value": "birch_forest"
+      },
+      {
+        "value": "mutated_plains"
+      },
+      {
+        "value": "mutated_desert"
+      },
+      {
+        "value": "mutated_extreme_hills"
+      },
+      {
+        "value": "mutated_forest"
+      },
+      {
+        "value": "mutated_taiga"
+      },
+      {
+        "value": "mutated_swampland"
+      },
+      {
+        "value": "mountains"
+      },
+      {
+        "value": "mushroom_fields"
+      },
+      {
+        "value": "desert_hills"
+      },
+      {
+        "value": "forest_hills"
+      },
+      {
+        "value": "taiga_hills"
+      },
+      {
+        "value": "beaches"
+      },
+      {
+        "value": "smaller_extreme_hills"
+      }
+    ],
+    "ignoreBlocks": "STRUCTURE_BLOCK",
+    "generateCondition": {
+      "name": "Checkevilraid"
+    }
+  }
+}

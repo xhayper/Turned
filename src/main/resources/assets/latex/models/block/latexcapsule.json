@@ -1,0 +1,8 @@
+{
+  "parent": "latex:custom/latex_capsule",
+  "textures": {
+    "all": "latex:blocks/dark_latex_top_crystal_black",
+    "particle": "latex:blocks/dark_latex_top_crystal_black",
+    "0": "latex:blocks/latex_capsule_texture"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "_fv": 24,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Dark latex infection",
+    "icon": "dlmask.png",
+    "color": {
+      "value": -14803426,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": true,
+    "isBenefitical": false,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": false,
+    "onStarted": {
+      "name": "DarklatexdarteffectPotionStartedapplied"
+    },
+    "onActiveTick": {
+      "name": "DarklatexdarteffectOnEffectActiveTick"
+    },
+    "onExpired": {
+      "name": "DarklatexdarteffectPotionExpires"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "book_pile_3_texture"
+      },
+      "name": "default"
+    }
+  }
+}

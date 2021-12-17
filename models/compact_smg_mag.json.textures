@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "mp5sd_texture"
+      },
+      "name": "default"
+    }
+  }
+}

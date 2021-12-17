@@ -1,0 +1,42 @@
+{
+  "group": "latex",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:white_concrete"
+    },
+    "1": {
+      "item": "minecraft:red_concrete"
+    },
+    "2": {
+      "item": "minecraft:white_concrete"
+    },
+    "3": {
+      "item": "minecraft:red_concrete"
+    },
+    "4": {
+      "item": "minecraft:red_concrete"
+    },
+    "5": {
+      "item": "minecraft:red_concrete"
+    },
+    "6": {
+      "item": "minecraft:white_concrete"
+    },
+    "7": {
+      "item": "minecraft:white_concrete"
+    },
+    "8": {
+      "item": "minecraft:white_concrete"
+    }
+  },
+  "result": {
+    "item": "latex:red_lab_block_2",
+    "count": 9
+  }
+}

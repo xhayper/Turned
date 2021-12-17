@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "laptop_texture_turned_on"
+      },
+      "name": "default"
+    }
+  }
+}

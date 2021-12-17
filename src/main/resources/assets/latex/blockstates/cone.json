@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/cone"
+    },
+    "facing=east": {
+      "model": "latex:block/cone",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/cone",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/cone",
+      "y": 270
+    }
+  }
+}

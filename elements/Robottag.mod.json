@@ -1,0 +1,44 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:Hertx"
+      },
+      {
+        "value": "CUSTOM:BeeHertx"
+      },
+      {
+        "value": "CUSTOM:AHVHertx"
+      },
+      {
+        "value": "CUSTOM:La4tankmorphr"
+      },
+      {
+        "value": "CUSTOM:La4tankmorphm"
+      },
+      {
+        "value": "CUSTOM:TSCOutsider"
+      },
+      {
+        "value": "CUSTOM:TSCOutsiderGunner"
+      },
+      {
+        "value": "CUSTOM:NXTHertx"
+      },
+      {
+        "value": "CUSTOM:TSCdrone"
+      },
+      {
+        "value": "CUSTOM:TSCHunter"
+      }
+    ],
+    "name": "robots",
+    "namespace": "mod"
+  }
+}

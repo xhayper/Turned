@@ -1,0 +1,9 @@
+{
+  "parent": "latex:custom/planter_block",
+  "textures": {
+    "all": "latex:blocks/pasted",
+    "particle": "latex:blocks/pasted",
+    "0": "latex:blocks/pasted",
+    "1": "latex:blocks/big_pot"
+  }
+}

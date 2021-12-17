@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "latex:blocks/bluelab2",
+    "up": "latex:blocks/bluelab2",
+    "north": "latex:blocks/bluelab1",
+    "east": "latex:blocks/bluelab1",
+    "south": "latex:blocks/bluelab1",
+    "west": "latex:blocks/bluelab1",
+    "particle": "latex:blocks/bluelab2"
+  }
+}

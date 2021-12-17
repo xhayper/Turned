@@ -1,0 +1,36 @@
+{
+  "group": "latex",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 12",
+    "345",
+    "67 "
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:string"
+    },
+    "2": {
+      "item": "latex:darklatexgoo"
+    },
+    "3": {
+      "item": "minecraft:string"
+    },
+    "4": {
+      "item": "latex:darklatexgoo"
+    },
+    "5": {
+      "item": "minecraft:string"
+    },
+    "6": {
+      "item": "latex:darklatexgoo"
+    },
+    "7": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "latex:dark_latex_quiver_chestplate",
+    "count": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "_fv": 24,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Logic",
+    "displayName": "Does dark latexes have a chance to leave a dark latex block on death?",
+    "description": "Does dark latexes have a chance to leave a dark latex block on death?",
+    "category": "MOBS",
+    "defaultValueLogic": true,
+    "defaultValueNumber": 0
+  }
+}

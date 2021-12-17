@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "latex:blocks/nuke_bottom",
+    "up": "latex:blocks/nuke_bottom",
+    "north": "latex:blocks/nuke",
+    "east": "latex:blocks/nuke",
+    "south": "latex:blocks/nuke",
+    "west": "latex:blocks/nuke",
+    "particle": "latex:blocks/nuke_bottom"
+  }
+}

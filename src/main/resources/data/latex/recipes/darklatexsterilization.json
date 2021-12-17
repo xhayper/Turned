@@ -1,0 +1,16 @@
+{
+  "group": "latex",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "latex:darklatexblock"
+    },
+    {
+      "item": "minecraft:bone_meal"
+    }
+  ],
+  "result": {
+    "item": "latex:darklatexblockharmless",
+    "count": 1
+  }
+}

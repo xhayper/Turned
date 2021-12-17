@@ -1,0 +1,8 @@
+{
+  "parent": "latex:custom/ceiling_light",
+  "textures": {
+    "all": "latex:blocks/cagelight",
+    "particle": "latex:blocks/cagelight",
+    "0": "latex:blocks/ceiling_light"
+  }
+}

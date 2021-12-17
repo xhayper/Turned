@@ -1,0 +1,9 @@
+{
+  "group": "latex",
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "latex:bunkerblock"
+  },
+  "result": "latex:bunker_stairs"
+}

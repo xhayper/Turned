@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "pasted",
+        "1": "big_pot"
+      },
+      "name": "default"
+    }
+  }
+}

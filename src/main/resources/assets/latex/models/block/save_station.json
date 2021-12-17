@@ -1,0 +1,10 @@
+{
+  "parent": "latex:custom/save_station",
+  "textures": {
+    "all": "latex:blocks/block3",
+    "particle": "latex:blocks/block5",
+    "0": "latex:blocks/block3",
+    "2": "latex:blocks/block4",
+    "3": "latex:blocks/crafting_table_front"
+  }
+}

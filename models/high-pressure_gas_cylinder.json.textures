@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "high-pressure_gas_cylinder"
+      },
+      "name": "default"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "latex:blocks/black_double_plant_rose_bottom",
+    "particle": "latex:blocks/black_double_plant_rose_bottom"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "latex:custom/book_pile_4",
+  "textures": {
+    "all": "latex:blocks/book_pile_2_texture",
+    "particle": "latex:blocks/book_pile_2_texture",
+    "0": "latex:blocks/book_pile_texture_4"
+  }
+}

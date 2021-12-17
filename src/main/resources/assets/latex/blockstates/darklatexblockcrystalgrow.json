@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/darklatexblockcrystalgrow"
+    },
+    "facing=east": {
+      "model": "latex:block/darklatexblockcrystalgrow",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/darklatexblockcrystalgrow",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/darklatexblockcrystalgrow",
+      "y": 270
+    }
+  }
+}

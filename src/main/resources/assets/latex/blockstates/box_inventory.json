@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/box_inventory"
+    },
+    "facing=east": {
+      "model": "latex:block/box_inventory",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/box_inventory",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/box_inventory",
+      "y": 270
+    }
+  }
+}

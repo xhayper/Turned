@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "lab_door_open"
+      },
+      "name": "default"
+    }
+  }
+}

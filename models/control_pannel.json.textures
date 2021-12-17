@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "controll_switch_on",
+        "1": "block2",
+        "2": "block1"
+      },
+      "name": "default"
+    }
+  }
+}

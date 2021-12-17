@@ -1,0 +1,12 @@
+{
+  "_fv": 24,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Number",
+    "displayName": "Dark Latex Slug Grow Time",
+    "description": "How much it takes for the dark latex slug to grow fully in ticks (+30 Ticks)",
+    "category": "MOBS",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 325
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "_fv": 24,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Logic",
+    "displayName": "Can noise stalkers break blocks such as doors, smooth stone and sandstone?",
+    "description": "Can noise stalkers break blocks such as doors, smooth stone and sandstone?",
+    "category": "MOBS",
+    "defaultValueLogic": true,
+    "defaultValueNumber": 0
+  }
+}

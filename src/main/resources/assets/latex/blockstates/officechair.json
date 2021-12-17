@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/officechair"
+    },
+    "facing=east": {
+      "model": "latex:block/officechair",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/officechair",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/officechair",
+      "y": 270
+    }
+  }
+}

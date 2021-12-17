@@ -1,0 +1,16 @@
+{
+  "group": "latex",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:bee_nest"
+    },
+    {
+      "item": "latex:darklatexgoo"
+    }
+  ],
+  "result": {
+    "item": "latex:darklatexhive",
+    "count": 1
+  }
+}

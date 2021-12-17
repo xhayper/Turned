@@ -1,0 +1,71 @@
+{
+  "_fv": 24,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "hazmat_helmet",
+    "enableBody": true,
+    "textureBody": "hazmat_chest",
+    "enableLeggings": true,
+    "textureLeggings": "hazmat_leggings",
+    "enableBoots": true,
+    "textureBoots": "hazmat_boots",
+    "creativeTab": {
+      "value": "CUSTOM:Latexitems"
+    },
+    "armorTextureFile": "hazmat_",
+    "helmetName": "Hazmat Helmet",
+    "bodyName": "Hazmat Body",
+    "leggingsName": "Hazmat Leggings",
+    "bootsName": "Hazmat Boots",
+    "helmetSpecialInfo": [],
+    "bodySpecialInfo": [],
+    "leggingsSpecialInfo": [],
+    "bootsSpecialInfo": [],
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "Arms L",
+    "armsModelPartR": "Arms R",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "maxDamage": 64,
+    "damageValueHelmet": 2,
+    "damageValueBody": 4,
+    "damageValueLeggings": 3,
+    "damageValueBoots": 2,
+    "enchantability": 12,
+    "toughness": 0.0,
+    "knockbackResistance": 0.0,
+    "equipSound": {
+      "value": "CUSTOM:gas_mask_wear"
+    },
+    "repairItems": [
+      {
+        "value": "Items.IRON_INGOT"
+      },
+      {
+        "value": "Items.LEATHER"
+      },
+      {
+        "value": "Items.COAL#1"
+      },
+      {
+        "value": "Items.GOLD_INGOT"
+      }
+    ]
+  }
+}

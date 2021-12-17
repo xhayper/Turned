@@ -1,0 +1,16 @@
+{
+  "group": "latex",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "latex:darklatexgoo"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "item": "latex:latex_soup",
+    "count": 1
+  }
+}

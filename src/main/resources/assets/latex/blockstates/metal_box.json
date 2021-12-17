@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/metal_box"
+    },
+    "facing=east": {
+      "model": "latex:block/metal_box",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/metal_box",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/metal_box",
+      "y": 270
+    }
+  }
+}

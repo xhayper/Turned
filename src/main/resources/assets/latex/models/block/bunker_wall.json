@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_wall_side",
+  "textures": {
+    "wall": "latex:blocks/reinforced_bunker_top_bottom",
+    "particle": "latex:blocks/reinforced_bunker_top_bottom"
+  }
+}

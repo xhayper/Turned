@@ -1,0 +1,42 @@
+{
+  "group": "latex",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:soul_sand"
+    },
+    "1": {
+      "item": "minecraft:slime_ball"
+    },
+    "2": {
+      "item": "minecraft:soul_sand"
+    },
+    "3": {
+      "item": "minecraft:slime_ball"
+    },
+    "4": {
+      "item": "latex:slimeessence"
+    },
+    "5": {
+      "item": "minecraft:slime_ball"
+    },
+    "6": {
+      "item": "minecraft:soul_sand"
+    },
+    "7": {
+      "item": "minecraft:slime_ball"
+    },
+    "8": {
+      "item": "minecraft:soul_sand"
+    }
+  },
+  "result": {
+    "item": "latex:darklatexblock",
+    "count": 1
+  }
+}

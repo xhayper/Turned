@@ -1,0 +1,27 @@
+{
+  "group": "latex",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "2 ",
+    "4 "
+  ],
+  "key": {
+    "0": {
+      "item": "latex:darklatexcrystal"
+    },
+    "1": {
+      "item": "latex:darklatexcrystal"
+    },
+    "2": {
+      "item": "latex:darklatexgoo"
+    },
+    "4": {
+      "item": "latex:darklatexgoo"
+    }
+  },
+  "result": {
+    "item": "latex:dl_hoe",
+    "count": 1
+  }
+}

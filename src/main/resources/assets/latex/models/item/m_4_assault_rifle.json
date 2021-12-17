@@ -1,0 +1,7 @@
+{
+  "parent": "latex:custom/m16",
+  "textures": {
+    "0": "latex:blocks/m16_texture",
+    "particle": "latex:items/dev_gun"
+  }
+}

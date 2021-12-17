@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/wallscreenon"
+    },
+    "facing=east": {
+      "model": "latex:block/wallscreenon",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/wallscreenon",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/wallscreenon",
+      "y": 270
+    }
+  }
+}

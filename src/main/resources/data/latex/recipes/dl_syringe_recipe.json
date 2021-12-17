@@ -1,0 +1,16 @@
+{
+  "group": "latex",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "latex:syringe"
+    },
+    {
+      "item": "latex:darklatexgoo"
+    }
+  ],
+  "result": {
+    "item": "latex:dl_syringe",
+    "count": 1
+  }
+}

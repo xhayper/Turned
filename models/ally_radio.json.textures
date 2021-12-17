@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "scientific_radio_caller_texture"
+      },
+      "name": "default"
+    }
+  }
+}

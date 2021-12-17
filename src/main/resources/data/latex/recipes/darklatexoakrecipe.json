@@ -1,0 +1,13 @@
+{
+  "group": "latex",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "latex:darklatexlog"
+    }
+  ],
+  "result": {
+    "item": "latex:darklatexgoo",
+    "count": 4
+  }
+}

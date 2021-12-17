@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/bunkerhatch"
+    },
+    "facing=east": {
+      "model": "latex:block/bunkerhatch",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/bunkerhatch",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/bunkerhatch",
+      "y": 270
+    }
+  }
+}

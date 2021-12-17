@@ -1,0 +1,16 @@
+{
+  "group": "latex",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "latex:dart"
+    },
+    {
+      "item": "latex:darklatexgoo"
+    }
+  ],
+  "result": {
+    "item": "latex:latexdart",
+    "count": 1
+  }
+}

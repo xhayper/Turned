@@ -1,0 +1,8 @@
+{
+  "parent": "latex:custom/servers",
+  "textures": {
+    "all": "latex:blocks/crafting_table_front",
+    "particle": "latex:blocks/crafting_table_front",
+    "0": "latex:blocks/servers_textire"
+  }
+}

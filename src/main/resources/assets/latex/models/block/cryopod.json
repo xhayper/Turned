@@ -1,0 +1,8 @@
+{
+  "parent": "latex:custom/cryopod",
+  "textures": {
+    "all": "latex:blocks/cryopodtexture",
+    "particle": "latex:blocks/cryopodtexture",
+    "0": "latex:blocks/cryopodtexture"
+  }
+}

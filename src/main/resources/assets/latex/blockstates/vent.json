@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/vent"
+    },
+    "facing=east": {
+      "model": "latex:block/vent",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/vent",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/vent",
+      "y": 270
+    }
+  }
+}

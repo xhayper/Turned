@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/bigcouch"
+    },
+    "facing=east": {
+      "model": "latex:block/bigcouch",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/bigcouch",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/bigcouch",
+      "y": 270
+    }
+  }
+}

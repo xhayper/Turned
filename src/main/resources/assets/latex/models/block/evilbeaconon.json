@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "latex:blocks/beaconactive",
+    "up": "latex:blocks/beaconactive",
+    "north": "latex:blocks/beaconactive",
+    "east": "latex:blocks/beaconactive",
+    "south": "latex:blocks/beaconactive",
+    "west": "latex:blocks/beaconactive",
+    "particle": "latex:blocks/beaconactive"
+  }
+}

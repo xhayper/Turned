@@ -1,0 +1,8 @@
+{
+  "parent": "latex:custom/telephone_no_phone",
+  "textures": {
+    "all": "latex:blocks/telephone_base",
+    "particle": "latex:blocks/telephone_base",
+    "1": "latex:blocks/telephone_base"
+  }
+}

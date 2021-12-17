@@ -1,0 +1,65 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:Militaryflameunit"
+      },
+      {
+        "value": "CUSTOM:Military"
+      },
+      {
+        "value": "CUSTOM:Scientist"
+      },
+      {
+        "value": "CUSTOM:EvilScientist"
+      },
+      {
+        "value": "CUSTOM:EvilSniper"
+      },
+      {
+        "value": "CUSTOM:EvilMilitary"
+      },
+      {
+        "value": "CUSTOM:MilitaryRiot"
+      },
+      {
+        "value": "EntityHusk"
+      },
+      {
+        "value": "EntityIllusionIllager"
+      },
+      {
+        "value": "EntityPillager"
+      },
+      {
+        "value": "EntityPlayer"
+      },
+      {
+        "value": "EntitySpellcasterIllager"
+      },
+      {
+        "value": "EntityVillager"
+      },
+      {
+        "value": "EntityVindicator"
+      },
+      {
+        "value": "EntityWanderingTrader"
+      },
+      {
+        "value": "EntityZombie"
+      },
+      {
+        "value": "EntityZombieVillager"
+      }
+    ],
+    "name": "humanlikes",
+    "namespace": "mod"
+  }
+}

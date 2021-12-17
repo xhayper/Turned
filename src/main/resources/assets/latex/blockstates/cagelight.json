@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/cagelight"
+    },
+    "facing=east": {
+      "model": "latex:block/cagelight",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/cagelight",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/cagelight",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "latex:block/cagelight",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "latex:block/cagelight",
+      "x": 90
+    }
+  }
+}

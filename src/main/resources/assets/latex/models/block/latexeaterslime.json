@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "latex:blocks/latex_eater",
+    "up": "latex:blocks/latex_eater",
+    "north": "latex:blocks/latex_eater",
+    "east": "latex:blocks/latex_eater",
+    "south": "latex:blocks/latex_eater",
+    "west": "latex:blocks/latex_eater",
+    "particle": "latex:blocks/latex_eater"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/darklatexcrystalegg"
+    },
+    "facing=east": {
+      "model": "latex:block/darklatexcrystalegg",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/darklatexcrystalegg",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/darklatexcrystalegg",
+      "y": 270
+    }
+  }
+}

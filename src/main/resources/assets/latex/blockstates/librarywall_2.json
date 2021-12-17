@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/librarywall_2"
+    },
+    "facing=east": {
+      "model": "latex:block/librarywall_2",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/librarywall_2",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/librarywall_2",
+      "y": 270
+    }
+  }
+}

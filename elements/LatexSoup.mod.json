@@ -1,0 +1,29 @@
+{
+  "_fv": 24,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "bowl",
+    "customModelName": "Normal",
+    "name": "Latex Soup",
+    "rarity": "COMMON",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Latexitems"
+    },
+    "stackSize": 16,
+    "nutritionalValue": 5,
+    "saturation": 0.5,
+    "eatingSpeed": 42,
+    "resultItem": {
+      "value": "Items.BOWL"
+    },
+    "forDogs": false,
+    "isAlwaysEdible": false,
+    "animation": "drink",
+    "hasGlow": false,
+    "onEaten": {
+      "name": "LatexSoupFoodEaten"
+    }
+  }
+}

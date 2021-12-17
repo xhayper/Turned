@@ -1,0 +1,22 @@
+{
+  "group": "latex",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "latex:redlabblock_1"
+    },
+    "1": {
+      "item": "latex:redlabblock_1"
+    },
+    "2": {
+      "item": "latex:redlabblock_1"
+    }
+  },
+  "result": {
+    "item": "latex:red_lab_slabs",
+    "count": 6
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "latex:blocks/blue3",
+    "top": "latex:blocks/blue2",
+    "side": "latex:blocks/blue"
+  }
+}

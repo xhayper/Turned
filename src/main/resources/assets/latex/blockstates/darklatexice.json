@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/darklatexice"
+    },
+    "facing=east": {
+      "model": "latex:block/darklatexice",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/darklatexice",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/darklatexice",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "latex:block/darklatexice",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "latex:block/darklatexice",
+      "x": 90
+    }
+  }
+}

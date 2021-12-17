@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/bunker_door"
+    },
+    "facing=east": {
+      "model": "latex:block/bunker_door",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/bunker_door",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/bunker_door",
+      "y": 270
+    }
+  }
+}

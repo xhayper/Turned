@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "wall_screen_on"
+      },
+      "name": "default"
+    }
+  }
+}

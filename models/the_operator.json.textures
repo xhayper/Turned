@@ -1,0 +1,14 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "glock_body",
+        "1": "glock_magazine",
+        "13": "pistol_red_dot",
+        "8": "glock_long_barrel",
+        "9": "glock_long_slide"
+      },
+      "name": "default"
+    }
+  }
+}

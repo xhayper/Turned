@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/darklatexpuddleharmless"
+    },
+    "facing=east": {
+      "model": "latex:block/darklatexpuddleharmless",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/darklatexpuddleharmless",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/darklatexpuddleharmless",
+      "y": 270
+    }
+  }
+}

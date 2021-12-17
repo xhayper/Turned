@@ -1,0 +1,22 @@
+{
+  "group": "latex",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "latex:blacklabblock_1a"
+    },
+    "1": {
+      "item": "latex:blacklabblock_1a"
+    },
+    "2": {
+      "item": "latex:blacklabblock_1a"
+    }
+  },
+  "result": {
+    "item": "latex:blacklabslab",
+    "count": 6
+  }
+}

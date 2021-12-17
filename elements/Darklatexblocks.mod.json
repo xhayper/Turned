@@ -1,0 +1,47 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:Darklatexblock"
+      },
+      {
+        "value": "CUSTOM:Darklatexice"
+      },
+      {
+        "value": "CUSTOM:Darklatexcrystalegg"
+      },
+      {
+        "value": "CUSTOM:Darklatexblockcrystalgrow"
+      },
+      {
+        "value": "CUSTOM:Darklatexhive"
+      },
+      {
+        "value": "CUSTOM:Darklatexleaves"
+      },
+      {
+        "value": "CUSTOM:Latexcobwebfix"
+      },
+      {
+        "value": "CUSTOM:Darklatexlog"
+      },
+      {
+        "value": "CUSTOM:Darklatexpuddleharmless"
+      },
+      {
+        "value": "CUSTOM:Darklatexcarpet"
+      },
+      {
+        "value": "CUSTOM:DarkLatexGooFluid"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "darklatexblocks",
+    "namespace": "mod"
+  }
+}

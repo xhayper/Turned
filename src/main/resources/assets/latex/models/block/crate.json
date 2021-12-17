@@ -1,0 +1,8 @@
+{
+  "parent": "latex:custom/crate",
+  "textures": {
+    "all": "latex:blocks/box_up",
+    "particle": "latex:blocks/box_up",
+    "0": "latex:blocks/military_crate"
+  }
+}

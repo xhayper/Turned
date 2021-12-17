@@ -1,0 +1,7 @@
+{
+  "parent": "latex:custom/ar_remaster",
+  "textures": {
+    "0": "latex:blocks/ar_remaster",
+    "particle": "latex:items/dev_gun"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/inverted_open_glass_door"
+    },
+    "facing=east": {
+      "model": "latex:block/inverted_open_glass_door",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/inverted_open_glass_door",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/inverted_open_glass_door",
+      "y": 270
+    }
+  }
+}

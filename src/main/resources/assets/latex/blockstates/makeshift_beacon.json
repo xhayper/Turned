@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/makeshift_beacon"
+    },
+    "facing=east": {
+      "model": "latex:block/makeshift_beacon",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/makeshift_beacon",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/makeshift_beacon",
+      "y": 270
+    }
+  }
+}

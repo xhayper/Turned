@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "latex:blocks/library_wall_2",
+    "up": "latex:blocks/library_wall_2",
+    "north": "latex:blocks/library_wall_3",
+    "east": "latex:blocks/library_wall_3",
+    "south": "latex:blocks/library_wall_3",
+    "west": "latex:blocks/library_wall_3",
+    "particle": "latex:blocks/library_wall_2"
+  }
+}

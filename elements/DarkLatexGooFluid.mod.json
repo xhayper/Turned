@@ -1,0 +1,59 @@
+{
+  "_fv": 24,
+  "_type": "fluid",
+  "definition": {
+    "name": "Dark Latex Goo Fluid",
+    "bucketName": "Dark Latex Goo Bucket",
+    "textureStill": "dark_latex_goo_fluid",
+    "textureFlowing": "dark_latex_goo_fluid",
+    "tintType": "No tint",
+    "canMultiply": true,
+    "flowRate": 15,
+    "levelDecrease": 4,
+    "slopeFindDistance": 3,
+    "spawnParticles": false,
+    "dripParticle": {
+      "value": "SMOKE_NORMAL"
+    },
+    "flowStrength": -2.0,
+    "luminosity": 0,
+    "density": 5000,
+    "viscosity": 2500,
+    "isGas": false,
+    "temperature": 350,
+    "type": "WATER",
+    "generateBucket": true,
+    "textureBucket": "dl_bucket",
+    "creativeTab": {
+      "value": "CUSTOM:Latex"
+    },
+    "emptySound": {
+      "value": "block.slime.place"
+    },
+    "rarity": "COMMON",
+    "specialInfo": [],
+    "resistance": 125.0,
+    "luminance": 0,
+    "lightOpacity": 12,
+    "emissiveRendering": false,
+    "tickRate": 10,
+    "flammability": 20,
+    "fireSpreadSpeed": 0,
+    "colorOnMap": "DEFAULT",
+    "frequencyOnChunks": 2,
+    "spawnWorldTypes": [
+      "Surface"
+    ],
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:DarkLatexBiome"
+      }
+    ],
+    "onTickUpdate": {
+      "name": "DarkLatexGooFluidUpdateTick"
+    },
+    "onEntityCollides": {
+      "name": "DarklatexblockEntityCollidesInTheBlock"
+    }
+  }
+}

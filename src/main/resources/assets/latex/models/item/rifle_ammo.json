@@ -1,0 +1,7 @@
+{
+  "parent": "latex:custom/ar_mag",
+  "textures": {
+    "0": "latex:blocks/assault_rifle_mag_texture",
+    "particle": "latex:items/gunpowder_modern_bullet"
+  }
+}

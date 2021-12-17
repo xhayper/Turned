@@ -1,0 +1,26 @@
+{
+  "group": "latex",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    " 4 "
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:glass_bottle"
+    },
+    "1": {
+      "item": "minecraft:glass_bottle"
+    },
+    "2": {
+      "item": "minecraft:glass_bottle"
+    },
+    "4": {
+      "tag": "forge:ores/quartz"
+    }
+  },
+  "result": {
+    "item": "latex:flaskcontainer",
+    "count": 2
+  }
+}

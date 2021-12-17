@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/darklatexblockharmless"
+    },
+    "facing=east": {
+      "model": "latex:block/darklatexblockharmless",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/darklatexblockharmless",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/darklatexblockharmless",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "latex:block/darklatexblockharmless",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "latex:block/darklatexblockharmless",
+      "x": 90
+    }
+  }
+}

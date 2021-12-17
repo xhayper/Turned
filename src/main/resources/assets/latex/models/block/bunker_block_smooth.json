@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "latex:blocks/reinforced_bunker_top_bottom",
+    "up": "latex:blocks/reinforced_bunker_top_bottom",
+    "north": "latex:blocks/reinforced_bunker_top_bottom",
+    "east": "latex:blocks/reinforced_bunker_top_bottom",
+    "south": "latex:blocks/reinforced_bunker_top_bottom",
+    "west": "latex:blocks/reinforced_bunker_top_bottom",
+    "particle": "latex:blocks/reinforced_bunker_top_bottom"
+  }
+}

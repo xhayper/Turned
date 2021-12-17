@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "glass_door"
+      },
+      "name": "default"
+    }
+  }
+}

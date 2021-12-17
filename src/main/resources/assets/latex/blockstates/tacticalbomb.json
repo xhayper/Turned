@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/tacticalbomb"
+    },
+    "facing=east": {
+      "model": "latex:block/tacticalbomb",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/tacticalbomb",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/tacticalbomb",
+      "y": 270
+    }
+  }
+}

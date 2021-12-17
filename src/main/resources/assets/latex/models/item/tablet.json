@@ -1,0 +1,7 @@
+{
+  "parent": "latex:custom/tablet_on",
+  "textures": {
+    "0": "latex:blocks/tablet_on",
+    "particle": "latex:items/device_icon"
+  }
+}

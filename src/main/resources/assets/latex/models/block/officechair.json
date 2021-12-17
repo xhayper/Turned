@@ -1,0 +1,8 @@
+{
+  "parent": "latex:custom/office_chair",
+  "textures": {
+    "all": "latex:blocks/office_chair_texture",
+    "particle": "latex:blocks/office_chair_texture",
+    "0": "latex:blocks/office_chair_texture"
+  }
+}

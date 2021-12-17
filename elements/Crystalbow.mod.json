@@ -1,0 +1,45 @@
+{
+  "_fv": 24,
+  "_type": "rangeditem",
+  "definition": {
+    "renderType": 0,
+    "texture": "black_crystal_bow_pulling_1",
+    "customModelName": "Normal",
+    "name": "Dark Latex bow",
+    "specialInfo": [
+      "help how to make bow animations"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:Latexitems"
+    },
+    "stackSize": 1,
+    "ammoItem": {
+      "value": "CUSTOM:Crystalarrow"
+    },
+    "shootConstantly": false,
+    "usageCount": 120,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "hasGlow": false,
+    "animation": "bow",
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "onRangedItemUsed": {
+      "name": "CrystalbowRangedItemUsed"
+    },
+    "bulletPower": 1.5,
+    "bulletDamage": 1.5,
+    "bulletKnockback": 0,
+    "bulletParticles": false,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": ""
+    },
+    "bulletModel": "Modelcrystal_arrow_model",
+    "customBulletModelTexture": "crystal_arrow_blk.png",
+    "onBulletHitsEntity": {
+      "name": "CrystalbowBulletHitsPlayer"
+    }
+  }
+}

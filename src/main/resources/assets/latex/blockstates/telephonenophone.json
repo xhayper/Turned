@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/telephonenophone"
+    },
+    "facing=east": {
+      "model": "latex:block/telephonenophone",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/telephonenophone",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/telephonenophone",
+      "y": 270
+    }
+  }
+}

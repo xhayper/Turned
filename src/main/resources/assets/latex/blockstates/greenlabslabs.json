@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "latex:block/greenlabslabs"
+    },
+    "type=top": {
+      "model": "latex:block/greenlabslabs_top"
+    },
+    "type=double": {
+      "model": "latex:block/greenlabslabs_full"
+    }
+  }
+}

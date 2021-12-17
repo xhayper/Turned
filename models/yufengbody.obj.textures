@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "m_0": "yufeng_wings_texture"
+      },
+      "name": "default"
+    }
+  }
+}

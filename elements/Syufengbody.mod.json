@@ -1,0 +1,75 @@
+{
+  "_fv": 24,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": false,
+    "textureHelmet": "dark_latex_mask_icon",
+    "enableBody": true,
+    "textureBody": "dark_latex_mask_icon",
+    "enableLeggings": false,
+    "textureLeggings": "",
+    "enableBoots": false,
+    "textureBoots": "",
+    "onBodyTick": {
+      "name": "SyufengbodyBodyTickEvent"
+    },
+    "creativeTab": {
+      "value": "No creative tab entry"
+    },
+    "armorTextureFile": "dark_latex_mark_",
+    "helmetName": "Skeleton Yufeng Horns",
+    "bodyName": "Skeleton Yufeng Body",
+    "leggingsName": "Yufengbody Leggings",
+    "bootsName": "Yufengbody Boots",
+    "helmetSpecialInfo": [
+      "How did you got this?! HANDS OFF."
+    ],
+    "bodySpecialInfo": [
+      "How did you got this?! HANDS OFF."
+    ],
+    "leggingsSpecialInfo": [],
+    "bootsSpecialInfo": [],
+    "helmetModelName": "Models_yufeng_h_model",
+    "helmetModelPart": "Head",
+    "helmetModelTexture": "skeleton_yufeng_horns.png",
+    "bodyModelName": "Models_yufeng_b_model",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "LeftArm",
+    "armsModelPartR": "RightArm",
+    "bodyModelTexture": "skeleton_yufeng_body.png",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "maxDamage": 0,
+    "damageValueHelmet": 1,
+    "damageValueBody": 5,
+    "damageValueLeggings": 0,
+    "damageValueBoots": 0,
+    "enchantability": 20,
+    "toughness": 0.0,
+    "knockbackResistance": 0.0,
+    "equipSound": {
+      "value": "CUSTOM:transfur"
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:Darklatexgoo"
+      },
+      {
+        "value": "Items.BONE"
+      },
+      {
+        "value": "CUSTOM:Darklatexcrystal"
+      }
+    ]
+  }
+}

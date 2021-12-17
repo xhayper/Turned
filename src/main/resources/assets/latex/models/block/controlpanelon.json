@@ -1,0 +1,10 @@
+{
+  "parent": "latex:custom/control_pannel",
+  "textures": {
+    "all": "latex:blocks/controll_switch_on",
+    "particle": "latex:blocks/controll_switch_on",
+    "0": "latex:blocks/controll_switch_on",
+    "1": "latex:blocks/block2",
+    "2": "latex:blocks/block1"
+  }
+}

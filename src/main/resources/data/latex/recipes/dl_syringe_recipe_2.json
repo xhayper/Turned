@@ -1,0 +1,26 @@
+{
+  "group": "latex",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "latex:syringe"
+    },
+    "1": {
+      "item": "minecraft:soul_sand"
+    },
+    "2": {
+      "item": "minecraft:slime_ball"
+    },
+    "3": {
+      "item": "latex:slimeessence"
+    }
+  },
+  "result": {
+    "item": "latex:dl_syringe",
+    "count": 1
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "latex:custom/modern_computer",
+  "textures": {
+    "all": "latex:blocks/modern_computer",
+    "particle": "latex:blocks/modern_computer",
+    "0": "latex:blocks/modern_computer"
+  }
+}

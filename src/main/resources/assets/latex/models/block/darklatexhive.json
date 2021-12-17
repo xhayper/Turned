@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "latex:blocks/dark_latex_hive_bottom",
+    "up": "latex:blocks/dark_latex_hive_bottom",
+    "north": "latex:blocks/dark_latex_hive",
+    "east": "latex:blocks/dark_latex_hive_sides",
+    "south": "latex:blocks/dark_latex_hive_sides",
+    "west": "latex:blocks/dark_latex_hive_sides",
+    "particle": "latex:blocks/dark_latex_hive_bottom"
+  }
+}

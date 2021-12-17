@@ -1,0 +1,24 @@
+{
+  "group": "latex",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  2",
+    " 4 ",
+    "6  "
+  ],
+  "key": {
+    "2": {
+      "item": "minecraft:iron_nugget"
+    },
+    "4": {
+      "item": "minecraft:glass_pane"
+    },
+    "6": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "result": {
+    "item": "latex:syringe",
+    "count": 4
+  }
+}

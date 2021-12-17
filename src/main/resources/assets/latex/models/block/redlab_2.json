@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "latex:blocks/redlab3",
+    "up": "latex:blocks/redlab3",
+    "north": "latex:blocks/block5",
+    "east": "latex:blocks/block5",
+    "south": "latex:blocks/block5",
+    "west": "latex:blocks/block5",
+    "particle": "latex:blocks/redlab3"
+  }
+}

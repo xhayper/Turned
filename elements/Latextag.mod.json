@@ -1,0 +1,74 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:Darklatex"
+      },
+      {
+        "value": "CUSTOM:Yufeng"
+      },
+      {
+        "value": "CUSTOM:NoiseStalker"
+      },
+      {
+        "value": "CUSTOM:SYufeng"
+      },
+      {
+        "value": "CUSTOM:Dlshark"
+      },
+      {
+        "value": "CUSTOM:Dlmermaid"
+      },
+      {
+        "value": "CUSTOM:DarkLatexFox"
+      },
+      {
+        "value": "CUSTOM:DarkLatexSkeleton"
+      },
+      {
+        "value": "CUSTOM:DarkLatexDragon"
+      },
+      {
+        "value": "CUSTOM:DarkLatexQueenBee"
+      },
+      {
+        "value": "CUSTOM:DLbee"
+      },
+      {
+        "value": "CUSTOM:DarkLatexFoxSniper"
+      },
+      {
+        "value": "CUSTOM:DarkLatexSnake"
+      },
+      {
+        "value": "CUSTOM:DarkLatexSnakeF"
+      },
+      {
+        "value": "CUSTOM:DarkLatexFoxScientist"
+      },
+      {
+        "value": "CUSTOM:DarkLatexSnep"
+      },
+      {
+        "value": "CUSTOM:DarkLatexSpider"
+      },
+      {
+        "value": "CUSTOM:DarkLatexSpiderQueen"
+      },
+      {
+        "value": "CUSTOM:Darklatexslug"
+      },
+      {
+        "value": "CUSTOM:DarkLatexMoth"
+      }
+    ],
+    "name": "darklatexes",
+    "namespace": "mod"
+  }
+}

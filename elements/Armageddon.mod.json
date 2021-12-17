@@ -1,0 +1,17 @@
+{
+  "_fv": 24,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "armageddon_disk",
+    "name": "Music Disc",
+    "description": "Loki616 - Armageddon",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "music": {
+      "value": "CUSTOM:armageddon"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}

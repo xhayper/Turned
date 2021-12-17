@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "latex:blocks/reinforced_concrete",
+    "up": "latex:blocks/reinforced_concrete",
+    "north": "latex:blocks/reinforced_concrete",
+    "east": "latex:blocks/reinforced_concrete",
+    "south": "latex:blocks/reinforced_concrete",
+    "west": "latex:blocks/reinforced_concrete",
+    "particle": "latex:blocks/reinforced_concrete"
+  }
+}

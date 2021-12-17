@@ -1,0 +1,9 @@
+{
+  "group": "latex",
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "latex:redlab_4"
+  },
+  "result": "latex:red_lab_slab"
+}

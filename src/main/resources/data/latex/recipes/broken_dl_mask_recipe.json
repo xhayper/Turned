@@ -1,0 +1,42 @@
+{
+  "group": "latex",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "latex:darklatexgoo"
+    },
+    "1": {
+      "item": "latex:darklatexcrystal"
+    },
+    "2": {
+      "item": "latex:darklatexgoo"
+    },
+    "3": {
+      "item": "latex:darklatexcrystal"
+    },
+    "4": {
+      "item": "latex:brokendlmask"
+    },
+    "5": {
+      "item": "latex:darklatexcrystal"
+    },
+    "6": {
+      "item": "latex:darklatexgoo"
+    },
+    "7": {
+      "item": "latex:darklatexcrystal"
+    },
+    "8": {
+      "item": "latex:darklatexgoo"
+    }
+  },
+  "result": {
+    "item": "latex:dlmask_helmet",
+    "count": 1
+  }
+}

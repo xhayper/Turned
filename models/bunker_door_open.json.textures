@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "bunker_door_open"
+      },
+      "name": "default"
+    }
+  }
+}

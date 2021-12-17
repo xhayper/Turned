@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "latex:blocks/blacklab2",
+    "top": "latex:blocks/black_lab_14",
+    "side": "latex:blocks/black_lab_13"
+  }
+}

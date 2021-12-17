@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "the_c_o_n_e"
+      },
+      "name": "default"
+    }
+  }
+}

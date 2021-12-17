@@ -1,0 +1,160 @@
+public static class Modeltsc_outsider_ranged_model extends EntityModel<Entity> {
+	private final ModelRenderer Head;
+	private final ModelRenderer Ears;
+	private final ModelRenderer Body;
+	private final ModelRenderer Tail;
+	private final ModelRenderer LeftArm;
+	private final ModelRenderer TSCPistol;
+	private final ModelRenderer bone2;
+	private final ModelRenderer RightArm;
+	private final ModelRenderer LeftLeg;
+	private final ModelRenderer cube_r1;
+	private final ModelRenderer cube_r2;
+	private final ModelRenderer cube_r3;
+	private final ModelRenderer cube_r4;
+	private final ModelRenderer RightLeg;
+	private final ModelRenderer cube_r5;
+	private final ModelRenderer cube_r6;
+	private final ModelRenderer cube_r7;
+	private final ModelRenderer cube_r8;
+
+	public Modeltsc_outsider_ranged_model() {
+		textureWidth = 80;
+		textureHeight = 80;
+
+		Head = new ModelRenderer(this);
+		Head.setRotationPoint(0.0F, 0.0F, 0.0F);
+		Head.setTextureOffset(0, 0).addBox(-3.5F, -7.0F, -3.5F, 7.0F, 7.0F, 7.0F, 0.0F, false);
+		Head.setTextureOffset(12, 27).addBox(-3.0F, -5.25F, -3.75F, 6.0F, 3.0F, 1.0F, 0.0F, false);
+
+		Ears = new ModelRenderer(this);
+		Ears.setRotationPoint(-3.5F, -6.5F, 2.5F);
+		Head.addChild(Ears);
+		setRotationAngle(Ears, 0.7854F, 0.0F, 0.0F);
+		Ears.setTextureOffset(53, 24).addBox(-1.0F, -1.5F, -3.0F, 2.0F, 3.0F, 5.0F, 0.0F, false);
+		Ears.setTextureOffset(52, 34).addBox(6.0F, -1.5F, -3.0F, 2.0F, 3.0F, 5.0F, 0.0F, false);
+
+		Body = new ModelRenderer(this);
+		Body.setRotationPoint(0.0F, 0.0F, 0.0F);
+		Body.setTextureOffset(16, 14).addBox(-4.0F, 0.0F, -2.0F, 8.0F, 6.0F, 4.0F, 0.0F, false);
+		Body.setTextureOffset(28, 0).addBox(-4.0F, 8.0F, -2.0F, 8.0F, 4.0F, 4.0F, 0.0F, false);
+		Body.setTextureOffset(28, 8).addBox(-3.5F, 6.0F, -2.0F, 7.0F, 2.0F, 4.0F, 0.0F, false);
+		Body.setTextureOffset(24, 35).addBox(-1.5F, 0.5F, -2.5F, 3.0F, 3.0F, 1.0F, 0.0F, false);
+
+		Tail = new ModelRenderer(this);
+		Tail.setRotationPoint(0.0F, 23.0F, -5.2F);
+		Body.addChild(Tail);
+		setRotationAngle(Tail, -0.3927F, 0.0F, 0.0F);
+		Tail.setTextureOffset(0, 14).addBox(-1.5F, -14.9043F, 1.769F, 3.0F, 3.0F, 10.0F, 0.0F, false);
+		Tail.setTextureOffset(19, 24).addBox(-2.0F, -15.4424F, 3.9603F, 4.0F, 4.0F, 7.0F, 0.0F, false);
+
+		LeftArm = new ModelRenderer(this);
+		LeftArm.setRotationPoint(-5.0F, 2.0F, 0.0F);
+		setRotationAngle(LeftArm, -1.5708F, 0.0F, 0.0F);
+		LeftArm.setTextureOffset(16, 45).addBox(-3.0F, -2.0F, -2.0F, 4.0F, 5.0F, 4.0F, 0.0F, false);
+		LeftArm.setTextureOffset(28, 50).addBox(-3.0F, 3.0F, -2.0F, 4.0F, 3.0F, 4.0F, 0.0F, false);
+		LeftArm.setTextureOffset(41, 30).addBox(-3.0F, 6.0F, -2.0F, 4.0F, 5.0F, 4.0F, 0.0F, false);
+
+		TSCPistol = new ModelRenderer(this);
+		TSCPistol.setRotationPoint(0.0F, 9.0F, 1.0F);
+		LeftArm.addChild(TSCPistol);
+		setRotationAngle(TSCPistol, 1.9635F, 0.0F, 0.0F);
+		TSCPistol.setTextureOffset(21, 0).addBox(-2.0F, -2.3108F, 0.4651F, 2.0F, 2.0F, 2.0F, 0.0F, false);
+		TSCPistol.setTextureOffset(40, 14).addBox(-2.0F, -3.3108F, -2.5349F, 2.0F, 4.0F, 1.0F, 0.0F, false);
+		TSCPistol.setTextureOffset(53, 46).addBox(-2.0F, -0.3108F, -1.5349F, 2.0F, 1.0F, 4.0F, 0.0F, false);
+
+		bone2 = new ModelRenderer(this);
+		bone2.setRotationPoint(0.0F, 1.8806F, 1.927F);
+		TSCPistol.addChild(bone2);
+		setRotationAngle(bone2, 1.1781F, 0.0F, 0.0F);
+		bone2.setTextureOffset(0, 14).addBox(-2.0F, -7.0F, 3.0F, 2.0F, 6.0F, 2.0F, 0.0F, false);
+		bone2.setTextureOffset(16, 14).addBox(-1.5F, -10.0F, 3.0F, 1.0F, 3.0F, 1.0F, 0.0F, false);
+		bone2.setTextureOffset(0, 0).addBox(-2.0F, -11.0F, 4.0F, 2.0F, 4.0F, 1.0F, 0.0F, false);
+		bone2.setTextureOffset(21, 4).addBox(-2.0F, -6.0F, 5.0F, 2.0F, 3.0F, 0.0F, 0.0F, false);
+		bone2.setTextureOffset(0, 5).addBox(-2.0F, -6.0F, 5.0F, 2.0F, 0.0F, 1.0F, 0.0F, false);
+
+		RightArm = new ModelRenderer(this);
+		RightArm.setRotationPoint(5.0F, 2.0F, 0.0F);
+		RightArm.setTextureOffset(40, 41).addBox(-1.0F, -2.0F, -2.0F, 4.0F, 5.0F, 4.0F, 0.0F, false);
+		RightArm.setTextureOffset(0, 50).addBox(-1.0F, 3.0F, -2.0F, 4.0F, 3.0F, 4.0F, 0.0F, false);
+		RightArm.setTextureOffset(0, 41).addBox(-1.0F, 6.0F, -2.0F, 4.0F, 5.0F, 4.0F, 0.0F, false);
+
+		LeftLeg = new ModelRenderer(this);
+		LeftLeg.setRotationPoint(-2.0F, 12.0F, 0.0F);
+
+		cube_r1 = new ModelRenderer(this);
+		cube_r1.setRotationPoint(0.0F, 4.6268F, 1.6794F);
+		LeftLeg.addChild(cube_r1);
+		cube_r1.setTextureOffset(48, 17).addBox(-2.0F, 4.3732F, -4.2794F, 4.0F, 3.0F, 4.0F, 0.0F, false);
+
+		cube_r2 = new ModelRenderer(this);
+		cube_r2.setRotationPoint(0.0F, 4.6268F, 2.2794F);
+		LeftLeg.addChild(cube_r2);
+		setRotationAngle(cube_r2, -0.3927F, 0.0F, 0.0F);
+		cube_r2.setTextureOffset(52, 0).addBox(-1.5F, 0.0F, -1.0F, 3.0F, 7.0F, 3.0F, 0.0F, false);
+
+		cube_r3 = new ModelRenderer(this);
+		cube_r3.setRotationPoint(0.0F, 2.5637F, -2.5296F);
+		LeftLeg.addChild(cube_r3);
+		setRotationAngle(cube_r3, 0.7854F, 0.0F, 0.0F);
+		cube_r3.setTextureOffset(36, 20).addBox(-2.0F, 0.0F, -2.0F, 4.0F, 6.0F, 4.0F, 0.0F, false);
+
+		cube_r4 = new ModelRenderer(this);
+		cube_r4.setRotationPoint(0.0F, -0.8F, 0.2F);
+		LeftLeg.addChild(cube_r4);
+		setRotationAngle(cube_r4, -0.3927F, 0.0F, 0.0F);
+		cube_r4.setTextureOffset(28, 35).addBox(-2.0F, 0.0F, -2.0F, 4.0F, 6.0F, 4.0F, 0.0F, false);
+
+		RightLeg = new ModelRenderer(this);
+		RightLeg.setRotationPoint(2.0F, 12.0F, 0.0F);
+
+		cube_r5 = new ModelRenderer(this);
+		cube_r5.setRotationPoint(0.0F, 4.6268F, 1.6794F);
+		RightLeg.addChild(cube_r5);
+		cube_r5.setTextureOffset(46, 10).addBox(-2.0F, 4.3732F, -4.2794F, 4.0F, 3.0F, 4.0F, 0.0F, false);
+
+		cube_r6 = new ModelRenderer(this);
+		cube_r6.setRotationPoint(0.0F, 4.6268F, 2.2794F);
+		RightLeg.addChild(cube_r6);
+		setRotationAngle(cube_r6, -0.3927F, 0.0F, 0.0F);
+		cube_r6.setTextureOffset(44, 50).addBox(-1.5F, 0.0F, -1.0F, 3.0F, 7.0F, 3.0F, 0.0F, false);
+
+		cube_r7 = new ModelRenderer(this);
+		cube_r7.setRotationPoint(0.0F, 2.5637F, -2.5296F);
+		RightLeg.addChild(cube_r7);
+		setRotationAngle(cube_r7, 0.7854F, 0.0F, 0.0F);
+		cube_r7.setTextureOffset(12, 35).addBox(-2.0F, 0.0F, -2.0F, 4.0F, 6.0F, 4.0F, 0.0F, false);
+
+		cube_r8 = new ModelRenderer(this);
+		cube_r8.setRotationPoint(0.0F, -0.8F, 0.2F);
+		RightLeg.addChild(cube_r8);
+		setRotationAngle(cube_r8, -0.3927F, 0.0F, 0.0F);
+		cube_r8.setTextureOffset(0, 27).addBox(-2.0F, 0.0F, -2.0F, 4.0F, 6.0F, 4.0F, 0.0F, false);
+	}
+
+	@Override
+	public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red,
+			float green, float blue, float alpha) {
+		Head.render(matrixStack, buffer, packedLight, packedOverlay);
+		Body.render(matrixStack, buffer, packedLight, packedOverlay);
+		LeftArm.render(matrixStack, buffer, packedLight, packedOverlay);
+		RightArm.render(matrixStack, buffer, packedLight, packedOverlay);
+		LeftLeg.render(matrixStack, buffer, packedLight, packedOverlay);
+		RightLeg.render(matrixStack, buffer, packedLight, packedOverlay);
+	}
+
+	public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
+		modelRenderer.rotateAngleX = x;
+		modelRenderer.rotateAngleY = y;
+		modelRenderer.rotateAngleZ = z;
+	}
+
+	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5, Entity e) {
+		super.setRotationAngles(f, f1, f2, f3, f4, f5, e);
+		this.RightArm.rotateAngleX = MathHelper.cos(f * 0.6662F) * f1;
+		this.LeftLeg.rotateAngleX = MathHelper.cos(f * 1.0F) * -1.0F * f1;
+		this.Head.rotateAngleY = f3 / (180F / (float) Math.PI);
+		this.Head.rotateAngleX = f4 / (180F / (float) Math.PI);
+		this.RightLeg.rotateAngleX = MathHelper.cos(f * 1.0F) * 1.0F * f1;
+	}
+}

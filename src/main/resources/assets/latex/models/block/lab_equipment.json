@@ -1,0 +1,12 @@
+{
+  "parent": "latex:custom/lab",
+  "textures": {
+    "all": "latex:blocks/custom_fineflask",
+    "particle": "latex:blocks/custom_fineflask",
+    "0": "latex:blocks/animation",
+    "1": "latex:blocks/finaljar",
+    "2": "latex:blocks/firstbottle",
+    "3": "latex:blocks/finaljaremptypart",
+    "4": "latex:blocks/glasswarestand"
+  }
+}

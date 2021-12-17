@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "office_table"
+      },
+      "name": "default"
+    }
+  }
+}

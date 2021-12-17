@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/locker"
+    },
+    "facing=east": {
+      "model": "latex:block/locker",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/locker",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/locker",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:Bunkerblock"
+      },
+      {
+        "value": "CUSTOM:BunkerBlockStriped"
+      },
+      {
+        "value": "CUSTOM:BunkerStairs"
+      },
+      {
+        "value": "CUSTOM:BunkerBlockSmooth"
+      },
+      {
+        "value": "CUSTOM:BunkerSlabs"
+      },
+      {
+        "value": "CUSTOM:BunkerWall"
+      },
+      {
+        "value": "CUSTOM:Bunkerhatch"
+      },
+      {
+        "value": "CUSTOM:BunkerHatchOpen"
+      },
+      {
+        "value": "CUSTOM:BunkerDoor"
+      },
+      {
+        "value": "CUSTOM:Bunkerdooropen"
+      },
+      {
+        "value": "CUSTOM:SaveStation"
+      },
+      {
+        "value": "CUSTOM:Controlpaneloff"
+      },
+      {
+        "value": "CUSTOM:Controlpanelon"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "wither_immune",
+    "namespace": "minecraft"
+  }
+}

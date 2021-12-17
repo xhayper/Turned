@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "m_0": "trap_chest"
+      },
+      "name": "default"
+    }
+  }
+}

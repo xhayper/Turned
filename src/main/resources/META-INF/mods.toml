@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="Academic Free License v3.0"
+
+[[mods]]
+modId="latex"
+version="1.26.2.1"
+displayName="Turned"
+credits="Created using mod maker MCreator and A LOT of patience - https://mcreator.net/about"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/turned-the-changed-mod"
+logoFile="logo.png"
+authors="Alex n' Italy"
+description='''
+A Minecraft Changed+ Mod.
+'''
+
+[[dependencies.latex]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+

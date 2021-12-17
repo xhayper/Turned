@@ -1,0 +1,7 @@
+{
+  "parent": "latex:custom/phone",
+  "textures": {
+    "0": "latex:blocks/phone",
+    "particle": "latex:items/hertx_visor"
+  }
+}

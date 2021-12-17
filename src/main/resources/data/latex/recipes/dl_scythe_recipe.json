@@ -1,0 +1,33 @@
+{
+  "group": "latex",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    " 45",
+    "6  "
+  ],
+  "key": {
+    "0": {
+      "item": "latex:darklatexcrystal"
+    },
+    "1": {
+      "item": "latex:darklatexcrystal"
+    },
+    "2": {
+      "item": "latex:darklatexgoo"
+    },
+    "4": {
+      "item": "latex:darklatexgoo"
+    },
+    "5": {
+      "item": "latex:darklatexcrystal"
+    },
+    "6": {
+      "item": "latex:darklatexgoo"
+    }
+  },
+  "result": {
+    "item": "latex:dl_scythe",
+    "count": 1
+  }
+}

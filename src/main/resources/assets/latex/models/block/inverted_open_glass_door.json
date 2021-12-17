@@ -1,0 +1,8 @@
+{
+  "parent": "latex:custom/inverted_open_glass_door",
+  "textures": {
+    "all": "latex:blocks/glasswarestand",
+    "particle": "latex:blocks/glasswarestand",
+    "0": "latex:blocks/glass_door"
+  }
+}

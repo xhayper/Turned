@@ -1,0 +1,14 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "animation",
+        "1": "finaljar",
+        "2": "firstbottle",
+        "3": "finaljaremptypart",
+        "4": "glasswarestand"
+      },
+      "name": "default"
+    }
+  }
+}

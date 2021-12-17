@@ -1,0 +1,29 @@
+{
+  "criteria": {
+    "batterycraft": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "latex:battery",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 2,
+    "recipes": [
+      "latex:cagelightrecipe",
+      "latex:cagelightrecipe_2",
+      "latex:laptoprecipe",
+      "latex:batteryrecipe",
+      "latex:old_tv_recipe",
+      "latex:makeshiftbeaconrecipe"
+    ]
+  }
+}

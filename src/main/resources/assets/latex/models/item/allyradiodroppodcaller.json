@@ -1,0 +1,7 @@
+{
+  "parent": "latex:custom/ally_radio",
+  "textures": {
+    "0": "latex:blocks/scientific_radio_caller_texture",
+    "particle": "latex:items/device_icon"
+  }
+}

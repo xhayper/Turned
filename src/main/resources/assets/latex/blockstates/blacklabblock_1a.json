@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/blacklabblock_1a"
+    },
+    "facing=east": {
+      "model": "latex:block/blacklabblock_1a",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/blacklabblock_1a",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/blacklabblock_1a",
+      "y": 270
+    }
+  }
+}

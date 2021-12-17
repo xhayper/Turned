@@ -1,0 +1,100 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [24, 24],
+	"textures": {
+		"0": "Assault Rifle/Assault_rifle_mag_texture",
+		"particle": "Assault Rifle/Assault_rifle_mag_texture"
+	},
+	"elements": [
+		{
+			"from": [6.56236, 7.27909, 4.76067],
+			"to": [9.16236, 12.97909, 10.36067],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7.95692, 15.71741, 5.56742]},
+			"faces": {
+				"north": {"uv": [8, 8, 10, 12], "texture": "#0"},
+				"east": {"uv": [0, 0, 4, 4], "texture": "#0"},
+				"south": {"uv": [8, 0, 10, 4], "texture": "#0"},
+				"west": {"uv": [0, 4, 4, 8], "texture": "#0"},
+				"up": {"uv": [10, 8, 8, 4], "texture": "#0"},
+				"down": {"uv": [12, 10, 10, 14], "texture": "#0"}
+			}
+		},
+		{
+			"from": [6.56236, 4.20495, 6.17344],
+			"to": [9.16236, 8.90495, 11.77344],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [7.95692, 11.64326, 6.9802]},
+			"faces": {
+				"north": {"uv": [0, 11.33333, 2, 14.66667], "texture": "#0"},
+				"east": {"uv": [4, 4, 8, 7.33333], "texture": "#0"},
+				"south": {"uv": [2, 11.33333, 4, 14.66667], "texture": "#0"},
+				"west": {"uv": [4, 0, 8, 3.33333], "texture": "#0"},
+				"up": {"uv": [12, 4, 10, 0], "texture": "#0"},
+				"down": {"uv": [12, 4, 10, 8], "texture": "#0"}
+			}
+		},
+		{
+			"from": [6.56236, 0.82416, 6.30225],
+			"to": [9.16236, 5.52416, 11.90225],
+			"rotation": {"angle": 45, "axis": "x", "origin": [7.95692, 8.26248, 7.109]},
+			"faces": {
+				"north": {"uv": [8, 12, 10, 15.33333], "texture": "#0"},
+				"east": {"uv": [4, 7.33333, 8, 10.66667], "texture": "#0"},
+				"south": {"uv": [12, 12, 14, 15.33333], "texture": "#0"},
+				"west": {"uv": [0, 8, 4, 11.33333], "texture": "#0"},
+				"up": {"uv": [6, 14.66667, 4, 10.66667], "texture": "#0"},
+				"down": {"uv": [8, 10.66667, 6, 14.66667], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, 0.25, 1.5],
+			"scale": [0.5, 0.4, 0.5]
+		},
+		"thirdperson_lefthand": {
+			"translation": [0, 0.25, 1.5],
+			"scale": [0, 0, 0]
+		},
+		"firstperson_righthand": {
+			"rotation": [-2, 38, -23],
+			"translation": [1.75, 2, 0],
+			"scale": [0.6, 0.7, 0.6]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 5, 0],
+			"translation": [1, 0.25, 4.25],
+			"scale": [0, 0, 0]
+		},
+		"ground": {
+			"rotation": [16, -78, 46],
+			"translation": [-0.25, 0.25, -0.75],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"gui": {
+			"rotation": [-23, -118, -26],
+			"translation": [-1.5, 1.5, 0]
+		},
+		"head": {
+			"rotation": [90, -93, 90],
+			"translation": [4.25, -24, 4.25],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"fixed": {
+			"rotation": [-90, -103, -90],
+			"translation": [-1.25, 0.5, 0]
+		}
+	},
+	"groups": [
+		{
+			"name": "AR_Mag",
+			"origin": [0, 0, 0],
+			"children": [
+				{
+					"name": "762x39_Magazine",
+					"origin": [27.5, 24, 4],
+					"children": [0, 1, 2]
+				}
+			]
+		}
+	]
+}

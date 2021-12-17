@@ -1,0 +1,8 @@
+{
+  "parent": "latex:custom/desk",
+  "textures": {
+    "all": "latex:blocks/desk",
+    "particle": "latex:blocks/desk",
+    "0": "latex:blocks/desk"
+  }
+}

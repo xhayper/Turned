@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "dark_latex_goo_block"
+      },
+      "name": "default"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/thecone"
+    },
+    "facing=east": {
+      "model": "latex:block/thecone",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/thecone",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/thecone",
+      "y": 270
+    }
+  }
+}

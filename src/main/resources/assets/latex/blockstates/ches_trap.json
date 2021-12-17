@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/ches_trap"
+    },
+    "facing=east": {
+      "model": "latex:block/ches_trap",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/ches_trap",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/ches_trap",
+      "y": 270
+    }
+  }
+}

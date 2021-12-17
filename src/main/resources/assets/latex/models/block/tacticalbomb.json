@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "latex:blocks/tacticalbombtop",
+    "up": "latex:blocks/tacticalbombtop",
+    "north": "latex:blocks/tactical_bomb",
+    "east": "latex:blocks/tactical_bomb",
+    "south": "latex:blocks/tactical_bomb",
+    "west": "latex:blocks/tactical_bomb",
+    "particle": "latex:blocks/tacticalbombtop"
+  }
+}

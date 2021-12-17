@@ -1,0 +1,44 @@
+{
+  "_fv": 24,
+  "_type": "item",
+  "definition": {
+    "renderType": 1,
+    "texture": "hertx_visor",
+    "customModelName": "hertx_visor:default",
+    "name": "Hertx visor",
+    "rarity": "COMMON",
+    "creativeTab": {
+      "value": "CUSTOM:Latexitems"
+    },
+    "stackSize": 1,
+    "enchantability": 0,
+    "useDuration": 0,
+    "toolType": 1.0,
+    "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInfo": [
+      "Right click on a latex block or left click on a normal latex to turn them in an hertx. (Won't work on strong latex variants.) §c(Note",
+      "you must be 3 blocks near the spawned hertx to insta-tame it",
+      "otherwise use Latex Goo)"
+    ],
+    "hasGlow": false,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "onRightClickedOnBlock": {
+      "name": "HertxvisorRightClickedOnBlock"
+    },
+    "onEntityHitWith": {
+      "name": "HertxvisorLivingEntityIsHitWithItem"
+    },
+    "hasDispenseBehavior": false
+  }
+}

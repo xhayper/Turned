@@ -1,0 +1,7 @@
+{
+  "parent": "latex:custom/flamethower",
+  "textures": {
+    "0": "latex:blocks/flamethower_texture",
+    "particle": "latex:items/flamethower"
+  }
+}

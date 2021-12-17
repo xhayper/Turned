@@ -1,0 +1,26 @@
+{
+  "group": "latex",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "latex:darklatexcrystal"
+    },
+    "1": {
+      "item": "latex:darklatexcrystal"
+    },
+    "2": {
+      "item": "latex:darklatexcrystal"
+    },
+    "3": {
+      "item": "latex:darklatexcrystal"
+    }
+  },
+  "result": {
+    "item": "latex:darklatexice",
+    "count": 1
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "latex:militaryflameunit",
+    "latex:military",
+    "latex:scientist",
+    "latex:evil_scientist",
+    "latex:evil_sniper",
+    "latex:evil_military",
+    "latex:military_riot",
+    "husk",
+    "illusioner",
+    "pillager",
+    "player",
+    "zombie",
+    "villager",
+    "vindicator",
+    "wandering_trader",
+    "zombie",
+    "zombie_villager"
+  ]
+}

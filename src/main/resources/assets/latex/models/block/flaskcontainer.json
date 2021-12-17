@@ -1,0 +1,8 @@
+{
+  "parent": "latex:custom/flask_container",
+  "textures": {
+    "all": "latex:blocks/custom_fineflask",
+    "particle": "latex:blocks/custom_fineflask",
+    "0": "latex:blocks/custom_fineflask"
+  }
+}

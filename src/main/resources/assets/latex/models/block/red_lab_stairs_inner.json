@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "latex:blocks/redlab3",
+    "top": "latex:blocks/redlab3",
+    "side": "latex:blocks/redlab3"
+  }
+}

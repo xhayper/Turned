@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "latex:block/bluelabslabs"
+    },
+    "type=top": {
+      "model": "latex:block/bluelabslabs_top"
+    },
+    "type=double": {
+      "model": "latex:block/bluelabslabs_full"
+    }
+  }
+}

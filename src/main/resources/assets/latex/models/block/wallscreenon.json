@@ -1,0 +1,8 @@
+{
+  "parent": "latex:custom/wall-screen-on",
+  "textures": {
+    "all": "latex:blocks/wall_screen_on",
+    "particle": "latex:blocks/wall_screen_on",
+    "0": "latex:blocks/wall_screen_on"
+  }
+}

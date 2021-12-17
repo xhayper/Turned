@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "dart_rifle"
+      },
+      "name": "default"
+    }
+  }
+}

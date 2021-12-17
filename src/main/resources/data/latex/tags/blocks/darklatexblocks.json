@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "latex:darklatexblock",
+    "latex:darklatexice",
+    "latex:darklatexcrystalegg",
+    "latex:darklatexblockcrystalgrow",
+    "latex:darklatexhive",
+    "latex:darklatexleaves",
+    "latex:latexcobwebfix",
+    "latex:darklatexlog",
+    "latex:darklatexpuddleharmless",
+    "latex:darklatexcarpet",
+    "latex:dark_latex_goo_fluid"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "sniper_rifle_texture"
+      },
+      "name": "default"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "latex:custom/radio",
+  "textures": {
+    "0": "latex:blocks/radio_droppod_texture",
+    "particle": "latex:items/device_icon"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "assault_rifle_mag_texture"
+      },
+      "name": "default"
+    }
+  }
+}

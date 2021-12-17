@@ -1,0 +1,8 @@
+{
+  "parent": "latex:custom/latex_chest",
+  "textures": {
+    "all": "latex:blocks/trap_chest_texture",
+    "particle": "latex:blocks/trap_chest_texture",
+    "0": "latex:blocks/trap_chest_texture"
+  }
+}

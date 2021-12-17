@@ -1,0 +1,48 @@
+{
+  "_fv": 24,
+  "_type": "rangeditem",
+  "definition": {
+    "renderType": 0,
+    "texture": "tank_cannon",
+    "customModelName": "Normal",
+    "name": "Tank Cannon",
+    "specialInfo": [
+      "You're DEFINETIVELY not supposed to have this."
+    ],
+    "creativeTab": {
+      "value": "No creative tab entry"
+    },
+    "stackSize": 1,
+    "ammoItem": {
+      "value": "Blocks.TNT"
+    },
+    "shootConstantly": false,
+    "usageCount": 0,
+    "actionSound": {
+      "value": "CUSTOM:tank_shot"
+    },
+    "hasGlow": false,
+    "animation": "none",
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "bulletPower": 10.0,
+    "bulletDamage": 100.0,
+    "bulletKnockback": 5,
+    "bulletParticles": false,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": "Blocks.TNT"
+    },
+    "bulletModel": "Default",
+    "customBulletModelTexture": "",
+    "onBulletHitsBlock": {
+      "name": "TankCannonBulletHitsBlock"
+    },
+    "onBulletHitsEntity": {
+      "name": "TankCannonBulletHitsBlock"
+    },
+    "onBulletFlyingTick": {
+      "name": "TankCannonWhileBulletFlyingTick"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "dark_latex_cannon_texture_"
+      },
+      "name": "default"
+    }
+  }
+}

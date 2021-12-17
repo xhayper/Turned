@@ -1,0 +1,7 @@
+{
+  "parent": "latex:custom/hertx_visor",
+  "textures": {
+    "0": "latex:blocks/hertx_visor",
+    "particle": "latex:items/hertx_visor"
+  }
+}

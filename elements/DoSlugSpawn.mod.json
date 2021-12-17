@@ -1,0 +1,12 @@
+{
+  "_fv": 24,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Logic",
+    "displayName": "Do Dark Latex Slugs Spawn?",
+    "description": "Will dark latex slugs have a chance to spawn in the darkness of most of biomes? (spawn weight: 6)",
+    "category": "SPAWNING",
+    "defaultValueLogic": true,
+    "defaultValueNumber": 0
+  }
+}

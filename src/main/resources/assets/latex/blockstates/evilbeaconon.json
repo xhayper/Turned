@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/evilbeaconon"
+    },
+    "facing=east": {
+      "model": "latex:block/evilbeaconon",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/evilbeaconon",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/evilbeaconon",
+      "y": 270
+    }
+  }
+}

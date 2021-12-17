@@ -1,0 +1,17 @@
+{
+  "_fv": 24,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "latex_disc",
+    "name": "Music Disc",
+    "description": "Loki616 - Latex Tune",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "music": {
+      "value": "CUSTOM:latex_tune"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}

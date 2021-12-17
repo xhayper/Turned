@@ -1,0 +1,7 @@
+{
+  "parent": "block/wall_inventory",
+  "textures": {
+    "wall": "latex:blocks/reinforced_bunker_top_bottom",
+    "particle": "latex:blocks/reinforced_bunker_top_bottom"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/nuke"
+    },
+    "facing=east": {
+      "model": "latex:block/nuke",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/nuke",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/nuke",
+      "y": 270
+    }
+  }
+}

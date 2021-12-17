@@ -1,0 +1,43 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "black_crystal_hoe",
+    "customModelName": "Normal",
+    "name": "Dark Latex Hoe",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Latexitems"
+    },
+    "toolType": "Hoe",
+    "harvestLevel": 2,
+    "efficiency": 5.0,
+    "attackSpeed": 0.5,
+    "enchantability": 25,
+    "damageVsEntity": 3.5,
+    "usageCount": 225,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:Darklatexgoo"
+      },
+      {
+        "value": "CUSTOM:Darklatexblock"
+      },
+      {
+        "value": "CUSTOM:Darklatexcrystal"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onRightClickedOnBlock": {
+      "name": "DLHoeRightClickedOnBlock"
+    },
+    "onEntityHitWith": {
+      "name": "DLSwordLivingEntityIsHitWithTool"
+    }
+  }
+}

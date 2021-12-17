@@ -1,0 +1,22 @@
+{
+  "group": "latex",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "latex:yellowlabblock_1"
+    },
+    "1": {
+      "item": "latex:yellowlabblock_1"
+    },
+    "2": {
+      "item": "latex:yellowlabblock_1"
+    }
+  },
+  "result": {
+    "item": "latex:yellowlabslabs",
+    "count": 6
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "latex:block/yellowlabslabs"
+    },
+    "type=top": {
+      "model": "latex:block/yellowlabslabs_top"
+    },
+    "type=double": {
+      "model": "latex:block/yellowlabslabs_full"
+    }
+  }
+}

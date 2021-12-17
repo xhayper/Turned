@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "latex:blocks/dark_latex_leaves",
+    "up": "latex:blocks/dark_latex_leaves",
+    "north": "latex:blocks/dark_latex_leaves",
+    "east": "latex:blocks/dark_latex_leaves",
+    "south": "latex:blocks/dark_latex_leaves",
+    "west": "latex:blocks/dark_latex_leaves",
+    "particle": "latex:blocks/dark_latex_leaves"
+  }
+}

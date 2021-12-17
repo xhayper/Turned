@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/darklatexhive"
+    },
+    "facing=east": {
+      "model": "latex:block/darklatexhive",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/darklatexhive",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/darklatexhive",
+      "y": 270
+    }
+  }
+}

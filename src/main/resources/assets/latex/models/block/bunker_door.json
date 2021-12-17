@@ -1,0 +1,8 @@
+{
+  "parent": "latex:custom/bunker_door_closed",
+  "textures": {
+    "all": "latex:blocks/reinforced_bunker_top_bottom",
+    "particle": "latex:blocks/reinforced_bunker_top_bottom",
+    "0": "latex:blocks/bunker_door"
+  }
+}

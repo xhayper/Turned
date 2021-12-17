@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/doom_doll"
+    },
+    "facing=east": {
+      "model": "latex:block/doom_doll",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/doom_doll",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/doom_doll",
+      "y": 270
+    }
+  }
+}

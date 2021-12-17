@@ -1,0 +1,7 @@
+{
+  "parent": "latex:custom/latex_cannon",
+  "textures": {
+    "0": "latex:blocks/dark_latex_cannon_texture_",
+    "particle": "latex:items/dark_latex_launcher"
+  }
+}

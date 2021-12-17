@@ -1,0 +1,20 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smoking",
+    "xpReward": 1.0,
+    "cookingTime": 100,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "smokingInputStack": {
+      "value": "CUSTOM:Darklatexlog"
+    },
+    "smokingReturnStack": {
+      "value": "Blocks.LOG2#1"
+    },
+    "name": "smokingdarklatex",
+    "namespace": "mod"
+  }
+}

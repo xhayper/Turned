@@ -1,0 +1,8 @@
+{
+  "parent": "latex:custom/vent",
+  "textures": {
+    "all": "latex:blocks/vent_grid",
+    "particle": "latex:blocks/vent_grid",
+    "0": "latex:blocks/vent_grid"
+  }
+}

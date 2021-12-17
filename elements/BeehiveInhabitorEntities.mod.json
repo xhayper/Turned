@@ -1,0 +1,20 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:DarkLatexQueenBee"
+      },
+      {
+        "value": "CUSTOM:DLbee"
+      }
+    ],
+    "name": "beehive_inhabitors",
+    "namespace": "minecraft"
+  }
+}

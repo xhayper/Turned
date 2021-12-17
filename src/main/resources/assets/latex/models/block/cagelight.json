@@ -1,0 +1,8 @@
+{
+  "parent": "latex:custom/cagelight",
+  "textures": {
+    "all": "latex:blocks/cagelight",
+    "particle": "latex:blocks/cagelight",
+    "0": "latex:blocks/cagelight"
+  }
+}

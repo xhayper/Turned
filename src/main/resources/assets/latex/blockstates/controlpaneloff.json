@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "latex:block/controlpaneloff"
+    },
+    "facing=east": {
+      "model": "latex:block/controlpaneloff",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "latex:block/controlpaneloff",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "latex:block/controlpaneloff",
+      "y": 270
+    }
+  }
+}

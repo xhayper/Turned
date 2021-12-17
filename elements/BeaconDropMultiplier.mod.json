@@ -1,0 +1,12 @@
+{
+  "_fv": 24,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Number",
+    "displayName": "Beacon Drop Multipier Value",
+    "description": "It handles the speed of the beacon (evil & makeshift) to spawn a drop pod of any kind, it's base value  is divided by 10.",
+    "category": "UPDATES",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 10
+  }
+}

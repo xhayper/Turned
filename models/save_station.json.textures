@@ -1,0 +1,13 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "block3",
+        "2": "block4",
+        "3": "crafting_table_front",
+        "particle": "block5"
+      },
+      "name": "default"
+    }
+  }
+}
