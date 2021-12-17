@@ -23,6 +23,6 @@ public class TurnedItem {
     public static final RegistryObject<ForgeSpawnEggItem> DARK_LATEX_FOX_SPAWN_EGG = ITEMS.register("dark_latex_fox_spawn_egg", () -> new ForgeSpawnEggItem(TurnedEntityType.DARK_LATEX_FOX, 0x1F1F1F, 0x343434, new Item.Properties().tab(TurnedCreativeModeTab.MISCELLANEOUS)));
     public static final RegistryObject<ForgeSpawnEggItem> DARK_LATEX_SNOW_LEOPARD_SPAWN_EGG = ITEMS.register("dark_latex_snow_leopard_spawn_egg", () -> new ForgeSpawnEggItem(TurnedEntityType.DARK_LATEX_SNOW_LEOPARD, 0x1F1F1F, 0x343434, new Item.Properties().tab(TurnedCreativeModeTab.MISCELLANEOUS)));
     public static final RegistryObject<ForgeSpawnEggItem> SCIENTIST_SPAWN_EGG = ITEMS.register("scientist_spawn_egg", () -> new ForgeSpawnEggItem(TurnedEntityType.SCIENTIST, 0xFFFFFF, 0x000000, new Item.Properties().tab(TurnedCreativeModeTab.MISCELLANEOUS)));
-    //public static final RegistryObject<DarkLatexMask> DARK_LATEX_MASK = ITEMS.register("dark_latex_mask", DarkLatexMask::new);
+    public static final RegistryObject<DarkLatexMask> DARK_LATEX_MASK = ITEMS.register("dark_latex_mask", DarkLatexMask::new);
     public static final RegistryObject<ForgeSpawnEggItem> DARK_LATEX_SPAWN_EGG = ITEMS.register("dark_latex_spawn_egg", () -> new ForgeSpawnEggItem(TurnedEntityType.DARK_LATEX, 0x1F1F1F, 0x343434, new Item.Properties().tab(TurnedCreativeModeTab.MISCELLANEOUS)));
 }

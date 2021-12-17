@@ -5,7 +5,9 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public class TurnedArmor implements ArmorMaterial {
+public enum TurnedArmor implements ArmorMaterial {
+	
+	LATEX_ARMOR(100, 1, 1, null, null, null, 1, 0);
 	
 	private int durabilityForSlot;
 	private int defenseForSlot;
