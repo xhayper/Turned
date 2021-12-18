@@ -5,7 +5,6 @@ import com.changedmc.turned.client.render.entity.CustomHumanoidRenderer;
 import com.changedmc.turned.entity.latex.DarkLatexSnowLeopard;
 import com.changedmc.turned.reference.Reference;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
 
 import javax.annotation.Nonnull;

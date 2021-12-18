@@ -5,8 +5,6 @@ import com.changedmc.turned.client.render.entity.CustomHumanoidRenderer;
 import com.changedmc.turned.entity.latex.DarkLatexFox;
 import com.changedmc.turned.reference.Reference;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.client.renderer.entity.HumanoidMobRenderer;
-import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;

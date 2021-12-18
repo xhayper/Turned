@@ -1,6 +1,5 @@
 package com.changedmc.turned.reference;
 
-import com.changedmc.turned.deferredregister.TurnedEntityType;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 
