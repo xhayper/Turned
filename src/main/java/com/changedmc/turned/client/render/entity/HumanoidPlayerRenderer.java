@@ -30,7 +30,13 @@ import javax.annotation.Nonnull;
 public abstract class HumanoidPlayerRenderer<E extends Player, M extends CustomHumanoidModel<E>> extends LivingEntityRenderer<E, M> {
 
     public HumanoidPlayerRenderer(EntityRendererProvider.Context p_174557_, M pModel) {
+        this(p_174557_, pModel, 1.0F, 1.0F, 1.0F);
+    }
+
+    public HumanoidPlayerRenderer(EntityRendererProvider.Context p_174557_, M pModel, float p_174480_, float p_174481_, float p_174482_) {
         super(p_174557_, pModel, 0.5F);
+        this.addLayer(new CustomHeadLayer<>(this, p_174557_.getModelSet(), p_174480_, p_174481_, p_174482_));
+        this.addLayer(new ElytraLayer<>(this, p_174557_.getModelSet()));
         this.addLayer(new PlayerItemInHandLayer<>(this));
     }
 

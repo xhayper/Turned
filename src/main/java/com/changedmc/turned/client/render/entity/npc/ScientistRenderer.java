@@ -17,7 +17,7 @@ public class ScientistRenderer extends HumanoidMobRenderer<Scientist, HumanoidMo
 
     @Nonnull
     @Override
-    public ResourceLocation getTextureLocation(@Nonnull Scientist scientistEntity) {
-        return new ResourceLocation(Reference.MOD_ID, scientistEntity.isEvil() ? "textures/entity/evil_scientist.png" : "textures/entity/scientist.png");
+    public ResourceLocation getTextureLocation(@Nonnull Scientist scientist) {
+        return new ResourceLocation(Reference.MOD_ID, scientist.isEvil() ? "textures/entity/evil_scientist.png" : "textures/entity/scientist.png");
     }
 }

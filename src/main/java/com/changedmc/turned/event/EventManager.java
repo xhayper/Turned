@@ -28,5 +28,7 @@ public class EventManager {
         TurnedFluid.FLUIDS.register(FMLJavaModLoadingContext.get().getModEventBus());
         if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering BIOMES");
         TurnedBiome.BIOMES.register(FMLJavaModLoadingContext.get().getModEventBus());
+        if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering SOUND_EVENT");
+        TurnedSoundEvent.SOUND_EVENTS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 }

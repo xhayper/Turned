@@ -8,9 +8,14 @@ import com.changedmc.turned.entity.ai.LatexNearestAttackableTargetGoal;
 import com.changedmc.turned.entity.ai.LatexPanicGoal;
 import com.changedmc.turned.entity.npc.Scientist;
 import com.changedmc.turned.util.Utility;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -24,8 +29,11 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 public abstract class Latex extends PathfinderMob {
+
+    private static final EntityDataAccessor<String> DATA_ORIGINAL_ENTITY_TYPE = SynchedEntityData.defineId(Latex.class, EntityDataSerializers.STRING);
 
     public Latex(EntityType<? extends PathfinderMob> type, Level levelIn) {
         super(type, levelIn);
@@ -50,34 +58,23 @@ public abstract class Latex extends PathfinderMob {
         return (player.isUsingItem() ? player.getUseItem() : ItemStack.EMPTY).is(Items.SHIELD);
     }
 
-    public <T extends Mob> EntityType<T> getTypedType() {
-        return (EntityType<T>) this.getType();
-    }
-
     @Override
     public boolean doHurtTarget(@Nonnull Entity entity) {
         ITransfurCapability transfurCapability = entity.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).resolve().orElse(null);
         if (transfurCapability == null || (transfurCapability.isTransfured() || transfurCapability.getLatexLevel() >= 100))
             return false;
         boolean flag = super.doHurtTarget(entity);
-        if (flag && (!(entity instanceof Player player) || !usingShield(player))) {
-            int nextLevel = Math.min(transfurCapability.getLatexLevel() + this.random.nextInt(10) + 1, 100);
-            if (nextLevel >= 100 || TurnedServerConfig.INSTANT_TRANSFUR.get()) {
-                Utility.removeAllNonLatexItem(entity);
-                if (entity instanceof Player) {
-                    transfurCapability.setTransfurType(this.getTransfurType());
-                    transfurCapability.setTransfured(true);
-                    transfurCapability.setLatexLevel(0);
-                } else if (entity instanceof Mob) {
-                    Mob newMob = ((Mob) entity).convertTo(this.getTypedType(), true);
-                    if (newMob == null) return true;
-                    newMob.setDeltaMovement(entity.getDeltaMovement());
+        if (flag) {
+            if ((!(entity instanceof Player player) || !usingShield(player))) {
+                int nextLevel = Math.min(transfurCapability.getLatexLevel() + this.random.nextInt(10) + 1, 100);
+                if (nextLevel >= 100 || TurnedServerConfig.INSTANT_TRANSFUR.get()) {
+                    Utility.transfur(this, entity, null, transfurCapability);
+                } else {
+                    transfurCapability.setLatexLevel(nextLevel);
                 }
-            } else {
-                transfurCapability.setLatexLevel(nextLevel);
             }
         }
-        return true;
+        return flag;
     }
 
     public boolean canBreatheUnderwater() {
@@ -109,6 +106,33 @@ public abstract class Latex extends PathfinderMob {
 
     protected SoundEvent getDeathSound() {
         return SoundEvents.HOSTILE_DEATH;
+    }
+
+    protected void defineSynchedData() {
+        super.defineSynchedData();
+        this.getEntityData().define(DATA_ORIGINAL_ENTITY_TYPE, "");
+    }
+
+    public void addAdditionalSaveData(@Nonnull CompoundTag compoundTag) {
+        super.addAdditionalSaveData(compoundTag);
+        compoundTag.putString("OriginalEntityType", this.getOriginalEntityType() != null && this.getOriginalEntityType().getRegistryName() != null ? this.getOriginalEntityType().getRegistryName().toString() : "");
+    }
+
+    public void readAdditionalSaveData(@Nonnull CompoundTag compoundTag) {
+        super.readAdditionalSaveData(compoundTag);
+        this.getEntityData().set(DATA_ORIGINAL_ENTITY_TYPE, compoundTag.getString("OriginalEntityType"));
+    }
+
+    public void setOriginalEntityType(EntityType<? extends Mob> entityType) {
+        this.getEntityData().set(DATA_ORIGINAL_ENTITY_TYPE, entityType.getRegistryName() != null ? entityType.getRegistryName().toString() : "");
+    }
+
+    @Nullable
+    public EntityType<? extends Mob> getOriginalEntityType() {
+        String key = this.getEntityData().get(DATA_ORIGINAL_ENTITY_TYPE);
+        if (key.equals("")) return null;
+        EntityType<?> entityType = EntityType.byString(key).orElse(null);
+        return entityType != null ? Utility.getTypedType(entityType) : null;
     }
 
     protected float getStandingEyeHeight(@Nonnull Pose pose, @Nonnull EntityDimensions entityDimensions) {

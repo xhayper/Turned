@@ -1,15 +1,25 @@
 package com.changedmc.turned.util;
 
+import com.changedmc.turned.capability.transfur.ITransfurCapability;
+import com.changedmc.turned.capability.transfur.TransfurCapability;
 import com.changedmc.turned.config.TurnedServerConfig;
+import com.changedmc.turned.deferredregister.TurnedSoundEvent;
+import com.changedmc.turned.entity.latex.Latex;
 import com.changedmc.turned.item.LatexUsableItem;
 import com.changedmc.turned.reference.TurnedItemTier;
+import com.changedmc.turned.reference.TurnedLatexType;
+import com.changedmc.turned.transfur.TransfurManager;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.core.BlockPos;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -18,6 +28,7 @@ import net.minecraft.world.item.SpawnEggItem;
 import net.minecraft.world.item.TieredItem;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Random;
 
@@ -97,6 +108,47 @@ public class Utility {
         itemIsLatexHoldable = itemIsLatexHoldable || ((item instanceof TieredItem) && ((TieredItem) item).getTier() == TurnedItemTier.DARK_LATEX);
         itemIsLatexHoldable = itemIsLatexHoldable || item instanceof SpawnEggItem;
         return itemIsLatexHoldable;
+    }
+
+    public static <T extends Mob> EntityType<T> getTypedType(Entity entity) {
+        if (!(entity instanceof Mob)) return null;
+        //noinspection ALL
+        return (EntityType<T>) entity.getType();
+    }
+
+    public static <T extends Mob> EntityType<T> getTypedType(EntityType<?> entityType) {
+        //noinspection ALL
+        return (EntityType<T>) entityType;
+    }
+
+    @Nullable
+    public static <T extends Mob> EntityType<T> getTransfurType(Entity source, Entity target, @Nullable ITransfurCapability sourceCap) {
+        ITransfurCapability sourceTransfurCapability = sourceCap != null ? sourceCap : source.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).resolve().orElse(null);
+        if ((!(source instanceof Latex) && !(source instanceof Player)) || ((source instanceof Player) && sourceTransfurCapability == null)) return null;
+        EntityType<T> sourceType = source instanceof Player ? getTypedType(TransfurManager.entityTypeHashMap.get(sourceTransfurCapability.getTransfurType())) : getTypedType((Latex) source);
+        EntityType<T> targetType = getTypedType(target);
+        //noinspection ALL
+        return (TurnedLatexType.redirectTransfurTypeHashMap.containsKey(targetType) && TurnedLatexType.redirectTransfurTypeHashMap.get(targetType).containsKey(sourceType)) ? (EntityType<T>) TurnedLatexType.redirectTransfurTypeHashMap.get(targetType).get(sourceType) : sourceType;
+    }
+
+    public static void transfur(Entity source, Entity target, @Nullable ITransfurCapability sourceCap, @Nullable ITransfurCapability targetCap) {
+        ITransfurCapability sourceTransfurCapability = sourceCap != null ? sourceCap : source.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).resolve().orElse(null);
+        ITransfurCapability targetTransfurCapability = targetCap != null ? targetCap : target.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).resolve().orElse(null);
+        if (sourceTransfurCapability == null || targetTransfurCapability == null) return;
+        Utility.removeAllNonLatexItem(target);
+        source.getLevel().playSound(null, new BlockPos(source.getX(), source.getY(), source.getZ()), TurnedSoundEvent.GOO.get(), SoundSource.NEUTRAL, 1F, 1F);
+        if (target instanceof Player) {
+            targetTransfurCapability.setTransfurType((source instanceof Latex) ? ((Latex) source).getTransfurType() : sourceTransfurCapability.getTransfurType());
+            targetTransfurCapability.setTransfured(true);
+            targetTransfurCapability.setLatexLevel(0);
+        } else if (target instanceof Mob) {
+            EntityType<? extends Mob> entityType = getTransfurType(source, target, sourceTransfurCapability);
+            if (entityType == null) return;
+            Mob newMob = ((Mob) target).convertTo(entityType, true);
+            if (newMob == null) return;
+            if (newMob instanceof Latex newLatex) newLatex.setOriginalEntityType(getTypedType(target.getType()));
+            newMob.setDeltaMovement(target.getDeltaMovement());
+        }
     }
 
 }

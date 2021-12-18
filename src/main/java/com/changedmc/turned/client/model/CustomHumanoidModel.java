@@ -1,5 +1,6 @@
 package com.changedmc.turned.client.model;
 
+import com.changedmc.turned.Main;
 import com.google.common.collect.ImmutableList;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.model.*;
