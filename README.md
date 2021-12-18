@@ -1,31 +1,18 @@
-![](https://cdn.discordapp.com/attachments/814468698618200135/838709503725010944/Turned_Background.png)
-# ChangedForge
-A mod inspired by the steam game "Changed", mixed sightly with my Discord Server "Adapted" lore, who is a Roleplay based on a different timeline of Changed!<br>
-The mod focuses on having mostly transform-based mechanics and various NPCs/Monsters, Along with decorative and building blocks.
+<div align="center">
+  <br />
+  <p>
+    <img src="https://cdn.discordapp.com/attachments/814468698618200135/838709503725010944/Turned_Background.png"  alt="Turned"/>
+  </p>
+  <br />
+  <p>
+    <a href="https://discord.gg/agxfs9btJK" target="_blank"><img src="https://img.shields.io/discord/636852445867409408" alt="Discord"></a>
+    <a href="https://trello.com/b/shhQBzRt/turned-remaster-roadmap" target="_blank"><img src="https://img.shields.io/badge/trello-blue?logo=trello" alt="Trello"></a>
+  </p>
+</div>
 
-## TODO
+# About
 
-|           Task            | Status | Taken By |
-|:-------------------------:|:------:|:--------:|
-|       Port code [1]       |   N    |    -     |
-| Rewrite transfur code [2] |   N    |    -     |
-
-W - Working on it, N - Will get to it
-
-[1] - Finish porting and removing unused imports/implementations and replace with the new ones<br>
-[2] - Rewriting the transfur code that Block was working on<br>
-
-This list might be outdated, Use Trello to keep track of the TODOs.
-
-## Credits
-
-[Vampirism](https://github.com/TeamLapen/Vampirism) - Biome Generation Code<br>
-
-## Note
-
-### Other developers, please edit this as we work on the project and keep track of what is done
-
-I will try to fix my code, however if I appear to be busy, or you know of a working fix, then you are welcome to apply it
-
-I will try to remain active<br>
-(Remove/edit this after all developers are added to this)
+A mod inspired by the steam game "Changed", mixed sightly with my Discord Server "Adapted" lore, who is a Roleplay based
+on a different timeline of Changed!<br>
+The mod focuses on having mostly transform-based mechanics and various NPCs/Monsters, Along with decorative and building
+blocks.
