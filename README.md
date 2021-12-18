@@ -5,7 +5,9 @@
   </p>
   <br />
   <p>
+    <a href="https://github.com/xhayper/Turned/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/github/license/xhayper/Turned" alt="License"></a>
     <a href="https://discord.gg/agxfs9btJK" target="_blank"><img src="https://img.shields.io/discord/636852445867409408" alt="Discord"></a>
+    <a href="https://github.com/xhayper/Turned/releases" target="_blank"><img src="https://img.shields.io/github/downloads/xhayper/Turned/total" alt="Downloads"></a>
     <a href="https://trello.com/b/shhQBzRt/turned-remaster-roadmap" target="_blank"><img src="https://img.shields.io/badge/trello-blue?logo=trello" alt="Trello"></a>
   </p>
 </div>
