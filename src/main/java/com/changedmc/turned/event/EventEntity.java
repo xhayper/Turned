@@ -5,6 +5,7 @@ import com.changedmc.turned.capability.transfur.TransfurCapability;
 import com.changedmc.turned.config.TurnedServerConfig;
 import com.changedmc.turned.entity.latex.Latex;
 import com.changedmc.turned.util.Utility;
+import net.minecraft.advancements.critereon.PlayerHurtEntityTrigger;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
@@ -68,6 +69,9 @@ public class EventEntity {
         if (((entityTransfurCapability != null && entityTransfurCapability.isTransfured()) || entity instanceof Latex) && event.getSource().msgId.equals("drown")) {
             event.setCanceled(true);
         }
+//        if (entity instanceof Latex || ((entity instanceof Player) && entityTransfurCapability != null && entityTransfurCapability.isTransfured())) {
+//            event.setCanceled(true);
+//        } // Immunity 2 :)
     }
 
     @SubscribeEvent

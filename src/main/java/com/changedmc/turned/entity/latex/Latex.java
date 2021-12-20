@@ -56,6 +56,11 @@ public abstract class Latex extends PathfinderMob {
         return (player.isUsingItem() ? player.getUseItem() : ItemStack.EMPTY).is(Items.SHIELD);
     }
 
+//    @Override
+//    public boolean hurt(@Nonnull DamageSource pSource, float pAmount) {
+//        return false;
+//    } // Immunity :)
+
     @Override
     public boolean doHurtTarget(@Nonnull Entity entity) {
         ITransfurCapability transfurCapability = entity.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).resolve().orElse(null);
