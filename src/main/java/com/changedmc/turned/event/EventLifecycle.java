@@ -2,6 +2,7 @@ package com.changedmc.turned.event;
 
 import com.changedmc.turned.Main;
 import com.changedmc.turned.capability.transfur.TransfurCapability;
+import com.changedmc.turned.client.model.armor.DarkLatexDisguiseMask;
 import com.changedmc.turned.client.model.latex.DarkLatexFoxModel;
 import com.changedmc.turned.client.model.latex.DarkLatexModel;
 import com.changedmc.turned.client.model.latex.DarkLatexSnowLeopardModel;
@@ -59,6 +60,7 @@ public class EventLifecycle {
         event.registerLayerDefinition(DarkLatexSnowLeopardModel.LAYER_LOCATION, DarkLatexSnowLeopardModel::createBodyLayer);
         event.registerLayerDefinition(DarkLatexFoxModel.LAYER_LOCATION, DarkLatexFoxModel::createBodyLayer);
         event.registerLayerDefinition(DarkLatexModel.LAYER_LOCATION, DarkLatexModel::createBodyLayer);
+        event.registerLayerDefinition(DarkLatexDisguiseMask.LAYER_LOCATION, DarkLatexDisguiseMask::createBodyLayer);
     }
 
     @OnlyIn(Dist.DEDICATED_SERVER)
