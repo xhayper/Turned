@@ -41,6 +41,7 @@ public abstract class Latex extends PathfinderMob {
         return Monster.createMonsterAttributes().add(Attributes.FOLLOW_RANGE, 35.0D).add(Attributes.MOVEMENT_SPEED, 0.23F).add(Attributes.ATTACK_DAMAGE, 1.0D).add(Attributes.ARMOR, 2.0D);
     }
 
+    @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
         this.goalSelector.addGoal(1, new LatexPanicGoal(this, 1.25D));
@@ -88,39 +89,47 @@ public abstract class Latex extends PathfinderMob {
         return 0;
     }
 
+    @Override
     @Nonnull
     public SoundSource getSoundSource() {
         return SoundSource.HOSTILE;
     }
 
+    @Override
     @Nonnull
     protected SoundEvent getSwimSound() {
         return SoundEvents.HOSTILE_SWIM;
     }
 
+    @Override
     @Nonnull
     protected SoundEvent getSwimSplashSound() {
         return SoundEvents.HOSTILE_SPLASH;
     }
 
+    @Override
     protected SoundEvent getHurtSound(@Nonnull DamageSource damageSource) {
         return SoundEvents.HOSTILE_HURT;
     }
 
+    @Override
     protected SoundEvent getDeathSound() {
         return SoundEvents.HOSTILE_DEATH;
     }
 
+    @Override
     protected void defineSynchedData() {
         super.defineSynchedData();
         this.getEntityData().define(DATA_ORIGINAL_ENTITY_TYPE, "");
     }
 
+    @Override
     public void addAdditionalSaveData(@Nonnull CompoundTag compoundTag) {
         super.addAdditionalSaveData(compoundTag);
         compoundTag.putString("OriginalEntityType", this.getOriginalEntityType() != null && this.getOriginalEntityType().getRegistryName() != null ? this.getOriginalEntityType().getRegistryName().toString() : "");
     }
 
+    @Override
     public void readAdditionalSaveData(@Nonnull CompoundTag compoundTag) {
         super.readAdditionalSaveData(compoundTag);
         this.getEntityData().set(DATA_ORIGINAL_ENTITY_TYPE, compoundTag.getString("OriginalEntityType"));
@@ -138,6 +147,7 @@ public abstract class Latex extends PathfinderMob {
         return entityType != null ? Utility.getTypedType(entityType) : null;
     }
 
+    @Override
     protected float getStandingEyeHeight(@Nonnull Pose pose, @Nonnull EntityDimensions entityDimensions) {
         return this.isBaby() ? 0.93F : 1.74F;
     }

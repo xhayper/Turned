@@ -4,6 +4,7 @@ import com.changedmc.turned.Main;
 import com.changedmc.turned.config.TurnedCommonConfig;
 import com.changedmc.turned.deferredregister.*;
 import com.changedmc.turned.reference.Reference;
+import com.changedmc.turned.world.TurnedBiomeManager;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 

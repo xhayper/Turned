@@ -26,6 +26,7 @@ public class CustomHumanoidRenderer<T extends Mob, M extends CustomHumanoidModel
     }
 
     @Nonnull
+    @Override
     public ResourceLocation getTextureLocation(@Nonnull T pEntity) {
         return DEFAULT_LOCATION;
     }

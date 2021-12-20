@@ -37,25 +37,30 @@ public abstract class PlayerLike extends PathfinderMob {
         this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
     }
 
+    @Override
     @Nonnull
     public SoundSource getSoundSource() {
         return SoundSource.NEUTRAL;
     }
 
+    @Override
     @Nonnull
     protected SoundEvent getSwimSound() {
         return SoundEvents.PLAYER_SWIM;
     }
 
+    @Override
     @Nonnull
     protected SoundEvent getSwimSplashSound() {
         return SoundEvents.PLAYER_SPLASH;
     }
 
+    @Override
     protected SoundEvent getHurtSound(@Nonnull DamageSource damageSource) {
         return SoundEvents.PLAYER_HURT;
     }
 
+    @Override
     protected SoundEvent getDeathSound() {
         return SoundEvents.PLAYER_DEATH;
     }

@@ -21,8 +21,6 @@ import com.changedmc.turned.transfur.TransfurManager;
 import com.changedmc.turned.reference.Reference;
 import com.changedmc.turned.world.TurnedBiomeManager;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
@@ -32,12 +30,21 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLDedicatedServerSetupEvent;
 
 public class EventLifecycle {
+//    @SubscribeEvent
+//    public static void onBiomeLoading(BiomeLoadingEvent event) {
+//        if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Running Biome Manager");
+//        TurnedBiomeManager.register();
+//    }
+
     @SubscribeEvent
     public static void onFMLCommonSetupEvent(FMLCommonSetupEvent event) {
         if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Network Packets");
         NetworkManager.registerPackets();
+        if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Gamerules");
         //noinspection ALL
         new TurnedGamerules();
+        if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Running Biome Manager");
+        TurnedBiomeManager.register();
     }
 
     @SubscribeEvent
@@ -53,7 +60,6 @@ public class EventLifecycle {
         TransfurCapability.register(event);
     }
 
-    @OnlyIn(Dist.CLIENT)
     @SubscribeEvent
     public static void onRegisterLayerDefinition(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(DarkLatexSnowLeopardModel.LAYER_LOCATION, DarkLatexSnowLeopardModel::createBodyLayer);
@@ -61,21 +67,17 @@ public class EventLifecycle {
         event.registerLayerDefinition(DarkLatexModel.LAYER_LOCATION, DarkLatexModel::createBodyLayer);
     }
 
-    @OnlyIn(Dist.DEDICATED_SERVER)
     @SubscribeEvent
     public static void onFMLDedicatedServerSetup(FMLDedicatedServerSetupEvent event) {
         TransfurManager.init(true, false);
     }
 
-    @OnlyIn(Dist.CLIENT)
     @SubscribeEvent
     public static void onFMLClientSetupEvent(FMLClientSetupEvent event) {
         EntityRenderers.register(TurnedEntityType.DARK_LATEX_SNOW_LEOPARD.get(), DarkLatexSnowLeopardRenderer::new);
         EntityRenderers.register(TurnedEntityType.DARK_LATEX_FOX.get(), DarkLatexFoxRenderer::new);
         EntityRenderers.register(TurnedEntityType.DARK_LATEX.get(), DarkLatexRenderer::new);
         EntityRenderers.register(TurnedEntityType.SCIENTIST.get(), ScientistRenderer::new);
-        if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Running Biome Manager");
-        TurnedBiomeManager.register();
         TransfurManager.init(false, false);
     }
 }
