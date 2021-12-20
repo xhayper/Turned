@@ -22,6 +22,7 @@ public class Scientist extends PlayerLike {
         super(type, levelIn);
     }
 
+    @Override
     protected void registerGoals() {
         super.registerGoals();
         this.goalSelector.addGoal(8, new LookAtPlayerGoal(this, Scientist.class, 6.0F));
@@ -34,11 +35,13 @@ public class Scientist extends PlayerLike {
         return spawnGroupData;
     }
 
+    @Override
     public void addAdditionalSaveData(@Nonnull CompoundTag compoundTag) {
         super.addAdditionalSaveData(compoundTag);
         compoundTag.putBoolean("IsEvil", this.isEvil());
     }
 
+    @Override
     public void readAdditionalSaveData(@Nonnull CompoundTag compoundTag) {
         super.readAdditionalSaveData(compoundTag);
         this.getEntityData().set(DATA_EVIL_ID, compoundTag.getBoolean("IsEvil"));

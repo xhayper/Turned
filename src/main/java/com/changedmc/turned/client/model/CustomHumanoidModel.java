@@ -65,20 +65,24 @@ public class CustomHumanoidModel<T extends LivingEntity> extends AgeableListMode
     }
 
     @Nonnull
+    @Override
     protected Iterable<ModelPart> headParts() {
         return ImmutableList.of(this.head);
     }
 
     @Nonnull
+    @Override
     protected Iterable<ModelPart> bodyParts() {
         return ImmutableList.of(this.body, this.rightArm, this.leftArm, this.rightLeg, this.leftLeg);
     }
 
+    @Override
     public void prepareMobModel(T pEntity, float pLimbSwing, float pLimbSwingAmount, float pPartialTick) {
         this.swimAmount = pEntity.getSwimAmount(pPartialTick);
         super.prepareMobModel(pEntity, pLimbSwing, pLimbSwingAmount, pPartialTick);
     }
 
+    @Override
     public void setupAnim(T pEntity, float pLimbSwing, float pLimbSwingAmount, float pAgeInTicks, float pNetHeadYaw, float pHeadPitch) {
         boolean flag = pEntity.getFallFlyingTicks() > 4;
         boolean flag1 = pEntity.isVisuallySwimming();
@@ -340,6 +344,7 @@ public class CustomHumanoidModel<T extends LivingEntity> extends AgeableListMode
         this.leftLeg.visible = pVisible;
     }
 
+    @Override
     public void translateToHand(@Nonnull HumanoidArm pSide, @Nonnull PoseStack pPoseStack) {
         this.getArm(pSide).translateAndRotate(pPoseStack);
     }
@@ -349,6 +354,7 @@ public class CustomHumanoidModel<T extends LivingEntity> extends AgeableListMode
     }
 
     @Nonnull
+    @Override
     public ModelPart getHead() {
         return this.head;
     }

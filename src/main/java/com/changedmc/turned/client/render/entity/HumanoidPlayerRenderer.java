@@ -40,12 +40,14 @@ public abstract class HumanoidPlayerRenderer<E extends Player, M extends CustomH
         this.addLayer(new PlayerItemInHandLayer<>(this));
     }
 
+    @Override
     public void render(@Nonnull E pEntity, float pEntityYaw, float pPartialTicks, @Nonnull PoseStack pMatrixStack, @Nonnull MultiBufferSource pBuffer, int pPackedLight) {
         this.setModelProperties(pEntity);
         super.render(pEntity, pEntityYaw, pPartialTicks, pMatrixStack, pBuffer, pPackedLight);
     }
 
     @Nonnull
+    @Override
     public Vec3 getRenderOffset(E pEntity, float pPartialTicks) {
         return pEntity.isCrouching() ? new Vec3(0.0D, -0.125D, 0.0D) : super.getRenderOffset(pEntity, pPartialTicks);
     }
@@ -110,11 +112,13 @@ public abstract class HumanoidPlayerRenderer<E extends Player, M extends CustomH
         }
     }
 
+    @Override
     protected void scale(@Nonnull E pLivingEntity, PoseStack pMatrixStack, float pPartialTickTime) {
         float f = 0.9375F;
         pMatrixStack.scale(0.9375F, 0.9375F, 0.9375F);
     }
 
+    @Override
     protected void renderNameTag(@Nonnull E pEntity, @Nonnull Component pDisplayName, PoseStack pMatrixStack, @Nonnull MultiBufferSource pBuffer, int pPackedLight) {
         double d0 = this.entityRenderDispatcher.distanceToSqr(pEntity);
         pMatrixStack.pushPose();
@@ -148,6 +152,7 @@ public abstract class HumanoidPlayerRenderer<E extends Player, M extends CustomH
         pRendererArm.render(pMatrixStack, pBuffer.getBuffer(RenderType.entitySolid(this.getTextureLocation(pPlayer))), pCombinedLight, OverlayTexture.NO_OVERLAY);
     }
 
+    @Override
     protected void setupRotations(E pEntityLiving, @Nonnull PoseStack pMatrixStack, float pAgeInTicks, float pRotationYaw, float pPartialTicks) {
         float f = pEntityLiving.getSwimAmount(pPartialTicks);
         if (pEntityLiving.isFallFlying()) {
