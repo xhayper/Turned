@@ -2,10 +2,8 @@ package com.github.turned.Turned.event;
 
 import com.github.turned.Turned.Main;
 import com.github.turned.Turned.config.TurnedCommonConfig;
-import com.changedmc.turned.deferredregister.*;
 import com.github.turned.Turned.deferredregister.*;
 import com.github.turned.Turned.reference.Reference;
-import com.changedmc.turned.world.TurnedBiomeManager;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
@@ -28,8 +26,6 @@ public class EventManager {
         TurnedBlock.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering FLUIDS");
         TurnedFluid.FLUIDS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering BIOMES");
-        TurnedBiome.BIOMES.register(FMLJavaModLoadingContext.get().getModEventBus());
         if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering SOUND_EVENT");
         TurnedSoundEvent.SOUND_EVENTS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }

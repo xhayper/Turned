@@ -1,6 +1,5 @@
 package com.github.turned.Turned.deferredregister;
 
-import com.changedmc.turned.item.*;
 import com.github.turned.Turned.item.*;
 import com.github.turned.Turned.reference.Reference;
 import com.github.turned.Turned.reference.TurnedCreativeModeTab;

@@ -24,3 +24,9 @@ The mod focuses on having mostly transform-based mechanics and various NPCs/Mons
     versionRange="[1.18,1.19)"
     ordering="NONE"
     side="BOTH"
+[[dependencies.turned]]
+    modId="terrablender"
+    mandatory=true
+    versionRange="[1.1.0.39,)"
+    ordering="NONE"
+    side="BOTH"

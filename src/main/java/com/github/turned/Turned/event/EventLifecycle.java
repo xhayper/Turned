@@ -20,22 +20,26 @@ import com.github.turned.Turned.gamerule.TurnedGamerules;
 import com.github.turned.Turned.reference.networking.NetworkManager;
 import com.github.turned.Turned.transfur.TransfurManager;
 import com.github.turned.Turned.reference.Reference;
-import com.changedmc.turned.world.TurnedBiomeManager;
+import com.github.turned.Turned.world.TurnedBiomeProvider;
+import com.github.turned.Turned.world.TurnedBiomes;
+import com.github.turned.Turned.world.TurnedOverworldBiomes;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLDedicatedServerSetupEvent;
+import net.minecraftforge.registries.IForgeRegistry;
+import terrablender.api.BiomeProviders;
+
+import static com.github.turned.Turned.reference.Reference.MOD_ID;
 
 public class EventLifecycle {
-//    @SubscribeEvent
-//    public static void onBiomeLoading(BiomeLoadingEvent event) {
-//        if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Running Biome Manager");
-//        TurnedBiomeManager.register();
-//    }
 
     @SubscribeEvent
     public static void onFMLCommonSetupEvent(FMLCommonSetupEvent event) {
@@ -44,8 +48,9 @@ public class EventLifecycle {
         if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Gamerules");
         //noinspection ALL
         new TurnedGamerules();
-        if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Running Biome Manager");
-        TurnedBiomeManager.register();
+        if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Biome Provider");
+        event.enqueueWork(() ->
+                BiomeProviders.register(new TurnedBiomeProvider(new ResourceLocation(MOD_ID, "biome_provider"), 5)));
     }
 
     @SubscribeEvent
@@ -54,6 +59,13 @@ public class EventLifecycle {
         event.put(TurnedEntityType.DARK_LATEX_FOX.get(), DarkLatexFox.createAttributes().build());
         event.put(TurnedEntityType.DARK_LATEX.get(), DarkLatex.createAttributes().build());
         event.put(TurnedEntityType.SCIENTIST.get(), Scientist.createAttributes().build());
+    }
+
+    @SubscribeEvent
+    public static void registerBiomes(RegistryEvent.Register<Biome> event)
+    {
+        IForgeRegistry<Biome> registry = event.getRegistry();
+        registry.register(TurnedOverworldBiomes.darkLatex().setRegistryName(TurnedBiomes.DARK_LATEX.location()));
     }
 
     @SubscribeEvent
