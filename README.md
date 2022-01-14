@@ -19,3 +19,5 @@ on a different timeline of Changed!<br>
 The mod focuses on having mostly transform-based mechanics and various NPCs/Monsters, Along with decorative and building
 blocks.
 
+# Dependencies
+[TerraBlender](https://github.com/Glitchfiend/TerraBlender)
