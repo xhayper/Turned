@@ -19,7 +19,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 version = '2.0.0'
-group = 'com.github.turned'
+group = 'io.github.changedmc'
 archivesBaseName = 'turned'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
