@@ -22,6 +22,7 @@ public class Main {
     }
 
     public void registerConfig() {
+
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, TurnedClientConfig.SPEC, Reference.MOD_ID + "-client.toml");
         ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, TurnedServerConfig.SPEC, Reference.MOD_ID + "-server.toml");
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, TurnedCommonConfig.SPEC, Reference.MOD_ID + "-common.toml");

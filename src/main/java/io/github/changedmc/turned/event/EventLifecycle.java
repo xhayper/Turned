@@ -48,7 +48,7 @@ public class EventLifecycle {
         new TurnedGamerules();
         if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Biome Provider");
         event.enqueueWork(() ->
-                BiomeProviders.register(new TurnedBiomeProvider(new ResourceLocation(Reference.MOD_ID, "biome_provider"), 5)));
+                BiomeProviders.register(new TurnedBiomeProvider(new ResourceLocation(Reference.MOD_ID, "biome_provider"), 1)));
     }
 
     @SubscribeEvent

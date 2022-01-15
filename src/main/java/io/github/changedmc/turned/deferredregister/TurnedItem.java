@@ -1,10 +1,8 @@
 package io.github.changedmc.turned.deferredregister;
 
-import com.github.turned.Turned.item.*;
 import io.github.changedmc.turned.item.*;
 import io.github.changedmc.turned.reference.Reference;
 import io.github.changedmc.turned.reference.TurnedCreativeModeTab;
-import io.github.turned.Turned.item.*;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.ForgeSpawnEggItem;

@@ -12,12 +12,7 @@ public class TurnedSurfaceRulesData {
     protected static SurfaceRules.RuleSource makeRules()
     {
         SurfaceRules.ConditionSource isAtOrAboveWaterLevel = SurfaceRules.waterBlockCheck(-1, 0);
-        SurfaceRules.RuleSource darkLatexSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterLevel, HARMLESS_DARK_LATEX_BLOCK), DARK_LATEX_BLOCK);
-
-        return SurfaceRules.sequence(
-                SurfaceRules.ifTrue(SurfaceRules.isBiome(TurnedBiomes.DARK_LATEX), DARK_LATEX_BLOCK),
-                SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, darkLatexSurface)
-        );
+        return SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.abovePreliminarySurface(), SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterLevel, HARMLESS_DARK_LATEX_BLOCK), DARK_LATEX_BLOCK)));
     }
 
     private static SurfaceRules.RuleSource makeStateRule(Block block)

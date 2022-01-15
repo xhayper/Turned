@@ -4,8 +4,6 @@ import io.github.changedmc.turned.Main;
 import io.github.changedmc.turned.config.TurnedCommonConfig;
 import io.github.changedmc.turned.deferredregister.*;
 import io.github.changedmc.turned.reference.Reference;
-import com.github.turned.Turned.deferredregister.*;
-import io.github.turned.Turned.deferredregister.*;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
