@@ -40,7 +40,7 @@ public class TurnedOverworldBiomes {
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(TurnedEntityType.DARK_LATEX_SNOW_LEOPARD.get(), 10, 1, 6));
 
         BiomeGenerationSettings.Builder biomeBuilder = new BiomeGenerationSettings.Builder();
-//        TurnedFeatures.addDefaultCarversWithoutLakes(biomeBuilder);
+        TurnedFeatures.addDefaultCarversWithoutLakes(biomeBuilder);
         TurnedFeatures.addModdedWaterLake(biomeBuilder);
 
         BiomeSpecialEffects.Builder biomeSpecialEffectsBuilder = new BiomeSpecialEffects.Builder();
