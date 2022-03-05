@@ -1,0 +1,32 @@
+modLoader="javafml"
+loaderVersion="[38,)"
+license="MIT"
+[[mods]]
+modId="turned"
+version="2.0.0"
+displayName="Turned"
+logoFile="logo.png"
+credits="Vamprisim, Twilight Forest"
+authors="xhayper, Alex n' Italy, Sasha Drozdov, BlockTheVillager"
+description='''
+A mod inspired by the steam game "Changed", mixed sightly with Alex n' Italy's Discord Server "Adapted" lore, who is a Roleplay based on a different timeline of Changed!
+The mod focuses on having mostly transform-based mechanics and various NPCs/Monsters, Along with decorative and building blocks.
+'''
+[[dependencies.turned]]
+    modId="forge"
+    mandatory=true
+    versionRange="[38,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.turned]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18,1.19)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.turned]]
+    modId="terrablender"
+    mandatory=true
+    versionRange="[1.18.1-1.1.0.54,)"
+    ordering="NONE"
+    side="BOTH"

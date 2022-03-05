@@ -1,0 +1,14 @@
+{
+  "goo": {
+    "subtitle": "turned.subtitle.goo",
+    "sounds": [ "turned:goo" ]
+  },
+  "crystal_zone": {
+    "sounds": [
+      {
+        "name": "turned:music/crystal_zone",
+        "stream": true
+      }
+    ]
+  }
+}
