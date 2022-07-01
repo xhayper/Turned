@@ -5,7 +5,7 @@ import io.github.changedmc.turned.deferredregister.TurnedBlock;
 import io.github.changedmc.turned.deferredregister.TurnedFluid;
 import io.github.changedmc.turned.deferredregister.TurnedItem;
 import io.github.changedmc.turned.gamerule.TurnedGamerules;
-import io.github.changedmc.turned.reference.Reference;
+import io.github.changedmc.turned.reference.TurnedReference;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
@@ -17,13 +17,16 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.material.*;
+import net.minecraft.world.level.material.FlowingFluid;
+import net.minecraft.world.level.material.Fluid;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.fluids.FluidAttributes;
 
 import javax.annotation.Nonnull;
 import java.util.List;
 
-// TODO: Make it swimable but not behave like water.
+// TODO: Make it swim-able but not behave like water.
 public abstract class DarkLatexFluid extends FlowingFluid {
 
     private static final List<Direction> spreadDirectionList = List.of(Direction.EAST, Direction.WEST, Direction.NORTH, Direction.SOUTH, Direction.DOWN);
@@ -113,8 +116,8 @@ public abstract class DarkLatexFluid extends FlowingFluid {
     @Override
     protected net.minecraftforge.fluids.FluidAttributes createAttributes() {
         return FluidAttributes.builder(
-                        new ResourceLocation(Reference.MOD_ID, "blocks/dark_latex_fluid"),
-                        new ResourceLocation(Reference.MOD_ID, "blocks/flowing_dark_latex_fluid"))
+                        new ResourceLocation(TurnedReference.MOD_ID, "blocks/dark_latex_fluid"),
+                        new ResourceLocation(TurnedReference.MOD_ID, "blocks/flowing_dark_latex_fluid"))
                 .density(3000).viscosity(6000)
                 .build(TurnedFluid.DARK_LATEX.get());
     }

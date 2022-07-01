@@ -12,7 +12,7 @@ import java.util.function.Predicate;
 
 public class LatexNearestAttackableTargetGoal<T extends LivingEntity> extends NearestAttackableTargetGoal<T> {
 
-    public  LatexNearestAttackableTargetGoal(Mob pMob, Class<T> pTargetType, boolean pMustSee) {
+    public LatexNearestAttackableTargetGoal(Mob pMob, Class<T> pTargetType, boolean pMustSee) {
         this(pMob, pTargetType, 10, pMustSee, false, null);
     }
 

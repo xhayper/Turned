@@ -1,7 +1,7 @@
 package io.github.changedmc.turned.client.model.latex;
 
-import io.github.changedmc.turned.reference.Reference;
 import io.github.changedmc.turned.client.model.CustomHumanoidModel;
+import io.github.changedmc.turned.reference.TurnedReference;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
@@ -11,7 +11,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
 
 public class DarkLatexSnowLeopardModel<T extends LivingEntity> extends CustomHumanoidModel<T> {
-    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(Reference.MOD_ID, "dark_latex_snow_leopard"), "main");
+    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(TurnedReference.MOD_ID, "dark_latex_snow_leopard"), "main");
 
     public DarkLatexSnowLeopardModel(ModelPart root) {
         super(RenderType::entityCutoutNoCull, root.getChild("Head"), root.getChild("Body"), root.getChild("LeftArm"), root.getChild("RightArm"), root.getChild("LeftLeg"), root.getChild("RightLeg"));

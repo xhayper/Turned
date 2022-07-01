@@ -1,10 +1,10 @@
 package io.github.changedmc.turned.transfur.types;
 
-import io.github.changedmc.turned.reference.Reference;
-import io.github.changedmc.turned.util.Utility;
 import io.github.changedmc.turned.client.model.latex.DarkLatexFoxModel;
 import io.github.changedmc.turned.client.render.entity.HumanoidPlayerRenderer;
+import io.github.changedmc.turned.reference.TurnedReference;
 import io.github.changedmc.turned.transfur.ITransfurType;
+import io.github.changedmc.turned.util.Utility;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Player;
@@ -21,7 +21,7 @@ public class DarkLatexFoxTransfur implements ITransfurType {
             @Nonnull
             @Override
             public ResourceLocation getTextureLocation(@Nonnull Player player) {
-                return new ResourceLocation(Reference.MOD_ID, "textures/entity/dark_latex_fox.png");
+                return new ResourceLocation(TurnedReference.MOD_ID, "textures/entity/dark_latex_fox.png");
             }
         };
     }

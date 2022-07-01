@@ -29,9 +29,8 @@ public class EventRenderer {
     public static void onRenderPlayer(RenderPlayerEvent.Pre event) {
         Player player = event.getPlayer();
         ITransfurCapability transfurCapability = player.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).resolve().orElse(null);
-        if (transfurCapability != null && transfurCapability.isTransfured()) {
-            TransfurManager.render(event, transfurCapability.getTransfurType());
-        }
+        if (transfurCapability == null || !transfurCapability.isTransfured()) return;
+        TransfurManager.render(event, transfurCapability.getTransfurType());
     }
 
     @SubscribeEvent
@@ -39,8 +38,7 @@ public class EventRenderer {
     public static void onRenderArm(RenderArmEvent event) {
         Player player = event.getPlayer();
         ITransfurCapability transfurCapability = player.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).resolve().orElse(null);
-        if (transfurCapability != null && transfurCapability.isTransfured()) {
-            TransfurManager.renderArm(event, transfurCapability.getTransfurType());
-        }
+        if (transfurCapability == null || !transfurCapability.isTransfured()) return;
+        TransfurManager.renderArm(event, transfurCapability.getTransfurType());
     }
 }

@@ -2,12 +2,12 @@ package io.github.changedmc.turned.entity.latex;
 
 import io.github.changedmc.turned.capability.transfur.ITransfurCapability;
 import io.github.changedmc.turned.capability.transfur.TransfurCapability;
-import io.github.changedmc.turned.util.Utility;
 import io.github.changedmc.turned.config.TurnedServerConfig;
 import io.github.changedmc.turned.entity.ai.LatexMeleeAttackGoal;
 import io.github.changedmc.turned.entity.ai.LatexNearestAttackableTargetGoal;
 import io.github.changedmc.turned.entity.ai.LatexPanicGoal;
 import io.github.changedmc.turned.entity.npc.Scientist;
+import io.github.changedmc.turned.util.Utility;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -19,7 +19,10 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.goal.*;
+import net.minecraft.world.entity.ai.goal.FloatGoal;
+import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
+import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -75,6 +78,7 @@ public abstract class Latex extends PathfinderMob {
                     Utility.transfur(this, entity, null, transfurCapability);
                 } else {
                     transfurCapability.setLatexLevel(nextLevel);
+                    transfurCapability.syncCapability();
                 }
             }
         }

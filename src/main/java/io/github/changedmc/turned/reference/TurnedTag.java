@@ -7,6 +7,6 @@ import net.minecraft.world.item.Item;
 
 public class TurnedTag {
 
-    public static final Tag.Named<Item> LATEX_HOLDABLE_ITEM = ItemTags.bind(new ResourceLocation(Reference.MOD_ID, "items/latex_holdable_item").toString());
+    public static final Tag.Named<Item> LATEX_HOLDABLE_ITEM = ItemTags.bind(new ResourceLocation(TurnedReference.MOD_ID, "items/latex_holdable_item").toString());
 
 }

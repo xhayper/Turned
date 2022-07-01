@@ -1,6 +1,6 @@
 package io.github.changedmc.turned.reference;
 
-public class Reference {
+public class TurnedReference {
     public static final String MOD_ID = "turned";
-    public static final boolean DEBUG_BUILD = true;
+    public static final boolean DEBUG_BUILD = false;
 }

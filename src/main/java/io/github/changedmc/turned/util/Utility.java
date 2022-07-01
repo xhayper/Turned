@@ -1,5 +1,6 @@
 package io.github.changedmc.turned.util;
 
+import com.google.common.collect.ImmutableList;
 import io.github.changedmc.turned.capability.transfur.ITransfurCapability;
 import io.github.changedmc.turned.capability.transfur.TransfurCapability;
 import io.github.changedmc.turned.config.TurnedServerConfig;
@@ -9,7 +10,6 @@ import io.github.changedmc.turned.item.LatexUsableItem;
 import io.github.changedmc.turned.reference.TurnedItemTier;
 import io.github.changedmc.turned.reference.TurnedLatexType;
 import io.github.changedmc.turned.transfur.TransfurManager;
-import com.google.common.collect.ImmutableList;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.core.BlockPos;
@@ -124,7 +124,8 @@ public class Utility {
     @Nullable
     public static <T extends Mob> EntityType<T> getTransfurType(Entity source, Entity target, @Nullable ITransfurCapability sourceCap) {
         ITransfurCapability sourceTransfurCapability = sourceCap != null ? sourceCap : source.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).resolve().orElse(null);
-        if ((!(source instanceof Latex) && !(source instanceof Player)) || ((source instanceof Player) && sourceTransfurCapability == null)) return null;
+        if ((!(source instanceof Latex) && !(source instanceof Player)) || ((source instanceof Player) && sourceTransfurCapability == null))
+            return null;
         EntityType<T> sourceType = source instanceof Player ? getTypedType(TransfurManager.entityTypeHashMap.get(sourceTransfurCapability.getTransfurType())) : getTypedType((Latex) source);
         EntityType<T> targetType = getTypedType(target);
         //noinspection ALL
@@ -141,6 +142,7 @@ public class Utility {
             targetTransfurCapability.setTransfurType((source instanceof Latex) ? ((Latex) source).getTransfurType() : sourceTransfurCapability.getTransfurType());
             targetTransfurCapability.setTransfured(true);
             targetTransfurCapability.setLatexLevel(0);
+            targetTransfurCapability.syncCapability();
         } else if (target instanceof Mob) {
             EntityType<? extends Mob> entityType = getTransfurType(source, target, sourceTransfurCapability);
             if (entityType == null) return;

@@ -17,8 +17,8 @@ import io.github.changedmc.turned.entity.latex.DarkLatexFox;
 import io.github.changedmc.turned.entity.latex.DarkLatexSnowLeopard;
 import io.github.changedmc.turned.entity.npc.Scientist;
 import io.github.changedmc.turned.gamerule.TurnedGamerules;
-import io.github.changedmc.turned.reference.Reference;
-import io.github.changedmc.turned.reference.networking.NetworkManager;
+import io.github.changedmc.turned.networking.NetworkManager;
+import io.github.changedmc.turned.reference.TurnedReference;
 import io.github.changedmc.turned.transfur.TransfurManager;
 import io.github.changedmc.turned.world.TurnedBiomeProvider;
 import io.github.changedmc.turned.world.TurnedBiomes;
@@ -41,14 +41,16 @@ public class EventLifecycle {
 
     @SubscribeEvent
     public static void onFMLCommonSetupEvent(FMLCommonSetupEvent event) {
-        if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Network Packets");
+        if (TurnedCommonConfig.debug.get() || TurnedReference.DEBUG_BUILD)
+            Main.LOGGER.debug("Registering Network Packets");
         NetworkManager.registerPackets();
-        if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Gamerules");
+        if (TurnedCommonConfig.debug.get() || TurnedReference.DEBUG_BUILD) Main.LOGGER.debug("Registering Gamerules");
         //noinspection ALL
         new TurnedGamerules();
-        if (TurnedCommonConfig.debug.get() || Reference.DEBUG_BUILD) Main.LOGGER.debug("Registering Biome Provider");
+        if (TurnedCommonConfig.debug.get() || TurnedReference.DEBUG_BUILD)
+            Main.LOGGER.debug("Registering Biome Provider");
         event.enqueueWork(() ->
-                BiomeProviders.register(new TurnedBiomeProvider(new ResourceLocation(Reference.MOD_ID, "biome_provider"), 1)));
+                BiomeProviders.register(new TurnedBiomeProvider(new ResourceLocation(TurnedReference.MOD_ID, "biome_provider"), 1)));
     }
 
     @SubscribeEvent
@@ -60,8 +62,7 @@ public class EventLifecycle {
     }
 
     @SubscribeEvent
-    public static void registerBiomes(RegistryEvent.Register<Biome> event)
-    {
+    public static void registerBiomes(RegistryEvent.Register<Biome> event) {
         IForgeRegistry<Biome> registry = event.getRegistry();
         registry.register(TurnedOverworldBiomes.darkLatex().setRegistryName(TurnedBiomes.DARK_LATEX.location()));
     }

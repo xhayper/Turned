@@ -1,6 +1,11 @@
-package io.github.changedmc.turned.reference.networking.packet.server;
+package io.github.changedmc.turned.networking.packet.server;
 
+import io.github.changedmc.turned.capability.transfur.ITransfurCapability;
+import io.github.changedmc.turned.capability.transfur.TransfurCapability;
+import net.minecraft.client.Minecraft;
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.network.NetworkEvent;
@@ -34,7 +39,17 @@ public class SyncTransfurCapability {
 
     public static void handle(SyncTransfurCapability message, Supplier<NetworkEvent.Context> contextSupplier) {
         NetworkEvent.Context context = contextSupplier.get();
-        context.enqueueWork(() -> DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> SyncTransfurCapabilityHandler.handle(message, contextSupplier)));
+        context.enqueueWork(() -> DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> {
+            Level level = Minecraft.getInstance().level;
+            if (level == null) return;
+            Entity entity = level.getEntity(message.entityID);
+            if (entity == null) return;
+            ITransfurCapability transfurCapability = entity.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).resolve().orElse(null);
+            if (transfurCapability == null) return;
+            transfurCapability.setTransfured(message.isTransfured);
+            transfurCapability.setLatexLevel(message.latexLevel);
+            transfurCapability.setTransfurType(message.transfurType);
+        }));
         context.setPacketHandled(true);
     }
 }

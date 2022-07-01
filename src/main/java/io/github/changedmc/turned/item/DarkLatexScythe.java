@@ -1,8 +1,8 @@
 package io.github.changedmc.turned.item;
 
-import io.github.changedmc.turned.reference.TurnedCreativeModeTab;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
+import io.github.changedmc.turned.reference.TurnedCreativeModeTab;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -14,6 +14,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Vanishable;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+
 import javax.annotation.Nonnull;
 
 public class DarkLatexScythe extends LatexUsableItem implements Vanishable {

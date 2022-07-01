@@ -14,26 +14,22 @@ public class TurnedOverworldBiomes {
     private static final Music NORMAL_MUSIC = null;
     private static final Music CRYSTAL_ZONE = new Music(TurnedSoundEvent.CRYSTAL_ZONE.get(), 0, 0, true);
 
-    protected static int calculateSkyColor(float color)
-    {
+    protected static int calculateSkyColor(float color) {
         float $$1 = color / 3.0F;
         $$1 = Mth.clamp($$1, -1.0F, 1.0F);
         return Mth.hsvToRgb(0.62222224F - $$1 * 0.05F, 0.5F + $$1 * 0.1F, 1.0F);
     }
 
-    private static Biome biome(Biome.Precipitation precipitation, Biome.BiomeCategory category, float temperature, float downfall, MobSpawnSettings.Builder spawnBuilder, BiomeGenerationSettings.Builder biomeBuilder, @Nullable Music music)
-    {
+    private static Biome biome(Biome.Precipitation precipitation, Biome.BiomeCategory category, float temperature, float downfall, MobSpawnSettings.Builder spawnBuilder, BiomeGenerationSettings.Builder biomeBuilder, @Nullable Music music) {
         return biome(precipitation, category, temperature, downfall, (new BiomeSpecialEffects.Builder()).waterColor(4159204).waterFogColor(329011).fogColor(12638463).skyColor(calculateSkyColor(temperature)).ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS).backgroundMusic(music), spawnBuilder, biomeBuilder);
     }
 
-    private static Biome biome(Biome.Precipitation precipitation, Biome.BiomeCategory category, float temperature, float downfall, BiomeSpecialEffects.Builder biomeSpecialEffectsBuilder, MobSpawnSettings.Builder spawnBuilder, BiomeGenerationSettings.Builder biomeBuilder)
-    {
+    private static Biome biome(Biome.Precipitation precipitation, Biome.BiomeCategory category, float temperature, float downfall, BiomeSpecialEffects.Builder biomeSpecialEffectsBuilder, MobSpawnSettings.Builder spawnBuilder, BiomeGenerationSettings.Builder biomeBuilder) {
         return (new Biome.BiomeBuilder()).precipitation(precipitation).biomeCategory(category).temperature(temperature).downfall(downfall).specialEffects(biomeSpecialEffectsBuilder.build()).mobSpawnSettings(spawnBuilder.build()).generationSettings(biomeBuilder.build()).build();
     }
 
 
-    public static Biome darkLatex()
-    {
+    public static Biome darkLatex() {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
         spawnBuilder.creatureGenerationProbability(.25f);
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(TurnedEntityType.DARK_LATEX_FOX.get(), 10, 1, 6));

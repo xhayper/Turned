@@ -9,7 +9,7 @@ public class TurnedLatexType {
 
     // A got transfur by B and became C
     // specialTransfurType.get(A).get(B) = C
-    public static final HashMap<EntityType<? extends Mob>,  HashMap<EntityType<? extends Mob>, EntityType<? extends Mob>>> redirectTransfurTypeHashMap;
+    public static final HashMap<EntityType<? extends Mob>, HashMap<EntityType<? extends Mob>, EntityType<? extends Mob>>> redirectTransfurTypeHashMap;
 
     static {
         redirectTransfurTypeHashMap = new HashMap<>();

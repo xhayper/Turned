@@ -15,14 +15,12 @@ import java.util.Optional;
 import java.util.function.Consumer;
 
 public class TurnedBiomeProvider extends BiomeProvider {
-    public TurnedBiomeProvider(ResourceLocation name, int overworldWeight)
-    {
+    public TurnedBiomeProvider(ResourceLocation name, int overworldWeight) {
         super(name, overworldWeight);
     }
 
     @Override
-    public void addOverworldBiomes(Registry<Biome> registry, Consumer<Pair<TBClimate.ParameterPoint, ResourceKey<Biome>>> mapper)
-    {
+    public void addOverworldBiomes(Registry<Biome> registry, Consumer<Pair<TBClimate.ParameterPoint, ResourceKey<Biome>>> mapper) {
         this.addBiome(mapper,
                 ParameterUtils.Temperature.HOT.parameter(),
                 ParameterUtils.Humidity.HUMID.parameter(),
@@ -35,8 +33,7 @@ public class TurnedBiomeProvider extends BiomeProvider {
     }
 
     @Override
-    public Optional<SurfaceRules.RuleSource> getOverworldSurfaceRules()
-    {
+    public Optional<SurfaceRules.RuleSource> getOverworldSurfaceRules() {
         return Optional.of(TurnedSurfaceRulesData.makeRules());
     }
 }

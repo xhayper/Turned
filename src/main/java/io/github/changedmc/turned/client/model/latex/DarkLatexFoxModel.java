@@ -1,8 +1,8 @@
 package io.github.changedmc.turned.client.model.latex;
 
-import io.github.changedmc.turned.reference.Reference;
-import io.github.changedmc.turned.client.model.CustomHumanoidModel;
 import com.google.common.collect.ImmutableList;
+import io.github.changedmc.turned.client.model.CustomHumanoidModel;
+import io.github.changedmc.turned.reference.TurnedReference;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
@@ -14,7 +14,7 @@ import net.minecraft.world.entity.LivingEntity;
 import javax.annotation.Nonnull;
 
 public class DarkLatexFoxModel<T extends LivingEntity> extends CustomHumanoidModel<T> {
-    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(Reference.MOD_ID, "dark_latex_fox"), "main");
+    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(TurnedReference.MOD_ID, "dark_latex_fox"), "main");
 
     private final ModelPart Tail;
 

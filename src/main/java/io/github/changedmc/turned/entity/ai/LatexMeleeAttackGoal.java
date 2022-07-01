@@ -21,7 +21,8 @@ public class LatexMeleeAttackGoal extends MeleeAttackGoal {
         LivingEntity livingEntity = this.mob.getTarget();
         if (livingEntity == null) return false;
         ITransfurCapability transfurCapability = livingEntity.getCapability(TransfurCapability.TRANSFUR_CAPABILITY).resolve().orElse(null);
-        if (transfurCapability != null && (transfurCapability.isTransfured() || transfurCapability.getLatexLevel() >= 100)) return false;
+        if (transfurCapability != null && (transfurCapability.isTransfured() || transfurCapability.getLatexLevel() >= 100))
+            return false;
         else return super.canContinueToUse();
     }
 }

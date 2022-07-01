@@ -8,7 +8,7 @@ import javax.annotation.Nonnull;
 
 public class TurnedCreativeModeTab {
 
-    public static final CreativeModeTab BUILDING_BLOCKS = new CreativeModeTab(Reference.MOD_ID + ".building_blocks") {
+    public static final CreativeModeTab BUILDING_BLOCKS = new CreativeModeTab(TurnedReference.MOD_ID + ".building_blocks") {
         @Nonnull
         @Override
         public ItemStack makeIcon() {
@@ -16,7 +16,7 @@ public class TurnedCreativeModeTab {
         }
     };
 
-    public static final CreativeModeTab MISCELLANEOUS = new CreativeModeTab(Reference.MOD_ID + ".miscellaneous") {
+    public static final CreativeModeTab MISCELLANEOUS = new CreativeModeTab(TurnedReference.MOD_ID + ".miscellaneous") {
         @Nonnull
         @Override
         public ItemStack makeIcon() {
@@ -24,7 +24,7 @@ public class TurnedCreativeModeTab {
         }
     };
 
-    public static final CreativeModeTab COMBAT = new CreativeModeTab(Reference.MOD_ID + ".combat") {
+    public static final CreativeModeTab COMBAT = new CreativeModeTab(TurnedReference.MOD_ID + ".combat") {
         @Nonnull
         @Override
         public ItemStack makeIcon() {
